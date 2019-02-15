@@ -1,35 +1,38 @@
-.. contk documentation master file, created by
-   sphinx-quickstart on Sat Dec  1 16:06:41 2018.
+.. Tasktk documentation master file, created by
+   sphinx-quickstart on Thu Jan 17 17:29:23 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-:github_url: https://github.com/hzhwcmhf/contk
+:github_url: https://github.com/xjli/DialogZone
 
-Contk documentation
-=================================
+Tasktk documentation
+==================================
+This is a toolkit for developing task-oriented dialog system. We followed the classical pipeline framework, where there are 4 seperated components: NLU, DST, Policy and NLG.
 
-Contk is a python package providing utilities for natural language
-generation. It contains benchmark data loader, word vector loader,
-pretrained baseline models and other useful utilities for evaluating
-new models fairly with baselines.
+We offered the base class and some SOTA baseline models (coming soon) for each component. Specially, the NLU, DST and NLG models are trained individually, while the Policy is trained within a complete pipeline model in a RL-based manner.
 
 .. toctree::
    :glob:
    :maxdepth: 1
    :caption: Notes
 
-   notes/*
+   n
 
 .. toctree::
    :maxdepth: 1
    :caption: Package Reference
 
-   dataloader
-   wordvector
-   metric
+   nlu
+
+Introduction
+============
+This is an introductino demo.
+
+
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
+* :ref:`search`
