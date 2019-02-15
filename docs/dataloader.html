@@ -1,0 +1,1864 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Loader &mdash; contk  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Word Vector" href="wordvector.html" />
+    <link rel="prev" title="Quick Start" href="notes/quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> contk
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notes/quickstart.html">Quick Start</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Loader</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#languagegeneration">LanguageGeneration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mscoco">MSCOCO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#singleturndialog">SingleTurnDialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#opensubtitles">OpenSubtitles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#multiturndialog">MultiTurnDialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubuntucorpus">UbuntuCorpus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wordvector.html">Word Vector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Metric</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">contk</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Data Loader</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/dataloader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-contk.dataloader">
+<span id="data-loader"></span><h1>Data Loader<a class="headerlink" href="#module-contk.dataloader" title="Permalink to this headline">¶</a></h1>
+<p><cite>contk.dataloader</cite> provides classes and functions downloading and
+loading benchmark data automatically. It reduce your cost preprocessing
+data and provide a fair dataset for every model. It also help you adapt
+your model from one dataset to other datasets.</p>
+<dl class="class">
+<dt id="contk.dataloader.Dataloader">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">Dataloader</code><a class="reference internal" href="_modules/contk/dataloader/dataloader.html#Dataloader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.Dataloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class of Dataloader.</p>
+<dl class="classmethod">
+<dt id="contk.dataloader.Dataloader.get_all_subclasses">
+<em class="property">classmethod </em><code class="descname">get_all_subclasses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/dataloader.html#Dataloader.get_all_subclasses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.Dataloader.get_all_subclasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a generator of all subclasses.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="contk.dataloader.Dataloader.load_class">
+<em class="property">classmethod </em><code class="descname">load_class</code><span class="sig-paren">(</span><em>class_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/dataloader.html#Dataloader.load_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.Dataloader.load_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a subclass of <cite>class_name</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>class_name</strong> (<em>str</em>) – target class name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="languagegeneration">
+<h2>LanguageGeneration<a class="headerlink" href="#languagegeneration" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="contk.dataloader.LanguageGeneration">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">LanguageGeneration</code><span class="sig-paren">(</span><em>end_token=None</em>, <em>ext_vocab=None</em>, <em>key_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/language_generation.html#LanguageGeneration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.LanguageGeneration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for language generation datasets. This is an abstract class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>end_token</strong> (<em>int</em>) – the special token that stands for end. default: <cite>3(“&lt;eos&gt;”)</cite></li>
+<li><strong>ext_vocab</strong> (<em>list</em>) – special tokens. default: <cite>[“&lt;pad&gt;”, “&lt;unk&gt;”, “&lt;go&gt;”, “&lt;eos&gt;”]</cite></li>
+<li><strong>key_name</strong> (<em>list</em>) – name of subsets of the data. default: <cite>[“train”, “dev”, “test”]</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.ext_vocab">
+<code class="descname">ext_vocab</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.ext_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>special tokens, be placed at beginning of <cite>vocab_list</cite>.
+For example: <cite>[“&lt;pad&gt;”, “&lt;unk&gt;”, “&lt;go&gt;”, “&lt;eos&gt;”]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.pad_id">
+<code class="descname">pad_id</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.pad_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for padding, always equal to <cite>0</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.unk_id">
+<code class="descname">unk_id</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.unk_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for unknown words, always equal to <cite>1</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.go_id">
+<code class="descname">go_id</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.go_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the beginning of sentences, always equal to <cite>2</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.eos_id">
+<code class="descname">eos_id</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.eos_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the end of sentences, always equal to <cite>3</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.key_name">
+<code class="descname">key_name</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.key_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of subsets of the data. For example: <cite>[“train”, “dev”, “test”]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.all_vocab_list">
+<code class="descname">all_vocab_list</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.all_vocab_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>vocabulary list of the datasets, including valid words and invalid words.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.word2id">
+<code class="descname">word2id</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.word2id" title="Permalink to this definition">¶</a></dt>
+<dd><p>a dict mapping tokens to index.
+Maybe you want to use <a class="reference internal" href="#contk.dataloader.LanguageGeneration.sen_to_index" title="contk.dataloader.LanguageGeneration.sen_to_index"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sen_to_index()</span></code></a> instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.end_token">
+<code class="descname">end_token</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.end_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for end. default: equals to <cite>eos_id</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.vocab_list">
+<code class="descname">vocab_list</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.vocab_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>valid vocab list, equals to <code class="docutils literal notranslate"><span class="pre">all_vocab_list[：valid_vocab_len]</span></code>.
+Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.vocab_size">
+<code class="descname">vocab_size</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.vocab_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>equals to <code class="docutils literal notranslate"><span class="pre">valid_vocab_len</span></code>. Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.LanguageGeneration.all_vocab_size">
+<code class="descname">all_vocab_size</code><a class="headerlink" href="#contk.dataloader.LanguageGeneration.all_vocab_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>equals to <code class="docutils literal notranslate"><span class="pre">len(self.all_vocab_list)</span></code>. Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration._load_data">
+<code class="descname">_load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called during the initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">tuple containing:<ul class="simple">
+<li>all_vocab_list (list): vocabulary list of the datasets,
+including valid and invalid words</li>
+<li>valid_vocab_len (int): the number of valid vocab.
+<code class="docutils literal notranslate"><span class="pre">vocab_list[:valid_vocab_len]</span></code> will be regarded as valid words,
+while <code class="docutils literal notranslate"><span class="pre">vocab_list[valid_vocab_len:]</span></code> regarded as invalid words</li>
+<li>data (dict): a dict contains data.</li>
+<li>data_size (dict): a dict contains size of each item in data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(tuple)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration._valid_word2id">
+<code class="descname">_valid_word2id</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration._valid_word2id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function return the id for a valid word (<code class="docutils literal notranslate"><span class="pre">id</span> <span class="pre">&lt;</span> <span class="pre">valid_vocab_len</span></code>),
+otherwise return <cite>unk_id</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><em>key</em>, <em>batch_size=None</em>, <em>shuffle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize mini-batches. Must call this function before <a class="reference internal" href="#contk.dataloader.LanguageGeneration.get_next_batch" title="contk.dataloader.LanguageGeneration.get_next_batch"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_next_batch()</span></code></a>
+or an epoch is end.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite>.</li>
+<li><strong>batch_size</strong> (<em>None</em><em> or </em><em>int</em>) – default (None): use last batch_size.</li>
+<li><strong>shuffle</strong> (<em>bool</em>) – whether to shuffle the data. default: <cite>True</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.get_batch">
+<code class="descname">get_batch</code><span class="sig-paren">(</span><em>key</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/language_generation.html#LanguageGeneration.get_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.LanguageGeneration.get_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a batch of specified <cite>index</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite></li>
+<li><strong>index</strong> (<em>list</em>) – a list of specified index</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A dict at least contains:</p>
+<blockquote>
+<div><ul class="simple">
+<li>sentence_length(list): A 1-d list, the length of sentence in each batch.
+Size: <cite>[batch_size]</cite></li>
+<li>sentence(<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 2-d padding array containing id of words.
+Only provide valid words. <cite>unk_id</cite> will be used if a word is not valid.
+Size: <cite>[batch_size, max(sent_length)]</cite></li>
+<li>sentence_allwords(<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 2-d padding array containing id of words.
+Provide both valid and invalid words.
+Size: <cite>[batch_size, max(sent_length)]</cite></li>
+</ul>
+</div></blockquote>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;how&quot;, &quot;are&quot;, &quot;you&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;hello&quot;, &quot;i&quot;, &quot;am&quot;, &quot;fine&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">get_batch</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">{</span>
+<span class="go">        &quot;sentence&quot;: [</span>
+<span class="go">                        [2, 4, 5, 6, 3],   # first sentence: &lt;go&gt; how are you &lt;eos&gt;</span>
+<span class="go">                        [2, 7, 3, 0, 0],   # second sentence:  &lt;go&gt; hello &lt;eos&gt; &lt;pad&gt; &lt;pad&gt;</span>
+<span class="go">                ],</span>
+<span class="go">                &quot;sentence_length&quot;: [5, 3], # length of sentences</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>add invalid_vocab examples</li>
+<li>mark which array is np.array</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.get_next_batch">
+<code class="descname">get_next_batch</code><span class="sig-paren">(</span><em>key</em>, <em>ignore_left_samples=False</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration.get_next_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get next batch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite></li>
+<li><strong>ignore_left_samples</strong> (<em>bool</em>) – Ignore the last batch, whose sample num
+is not equal to <cite>batch_size</cite>. Default: <cite>False</cite></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A dict like <a class="reference internal" href="#contk.dataloader.LanguageGeneration.get_batch" title="contk.dataloader.LanguageGeneration.get_batch"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_batch()</span></code></a>, or None if the epoch is end.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.trim_index">
+<code class="descname">trim_index</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration.trim_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trim index. There will be two steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If there is an <cite>&lt;eos&gt;</cite> in sentences,
+find first <cite>&lt;eos&gt;</cite> and abondon words after it (included the <cite>&lt;eos&gt;</cite>).</li>
+<li>ignore <cite>&lt;pad&gt;</cite> s at the end of the sentence.</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>list</em>) – a list of int</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># end_token = 3 #(&#39;&lt;eos&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># all_vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">trim_index</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="gp">... </span><span class="c1"># &lt;go&gt; I have been to Sichuan &lt;pad&gt; &lt;pad&gt; &lt;eos&gt; I &lt;eos&gt; &lt;pad&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="c1"># &lt;go&gt; I have been to Sichuan</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.sen_to_index">
+<code class="descname">sen_to_index</code><span class="sig-paren">(</span><em>sen</em>, <em>invalid_vocab=False</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration.sen_to_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a sentence from string to index representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sen</strong> (<em>list</em>) – a list of str, representing each token of the sentences.</li>
+<li><strong>invalid_vocab</strong> (<em>bool</em>) – whether to provide invalid words.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, invalid words will be replaced by <cite>unk_id</cite>.
+If <code class="docutils literal notranslate"><span class="pre">True</span></code>, invalid words will using their own id.
+Default: <cite>False</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">sen_to_index</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;eos&gt;&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span> <span class="p">,</span><span class="mi">8</span> <span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>add invalid vocab example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.index_to_sen">
+<code class="descname">index_to_sen</code><span class="sig-paren">(</span><em>index</em>, <em>trim=True</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.LanguageGeneration.index_to_sen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a sentence from index to string representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>list</em>) – a list of int.</li>
+<li><strong>trim</strong> (<em>bool</em>) – if True, call <a class="reference internal" href="#contk.dataloader.LanguageGeneration.trim_index" title="contk.dataloader.LanguageGeneration.trim_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">trim_index()</span></code></a> before convertion.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># end_token = 3 #(&#39;&lt;eos&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># all_vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">index_to_sen</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trim</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">index_to_sen</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trim</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;eos&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.get_teacher_forcing_metric">
+<code class="descname">get_teacher_forcing_metric</code><span class="sig-paren">(</span><em>gen_prob_key='gen_prob'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/language_generation.html#LanguageGeneration.get_teacher_forcing_metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.LanguageGeneration.get_teacher_forcing_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metric for teacher-forcing mode.</p>
+<p>It contains:</p>
+<ul class="simple">
+<li><a class="reference internal" href="metric.html#contk.metric.PerlplexityMetric" title="contk.metric.PerlplexityMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.PerlplexityMetric</span></code></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gen_prob_key</strong> (<em>str</em>) – default: <cite>gen_prob</cite>. Refer to <a class="reference internal" href="metric.html#contk.metric.PerlplexityMetric" title="contk.metric.PerlplexityMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.PerlplexityMetric</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.LanguageGeneration.get_inference_metric">
+<code class="descname">get_inference_metric</code><span class="sig-paren">(</span><em>gen_key='gen'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/language_generation.html#LanguageGeneration.get_inference_metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.LanguageGeneration.get_inference_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metric for inference.</p>
+<p>It contains:</p>
+<ul class="simple">
+<li><a class="reference internal" href="metric.html#contk.metric.LanguageGenerationRecorder" title="contk.metric.LanguageGenerationRecorder"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.LanguageGenerationRecorder</span></code></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gen_key</strong> (<em>str</em>) – default: “gen”. Refer to <a class="reference internal" href="metric.html#contk.metric.LanguageGenerationRecorder" title="contk.metric.LanguageGenerationRecorder"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.LanguageGenerationRecorder</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="mscoco">
+<h3>MSCOCO<a class="headerlink" href="#mscoco" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="contk.dataloader.MSCOCO">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">MSCOCO</code><span class="sig-paren">(</span><em>file_path</em>, <em>min_vocab_times=10</em>, <em>max_sen_length=50</em>, <em>invalid_vocab_times=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/language_generation.html#MSCOCO"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MSCOCO" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dataloder for preprocessed MSCOCO dataset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_path</strong> (<em>str</em>) – a str indicates the dir of MSCOCO dataset.</li>
+<li><strong>valid_vocab_times</strong> (<em>int</em>) – A cut-off threshold of valid tokens. All tokens appear
+not less than <cite>min_vocab_times</cite> in <strong>training set</strong> will be marked as valid words.
+Default: 10.</li>
+<li><strong>max_sen_length</strong> (<em>int</em>) – All sentences longer than <cite>max_sen_length</cite> will be shortened
+to first <cite>max_sen_length</cite> tokens. Default: 50.</li>
+<li><strong>invalid_vocab_times</strong> (<em>int</em>) – A cut-off threshold of invalid tokens. All tokens appear
+not less than <cite>invalid_vocab_times</cite> in the <strong>whole dataset</strong> (except valid words) will be
+marked as invalid words. Otherwise, they are unknown words, both in training or
+testing stages. Default: 0 (No unknown words).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Refer to <a class="reference internal" href="#contk.dataloader.LanguageGeneration" title="contk.dataloader.LanguageGeneration"><code class="xref py py-class docutils literal notranslate"><span class="pre">LanguageGeneration</span></code></a> for attributes and methods.</p>
+<p class="rubric">References</p>
+<p>[1] <a class="reference external" href="http://images.cocodataset.org/annotations/annotations_trainval2017.zip">http://images.cocodataset.org/annotations/annotations_trainval2017.zip</a></p>
+<p>[2] Lin T Y, Maire M, Belongie S, et al. Microsoft COCO: Common Objects in Context. ECCV 2014.</p>
+<dl class="method">
+<dt id="contk.dataloader.MSCOCO._load_data">
+<code class="descname">_load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/language_generation.html#MSCOCO._load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MSCOCO._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loading dataset, invoked by <cite>LanguageGeneration.__init__</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="singleturndialog">
+<h2>SingleTurnDialog<a class="headerlink" href="#singleturndialog" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="contk.dataloader.SingleTurnDialog">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">SingleTurnDialog</code><span class="sig-paren">(</span><em>end_token=None</em>, <em>ext_vocab=None</em>, <em>key_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/single_turn_dialog.html#SingleTurnDialog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.SingleTurnDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for single-turn dialog datasets. This is an abstract class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>end_token</strong> (<em>int</em>) – the special token that stands for end. default: <cite>3(“&lt;eos&gt;”)</cite></li>
+<li><strong>ext_vocab</strong> (<em>list</em>) – special tokens. default: <cite>[“&lt;pad&gt;”, “&lt;unk&gt;”, “&lt;go&gt;”, “&lt;eos&gt;”]</cite></li>
+<li><strong>key_name</strong> (<em>list</em>) – name of subsets of the data. default: <cite>[“train”, “dev”, “test”]</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.ext_vocab">
+<code class="descname">ext_vocab</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.ext_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>special tokens, be placed at beginning of <cite>vocab_list</cite>.
+For example: <cite>[“&lt;pad&gt;”, “&lt;unk&gt;”, “&lt;go&gt;”, “&lt;eos&gt;”]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.pad_id">
+<code class="descname">pad_id</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.pad_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for padding, always equal to <cite>0</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.unk_id">
+<code class="descname">unk_id</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.unk_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for unknown words, always equal to <cite>1</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.go_id">
+<code class="descname">go_id</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.go_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the beginning of sentences, always equal to <cite>2</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.eos_id">
+<code class="descname">eos_id</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.eos_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the end of sentences, always equal to <cite>3</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.key_name">
+<code class="descname">key_name</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.key_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of subsets of the data. For example: <cite>[“train”, “dev”, “test”]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.all_vocab_list">
+<code class="descname">all_vocab_list</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.all_vocab_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>vocabulary list of the datasets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.word2id">
+<code class="descname">word2id</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.word2id" title="Permalink to this definition">¶</a></dt>
+<dd><p>a dict mapping tokens to index.
+Maybe you want to use <a class="reference internal" href="#contk.dataloader.SingleTurnDialog.sen_to_index" title="contk.dataloader.SingleTurnDialog.sen_to_index"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sen_to_index()</span></code></a> instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.end_token">
+<code class="descname">end_token</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.end_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for end. default: equals to <cite>eos_id</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.vocab_list">
+<code class="descname">vocab_list</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.vocab_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>valid vocab list, equals to <code class="docutils literal notranslate"><span class="pre">all_vocab_list[：valid_vocab_len]</span></code>.
+Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.vocab_size">
+<code class="descname">vocab_size</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.vocab_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>equals to <code class="docutils literal notranslate"><span class="pre">valid_vocab_len</span></code>. Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.SingleTurnDialog.all_vocab_size">
+<code class="descname">all_vocab_size</code><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.all_vocab_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>equals to <code class="docutils literal notranslate"><span class="pre">len(self.all_vocab_list)</span></code>. Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog._load_data">
+<code class="descname">_load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called during the initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">tuple containing:<ul class="simple">
+<li>all_vocab_list (list): vocabulary list of the datasets,
+including valid and invalid words</li>
+<li>valid_vocab_len (int): the number of valid vocab.
+<code class="docutils literal notranslate"><span class="pre">vocab_list[:valid_vocab_len]</span></code> will be regarded as valid words,
+while <code class="docutils literal notranslate"><span class="pre">vocab_list[valid_vocab_len:]</span></code> regarded as invalid words</li>
+<li>data (dict): a dict contains data.</li>
+<li>data_size (dict): a dict contains size of each item in data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(tuple)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog._valid_word2id">
+<code class="descname">_valid_word2id</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog._valid_word2id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function return the id for a valid word (<code class="docutils literal notranslate"><span class="pre">id</span> <span class="pre">&lt;</span> <span class="pre">valid_vocab_len</span></code>),
+otherwise return <cite>unk_id</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><em>key</em>, <em>batch_size=None</em>, <em>shuffle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize mini-batches. Must call this function before <a class="reference internal" href="#contk.dataloader.SingleTurnDialog.get_next_batch" title="contk.dataloader.SingleTurnDialog.get_next_batch"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_next_batch()</span></code></a>
+or an epoch is end.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite>.</li>
+<li><strong>batch_size</strong> (<em>None</em><em> or </em><em>int</em>) – default (None): use last batch_size.</li>
+<li><strong>shuffle</strong> (<em>bool</em>) – whether to shuffle the data. default: <cite>True</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.get_batch">
+<code class="descname">get_batch</code><span class="sig-paren">(</span><em>key</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/single_turn_dialog.html#SingleTurnDialog.get_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.get_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a batch of specified <cite>index</cite>.
+:param key: must be contained in <cite>key_name</cite>
+:type key: str
+:param index: a list of specified index
+:type index: list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A dict at least contains:<ul class="simple">
+<li>post_length (list): A 1-d list, the length of post in each batch.
+Size: <cite>[batch_size]</cite></li>
+<li>post (<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 2-d padding array containing id of words in posts.
+Only provide valid words. <cite>unk_id</cite> will be used if a word is not valid.
+Size: <cite>[batch_size, max(sent_length)]</cite></li>
+<li>post_allwords (<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 2-d padding array containing id of words in posts.
+Provide both valid and invalid words.
+Size: <cite>[batch_size, max(sent_length)]</cite></li>
+<li>resp_length (list): A 1-d list, the length of response in each batch.
+Size: <cite>[batch_size]</cite></li>
+<li>resp (<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 2-d padding array containing id of words in responses.
+Only provide valid words. <cite>unk_id</cite> will be used if a word is not valid.
+Size: <cite>[batch_size, max(sent_length)]</cite></li>
+<li>resp_allwords (<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 2-d padding array containing id of words in responses.
+Provide both valid and invalid words.
+Size: <cite>[batch_size, max(sent_length)]</cite></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(dict)</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;how&quot;, &quot;are&quot;, &quot;you&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;hello&quot;, &quot;i&quot;, &quot;am&quot;, &quot;fine&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">get_batch</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">{</span>
+<span class="go">        &quot;post&quot;: [</span>
+<span class="go">                [2, 4, 5, 6, 3],   # first post: &lt;go&gt; how are you &lt;eos&gt;</span>
+<span class="go">                [2, 7, 3, 0, 0],   # second post: &lt;go&gt; hello &lt;eos&gt; &lt;pad&gt; &lt;pad&gt;</span>
+<span class="go">        ],</span>
+<span class="go">        &quot;resp&quot;: [</span>
+<span class="go">                [2, 8, 9, 10, 3],  # first response: &lt;go&gt; i am fine &lt;eos&gt;</span>
+<span class="go">                [2, 7, 3, 0, 0],   # second response: &lt;go&gt; hello &lt;eos&gt; &lt;pad&gt; &lt;pad&gt;</span>
+<span class="go">        ],</span>
+<span class="go">        &quot;post_length&quot;: [5, 3], # length of posts</span>
+<span class="go">        &quot;resp_length&quot;: [5, 3], # length of responses</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>add invalid_vocab examples</li>
+<li>mark which is np.array</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.get_next_batch">
+<code class="descname">get_next_batch</code><span class="sig-paren">(</span><em>key</em>, <em>ignore_left_samples=False</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.get_next_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get next batch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite></li>
+<li><strong>ignore_left_samples</strong> (<em>bool</em>) – Ignore the last batch, whose sample num
+is not equal to <cite>batch_size</cite>. Default: <cite>False</cite></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A dict like <a class="reference internal" href="#contk.dataloader.SingleTurnDialog.get_batch" title="contk.dataloader.SingleTurnDialog.get_batch"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_batch()</span></code></a>, or None if the epoch is end.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.trim_index">
+<code class="descname">trim_index</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.trim_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trim index. There will be two steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If there is an <cite>&lt;eos&gt;</cite> in sentences,
+find first <cite>&lt;eos&gt;</cite> and abondon words after it (included the <cite>&lt;eos&gt;</cite>).</li>
+<li>ignore <cite>&lt;pad&gt;</cite> s at the end of the sentence.</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>list</em>) – a list of int</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># end_token = 3 #(&#39;&lt;eos&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># all_vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">trim_index</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="gp">... </span><span class="c1"># &lt;go&gt; I have been to Sichuan &lt;pad&gt; &lt;pad&gt; &lt;eos&gt; I &lt;eos&gt; &lt;pad&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="c1"># &lt;go&gt; I have been to Sichuan</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.sen_to_index">
+<code class="descname">sen_to_index</code><span class="sig-paren">(</span><em>sen</em>, <em>invalid_vocab=False</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.sen_to_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a sentence from string to index representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sen</strong> (<em>list</em>) – a list of str, representing each token of the sentences.</li>
+<li><strong>invalid_vocab</strong> (<em>bool</em>) – whether to provide invalid words.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, invalid words will be replaced by <cite>unk_id</cite>.
+If <code class="docutils literal notranslate"><span class="pre">True</span></code>, invalid words will using their own id.
+Default: <cite>False</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">sen_to_index</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;eos&gt;&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span> <span class="p">,</span><span class="mi">8</span> <span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>add invalid vocab example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.index_to_sen">
+<code class="descname">index_to_sen</code><span class="sig-paren">(</span><em>index</em>, <em>trim=True</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.index_to_sen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a sentence from index to string representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>list</em>) – a list of int.</li>
+<li><strong>trim</strong> (<em>bool</em>) – if True, call <a class="reference internal" href="#contk.dataloader.SingleTurnDialog.trim_index" title="contk.dataloader.SingleTurnDialog.trim_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">trim_index()</span></code></a> before convertion.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># end_token = 3 #(&#39;&lt;eos&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># all_vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">index_to_sen</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trim</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">index_to_sen</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trim</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;eos&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.get_teacher_forcing_metric">
+<code class="descname">get_teacher_forcing_metric</code><span class="sig-paren">(</span><em>gen_prob_key='gen_prob'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/single_turn_dialog.html#SingleTurnDialog.get_teacher_forcing_metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.get_teacher_forcing_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metric for teacher-forcing mode.</p>
+<p>It contains:</p>
+<ul class="simple">
+<li><a class="reference internal" href="metric.html#contk.metric.PerlplexityMetric" title="contk.metric.PerlplexityMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.PerlplexityMetric</span></code></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gen_prob_key</strong> (<em>str</em>) – default: <cite>gen_prob</cite>. Refer to <a class="reference internal" href="metric.html#contk.metric.PerlplexityMetric" title="contk.metric.PerlplexityMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.PerlplexityMetric</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.SingleTurnDialog.get_inference_metric">
+<code class="descname">get_inference_metric</code><span class="sig-paren">(</span><em>gen_key='gen'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/single_turn_dialog.html#SingleTurnDialog.get_inference_metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.SingleTurnDialog.get_inference_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metric for inference.</p>
+<p>It contains:</p>
+<ul class="simple">
+<li><a class="reference internal" href="metric.html#contk.metric.BleuCorpusMetric" title="contk.metric.BleuCorpusMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.BleuCorpusMetric</span></code></a></li>
+<li><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.SingleDialogRecorder</span></code></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gen_key</strong> (<em>str</em>) – default: “gen”. Refer to <a class="reference internal" href="metric.html#contk.metric.BleuCorpusMetric" title="contk.metric.BleuCorpusMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.BleuCorpusMetric</span></code></a> or
+<code class="xref py py-class docutils literal notranslate"><span class="pre">metric.SingleDialogRecorder</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="opensubtitles">
+<h3>OpenSubtitles<a class="headerlink" href="#opensubtitles" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="contk.dataloader.OpenSubtitles">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">OpenSubtitles</code><span class="sig-paren">(</span><em>file_path</em>, <em>min_vocab_times=10</em>, <em>max_sen_length=50</em>, <em>invalid_vocab_times=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/single_turn_dialog.html#OpenSubtitles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.OpenSubtitles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dataloder for OpenSubtitles dataset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_path</strong> (<em>str</em>) – a str indicates the dir of OpenSubtitles dataset.</li>
+<li><strong>min_vocab_times</strong> (<em>int</em>) – A cut-off threshold of <cite>UNK</cite> tokens. All tokens appear
+less than <cite>min_vocab_times</cite>     will be replaced by <cite>&lt;unk&gt;</cite>. Default: 10.</li>
+<li><strong>max_sen_length</strong> (<em>int</em>) – All sentences longer than <cite>max_sen_length</cite> will be shortened
+to first <cite>max_sen_length</cite> tokens. Default: 50.</li>
+<li><strong>invalid_vocab_times</strong> (<em>int</em>) – A cut-off threshold of invalid tokens. All tokens appear
+not less than <cite>invalid_vocab_times</cite> in the <strong>whole dataset</strong> (except valid words) will be
+marked as invalid words. Otherwise, they are unknown words, both in training or
+testing stages. Default: 0 (No unknown words).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Refer to <a class="reference internal" href="#contk.dataloader.SingleTurnDialog" title="contk.dataloader.SingleTurnDialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleTurnDialog</span></code></a> for attributes and methods.</p>
+<p class="rubric">References</p>
+<p>[1] <a class="reference external" href="http://opus.nlpl.eu/OpenSubtitles.php">http://opus.nlpl.eu/OpenSubtitles.php</a></p>
+<p>[2] P. Lison and J. Tiedemann, OpenSubtitles2016: Extracting Large Parallel Corpora from
+Movie and TV Subtitles.(LREC 2016)</p>
+<dl class="method">
+<dt id="contk.dataloader.OpenSubtitles._load_data">
+<code class="descname">_load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/single_turn_dialog.html#OpenSubtitles._load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.OpenSubtitles._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loading dataset, invoked by <cite>SingleTurnDialog.__init__</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="multiturndialog">
+<h2>MultiTurnDialog<a class="headerlink" href="#multiturndialog" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="contk.dataloader.MultiTurnDialog">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">MultiTurnDialog</code><span class="sig-paren">(</span><em>end_token=None</em>, <em>ext_vocab=None</em>, <em>key_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for multi-turn dialog datasets. This is an abstract class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>end_token</strong> (<em>int</em>) – the special token that stands for end. default: <cite>4(“&lt;eot&gt;”)</cite></li>
+<li><strong>ext_vocab</strong> (<em>list</em>) – special tokens. default: <cite>[“&lt;pad&gt;”, “&lt;unk&gt;”, “&lt;go&gt;”, “&lt;eos&gt;”, “&lt;eot&gt;”]</cite></li>
+<li><strong>key_name</strong> (<em>list</em>) – name of subsets of the data. default: <cite>[“train”, “dev”, “test”]</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.ext_vocab">
+<code class="descname">ext_vocab</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.ext_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>special tokens, be placed at beginning of <cite>vocab_list</cite>.
+For example: <cite>[“&lt;pad&gt;”, “&lt;unk&gt;”, “&lt;go&gt;”, “&lt;eos&gt;”, “&lt;eot&gt;”]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.pad_id">
+<code class="descname">pad_id</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.pad_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for padding, always equal to <cite>0</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.unk_id">
+<code class="descname">unk_id</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.unk_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for unknown words, always equal to <cite>1</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.go_id">
+<code class="descname">go_id</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.go_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the beginning of sentences, always equal to <cite>2</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.eos_id">
+<code class="descname">eos_id</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.eos_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the end of sentences, always equal to <cite>3</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.eot_id">
+<code class="descname">eot_id</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.eot_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>token at the end of turns, always equal to <cite>4</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.key_name">
+<code class="descname">key_name</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.key_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of subsets of the data. For example: <cite>[“train”, “dev”, “test”]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.all_vocab_list">
+<code class="descname">all_vocab_list</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.all_vocab_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>vocabulary list of the datasets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.word2id">
+<code class="descname">word2id</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.word2id" title="Permalink to this definition">¶</a></dt>
+<dd><p>a dict mapping tokens to index.
+Maybe you want to use <a class="reference internal" href="#contk.dataloader.MultiTurnDialog.sen_to_index" title="contk.dataloader.MultiTurnDialog.sen_to_index"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sen_to_index()</span></code></a> instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.end_token">
+<code class="descname">end_token</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.end_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>token for end. default: equals to <cite>eot_id</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.vocab_list">
+<code class="descname">vocab_list</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.vocab_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>valid vocab list, equals to <code class="docutils literal notranslate"><span class="pre">all_vocab_list[：valid_vocab_len]</span></code>.
+Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.vocab_size">
+<code class="descname">vocab_size</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.vocab_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>equals to <code class="docutils literal notranslate"><span class="pre">valid_vocab_len</span></code>. Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="contk.dataloader.MultiTurnDialog.all_vocab_size">
+<code class="descname">all_vocab_size</code><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.all_vocab_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>equals to <code class="docutils literal notranslate"><span class="pre">len(self.all_vocab_list)</span></code>. Read only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog._load_data">
+<code class="descname">_load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called during the initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">tuple containing:<ul class="simple">
+<li>all_vocab_list (list): vocabulary list of the datasets,
+including valid and invalid words</li>
+<li>valid_vocab_len (int): the number of valid vocab.
+<code class="docutils literal notranslate"><span class="pre">vocab_list[:valid_vocab_len]</span></code> will be regarded as valid words,
+while <code class="docutils literal notranslate"><span class="pre">vocab_list[valid_vocab_len:]</span></code> regarded as invalid words</li>
+<li>data (dict): a dict contains data.</li>
+<li>data_size (dict): a dict contains size of each item in data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(tuple)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog._valid_word2id">
+<code class="descname">_valid_word2id</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog._valid_word2id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function return the id for a valid word (<code class="docutils literal notranslate"><span class="pre">id</span> <span class="pre">&lt;</span> <span class="pre">valid_vocab_len</span></code>),
+otherwise return <cite>unk_id</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><em>key</em>, <em>batch_size=None</em>, <em>shuffle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize mini-batches. Must call this function before <a class="reference internal" href="#contk.dataloader.MultiTurnDialog.get_next_batch" title="contk.dataloader.MultiTurnDialog.get_next_batch"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_next_batch()</span></code></a>
+or an epoch is end.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite>.</li>
+<li><strong>batch_size</strong> (<em>None</em><em> or </em><em>int</em>) – default (None): use last batch_size.</li>
+<li><strong>shuffle</strong> (<em>bool</em>) – whether to shuffle the data. default: <cite>True</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.get_batch">
+<code class="descname">get_batch</code><span class="sig-paren">(</span><em>key</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog.get_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.get_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a batch of specified <cite>index</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite></li>
+<li><strong>index</strong> (<em>list</em>) – a list of specified index</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A dict at least contains:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>turn_length(list): A 1-d list, the number of turns in sessions.</dt>
+<dd>Size: <cite>[batch_size]</cite></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>sent_length(list): A 2-d non-padded list, the length of sentence in turns.</dt>
+<dd>The second dimension is various in different session.
+Length of outer list: <cite>[batch_size]</cite></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>sent(<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 3-d padding array containing id of words.</dt>
+<dd>Only provide valid words. <cite>unk_id</cite> will be used if a word is not valid.
+Size: <cite>[batch_size, max(turn_length[i]), max(sent_length)]</cite></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>sent_allwords(<code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>): A 3-d padding array containing id of words.</dt>
+<dd>Provide both valid and invalid words.
+Size: <cite>[batch_size, max(turn_length[i]), max(sent_length)]</cite></dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>See the example belows.</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">get_batch</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-4">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>fix the missing example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.get_next_batch">
+<code class="descname">get_next_batch</code><span class="sig-paren">(</span><em>key</em>, <em>ignore_left_samples=False</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.get_next_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get next batch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<em>str</em>) – must be contained in <cite>key_name</cite></li>
+<li><strong>ignore_left_samples</strong> (<em>bool</em>) – Ignore the last batch, whose sample num
+is not equal to <cite>batch_size</cite>. Default: <cite>False</cite></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A dict like <a class="reference internal" href="#contk.dataloader.MultiTurnDialog.get_batch" title="contk.dataloader.MultiTurnDialog.get_batch"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_batch()</span></code></a>, or None if the epoch is end.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.trim_index">
+<code class="descname">trim_index</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.trim_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trim index. There will be two steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If there is an <cite>&lt;eos&gt;</cite> in sentences,
+find first <cite>&lt;eos&gt;</cite> and abondon words after it (included the <cite>&lt;eos&gt;</cite>).</li>
+<li>ignore <cite>&lt;pad&gt;</cite> s at the end of the sentence.</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>list</em>) – a list of int</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># end_token = 3 #(&#39;&lt;eos&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># all_vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">trim_index</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="gp">... </span><span class="c1"># &lt;go&gt; I have been to Sichuan &lt;pad&gt; &lt;pad&gt; &lt;eos&gt; I &lt;eos&gt; &lt;pad&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="c1"># &lt;go&gt; I have been to Sichuan</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.multi_turn_trim_index">
+<code class="descname">multi_turn_trim_index</code><span class="sig-paren">(</span><em>index</em>, <em>ignore_first_token=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog.multi_turn_trim_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.multi_turn_trim_index" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Trim indexes for multi turn dialog. There will be 3 steps:</dt>
+<dd><ul class="first last simple">
+<li>For every turn, if there is an <cite>&lt;eot&gt;</cite>,                               find first <cite>&lt;eot&gt;</cite> and abondon words after it (included the <cite>&lt;eot&gt;</cite>).</li>
+<li>If the sentence after triming is empty, discard this turn and the turn after it.</li>
+<li>Ignore <cite>&lt;pad&gt;</cite> s at the end of every turn.</li>
+</ul>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (list or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>) – a 2-d array of int.</li>
+<li><strong>Size</strong> – [turn_length, max_sent_length]</li>
+<li><strong>ignore_first_token</strong> (<em>bool</em>) – if True, ignore first token of each turn (must be <cite>&lt;go&gt;</cite>).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="admonition-todo admonition" id="index-5">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>fix the missing example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.sen_to_index">
+<code class="descname">sen_to_index</code><span class="sig-paren">(</span><em>sen</em>, <em>invalid_vocab=False</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.sen_to_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a sentence from string to index representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sen</strong> (<em>list</em>) – a list of str, representing each token of the sentences.</li>
+<li><strong>invalid_vocab</strong> (<em>bool</em>) – whether to provide invalid words.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, invalid words will be replaced by <cite>unk_id</cite>.
+If <code class="docutils literal notranslate"><span class="pre">True</span></code>, invalid words will using their own id.
+Default: <cite>False</cite></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">sen_to_index</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;eos&gt;&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span> <span class="p">,</span><span class="mi">8</span> <span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-6">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>add invalid vocab example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.multi_turn_sen_to_index">
+<code class="descname">multi_turn_sen_to_index</code><span class="sig-paren">(</span><em>session</em>, <em>invalid_vocab=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog.multi_turn_sen_to_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.multi_turn_sen_to_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a session from string to index representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sen</strong> (<em>list</em>) – a 2-d list of str, representing each token of the session.</li>
+<li><strong>invalid_vocab</strong> (<em>bool</em>) – whether to provide invalid words.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, invalid words will be trasfered to <cite>unk_id</cite>.
+If <code class="docutils literal notranslate"><span class="pre">True</span></code>, invalid words will using their own id.
+Default: False</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="admonition-todo admonition" id="index-7">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>fix the missing example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.index_to_sen">
+<code class="descname">index_to_sen</code><span class="sig-paren">(</span><em>index</em>, <em>trim=True</em><span class="sig-paren">)</span><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.index_to_sen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a sentence from index to string representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>list</em>) – a list of int.</li>
+<li><strong>trim</strong> (<em>bool</em>) – if True, call <a class="reference internal" href="#contk.dataloader.MultiTurnDialog.trim_index" title="contk.dataloader.MultiTurnDialog.trim_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">trim_index()</span></code></a> before convertion.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># end_token = 3 #(&#39;&lt;eos&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># all_vocab_list = [&quot;&lt;pad&gt;&quot;, &quot;&lt;unk&gt;&quot;, &quot;&lt;go&gt;&quot;, &quot;&lt;eos&gt;&quot;, &quot;I&quot;, &quot;have&quot;,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#   &quot;been&quot;, &quot;to&quot;, &quot;Sichuan&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">index_to_sen</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trim</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataloader</span><span class="o">.</span><span class="n">index_to_sen</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trim</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s2">&quot;&lt;go&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;Sichuan&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;eos&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.multi_turn_index_to_sen">
+<code class="descname">multi_turn_index_to_sen</code><span class="sig-paren">(</span><em>index</em>, <em>trim=True</em>, <em>ignore_first_token=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog.multi_turn_index_to_sen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.multi_turn_index_to_sen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a session from index to string representation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (list or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code>) – a 2-d array of int.
+Size: [turn_length, max_sent_length]</li>
+<li><strong>trim</strong> (<em>bool</em>) – if True, call <a class="reference internal" href="#contk.dataloader.MultiTurnDialog.multi_turn_trim_index" title="contk.dataloader.MultiTurnDialog.multi_turn_trim_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">multi_turn_trim_index()</span></code></a> before convertion.</li>
+<li><strong>ignore_first_token</strong> (<em>bool</em>) – Only works when trim=True.
+If True, ignore first token of each turn (must be <cite>&lt;go&gt;</cite>).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="admonition-todo admonition" id="index-8">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>fix the missing example</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.get_teacher_forcing_metric">
+<code class="descname">get_teacher_forcing_metric</code><span class="sig-paren">(</span><em>gen_prob_key='gen_prob'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog.get_teacher_forcing_metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.get_teacher_forcing_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metric for teacher-forcing mode.</p>
+<p>It contains:</p>
+<ul class="simple">
+<li><a class="reference internal" href="metric.html#contk.metric.MultiTurnPerplexityMetric" title="contk.metric.MultiTurnPerplexityMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.MultiTurnPerplexityMetric</span></code></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gen_prob_key</strong> (<em>str</em>) – default: <cite>gen_prob</cite>. Refer to <a class="reference internal" href="metric.html#contk.metric.PerlplexityMetric" title="contk.metric.PerlplexityMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.PerlplexityMetric</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contk.dataloader.MultiTurnDialog.get_inference_metric">
+<code class="descname">get_inference_metric</code><span class="sig-paren">(</span><em>gen_key='gen'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#MultiTurnDialog.get_inference_metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.MultiTurnDialog.get_inference_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metric for inference.</p>
+<p>It contains:</p>
+<ul class="simple">
+<li><a class="reference internal" href="metric.html#contk.metric.BleuCorpusMetric" title="contk.metric.BleuCorpusMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.BleuCorpusMetric</span></code></a></li>
+<li><a class="reference internal" href="metric.html#contk.metric.MultiTurnDialogRecorder" title="contk.metric.MultiTurnDialogRecorder"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.MultiTurnDialogRecorder</span></code></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gen_key</strong> (<em>str</em>) – default: “gen”. Refer to <a class="reference internal" href="metric.html#contk.metric.BleuCorpusMetric" title="contk.metric.BleuCorpusMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.BleuCorpusMetric</span></code></a> or
+<a class="reference internal" href="metric.html#contk.metric.MultiTurnDialogRecorder" title="contk.metric.MultiTurnDialogRecorder"><code class="xref py py-class docutils literal notranslate"><span class="pre">metric.MultiTurnDialogRecorder</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="ubuntucorpus">
+<h3>UbuntuCorpus<a class="headerlink" href="#ubuntucorpus" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="contk.dataloader.UbuntuCorpus">
+<em class="property">class </em><code class="descclassname">contk.dataloader.</code><code class="descname">UbuntuCorpus</code><span class="sig-paren">(</span><em>file_path</em>, <em>min_vocab_times=10</em>, <em>max_sen_length=50</em>, <em>max_turn_length=20</em>, <em>invalid_vocab_times=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#UbuntuCorpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.UbuntuCorpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dataloder for OpenSubtitles dataset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_path</strong> (<em>str</em>) – a str indicates the dir of OpenSubtitles dataset.</li>
+<li><strong>min_vocab_times</strong> (<em>int</em>) – A cut-off threshold of <cite>UNK</cite> tokens. All tokens appear
+less than <cite>min_vocab_times</cite>     will be replaced by <cite>&lt;unk&gt;</cite>. Default: 10.</li>
+<li><strong>max_sen_length</strong> (<em>int</em>) – All sentences longer than <cite>max_sen_length</cite> will be shortened
+to first <cite>max_sen_length</cite> tokens. Default: 50.</li>
+<li><strong>max_turn_length</strong> (<em>int</em>) – All sessions longer than <cite>max_turn_length</cite> will be shortened
+to first <cite>max_turn_length</cite> sentences. Default: 20.</li>
+<li><strong>invalid_vocab_times</strong> (<em>int</em>) – A cut-off threshold of invalid tokens. All tokens appear
+not less than <cite>invalid_vocab_times</cite> in the <strong>whole dataset</strong> (except valid words) will be
+marked as invalid words. Otherwise, they are unknown words, both in training or
+testing stages. Default: 0 (No unknown words).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Refer to <a class="reference internal" href="#contk.dataloader.MultiTurnDialog" title="contk.dataloader.MultiTurnDialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiTurnDialog</span></code></a> for attributes and methods.</p>
+<div class="admonition-todo admonition" id="index-9">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>add references</li>
+</ul>
+</div>
+<dl class="method">
+<dt id="contk.dataloader.UbuntuCorpus._load_data">
+<code class="descname">_load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contk/dataloader/multi_turn_dialog.html#UbuntuCorpus._load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contk.dataloader.UbuntuCorpus._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loading dataset, invoked by <cite>MultiTurnDialog.__init__</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wordvector.html" class="btn btn-neutral float-right" title="Word Vector" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="notes/quickstart.html" class="btn btn-neutral" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, thu-coai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
