@@ -165,16 +165,16 @@
 </div>
 <div class="section" id="module-tatk.nlu.nlu">
 <span id="tatk-nlu-nlu-module"></span><h2>tatk.nlu.nlu module<a class="headerlink" href="#module-tatk.nlu.nlu" title="Permalink to this headline">¶</a></h2>
-<p>Natural Language Understanding Interface</p>
+<p>Natural language understanding interface.</p>
 <dl class="class">
 <dt id="tatk.nlu.nlu.NLU">
 <em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.nlu.</code><code class="sig-name descname">NLU</code><a class="headerlink" href="#tatk.nlu.nlu.NLU" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Base class for NLU model.</p>
+<p>NLU module interface.</p>
 <dl class="method">
-<dt id="tatk.nlu.nlu.NLU.parse">
-<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">utterance</em>, <em class="sig-param">sess=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.parse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict the dialog act of a natural language utterance and apply error model.
+<dt id="tatk.nlu.nlu.NLU.predict">
+<em class="property">abstract </em><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">utterance</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the dialog act of a natural language utterance.
 Args:</p>
 <blockquote>
 <div><p>utterance (str): A natural language utterance.</p>
