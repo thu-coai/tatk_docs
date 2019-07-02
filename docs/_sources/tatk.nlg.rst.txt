@@ -1,13 +1,13 @@
-tasktk.usr package
-==================
+tatk.nlg package
+================
 
 Submodules
 ----------
 
-tasktk.usr.simulator module
----------------------------
+tatk.nlg.nlg module
+-------------------
 
-.. automodule:: tasktk.usr.simulator
+.. automodule:: tatk.nlg.nlg
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ tasktk.usr.simulator module
 Module contents
 ---------------
 
-.. automodule:: tasktk.usr
+.. automodule:: tatk.nlg
     :members:
     :undoc-members:
     :show-inheritance:

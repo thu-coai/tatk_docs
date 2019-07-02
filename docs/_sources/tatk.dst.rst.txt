@@ -1,13 +1,13 @@
-tasktk.dst package
-==================
+tatk.dst package
+================
 
 Submodules
 ----------
 
-tasktk.dst.state\_tracker module
---------------------------------
+tatk.dst.state\_tracker module
+------------------------------
 
-.. automodule:: tasktk.dst.state_tracker
+.. automodule:: tatk.dst.state_tracker
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ tasktk.dst.state\_tracker module
 Module contents
 ---------------
 
-.. automodule:: tasktk.dst
+.. automodule:: tatk.dst
     :members:
     :undoc-members:
     :show-inheritance:

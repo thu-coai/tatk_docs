@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tatk.dialog_agent package &mdash; tatk  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="tatk.dst package" href="tatk.dst.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tatk
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.dialog_agent package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.agent">tatk.dialog_agent.agent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.session">tatk.dialog_agent.session module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.system">tatk.dialog_agent.system module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.user">tatk.dialog_agent.user module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tatk</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>tatk.dialog_agent package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tatk.dialog_agent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tatk-dialog-agent-package">
+<h1>tatk.dialog_agent package<a class="headerlink" href="#tatk-dialog-agent-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.dialog_agent.agent">
+<span id="tatk-dialog-agent-agent-module"></span><h2>tatk.dialog_agent.agent module<a class="headerlink" href="#module-tatk.dialog_agent.agent" title="Permalink to this headline">¶</a></h2>
+<p>Base class for agent</p>
+<dl class="class">
+<dt id="tatk.dialog_agent.agent.BaseAgent">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.agent.</code><code class="sig-name descname">BaseAgent</code><a class="headerlink" href="#tatk.dialog_agent.agent.BaseAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base dialog agent class.</p>
+<dl class="method">
+<dt id="tatk.dialog_agent.agent.BaseAgent.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.BaseAgent.init_session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.agent.BaseAgent.response">
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">sess</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.BaseAgent.response" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.dialog_agent.agent.End2EndAgent">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.agent.</code><code class="sig-name descname">End2EndAgent</code><a class="headerlink" href="#tatk.dialog_agent.agent.End2EndAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.dialog_agent.agent.BaseAgent" title="tatk.dialog_agent.agent.BaseAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.BaseAgent</span></code></a></p>
+<p>End2End dialog agent base class.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.dialog_agent.agent.PipelineAgent">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.agent.</code><code class="sig-name descname">PipelineAgent</code><span class="sig-paren">(</span><em class="sig-param">nlu_model</em>, <em class="sig-param">tracker</em>, <em class="sig-param">policy</em>, <em class="sig-param">nlg_model</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.dialog_agent.agent.BaseAgent" title="tatk.dialog_agent.agent.BaseAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.BaseAgent</span></code></a></p>
+<p>Pipeline dialog agent base class, includes NLU, DST, Policy, NLG.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.dialog_agent.session">
+<span id="tatk-dialog-agent-session-module"></span><h2>tatk.dialog_agent.session module<a class="headerlink" href="#module-tatk.dialog_agent.session" title="Permalink to this headline">¶</a></h2>
+<p>Session class</p>
+<dl class="class">
+<dt id="tatk.dialog_agent.session.Session">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.session.</code><code class="sig-name descname">Session</code><span class="sig-paren">(</span><em class="sig-param">sys_agent</em>, <em class="sig-param">simulator</em>, <em class="sig-param">kb_query</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.Session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A dialog controller which aggregates two agents to conduct a complete dialog session or to train the dialog policy
+model.</p>
+<dl class="method">
+<dt id="tatk.dialog_agent.session.Session.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.Session.init_session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.session.Session.next_turn">
+<code class="sig-name descname">next_turn</code><span class="sig-paren">(</span><em class="sig-param">last_user_response</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.Session.next_turn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conduct a new turn of dialog, which consists of the system response and user response.
+Note that the system response comes first in each turn, and in the 1st turn its response can be like “hello, how
+can I help you”.
+The variable type of responses can be either 1) str or 2) dialog act, depends on the dialog mode settings of the
+two agents which are supposed to be the same.
+Args:</p>
+<blockquote>
+<div><p>last_user_response: Last user response.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>sys_response: The response of system.
+user_response:The response of user simulator.
+session_over (boolean): True if session ends, else session continues.
+reward (float): The reward given by the user.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.session.Session.train_sys">
+<code class="sig-name descname">train_sys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.Session.train_sys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train the parameters of system agent.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.dialog_agent.system">
+<span id="tatk-dialog-agent-system-module"></span><h2>tatk.dialog_agent.system module<a class="headerlink" href="#module-tatk.dialog_agent.system" title="Permalink to this headline">¶</a></h2>
+<p>Dialog System derived from PipelineAgent</p>
+<dl class="class">
+<dt id="tatk.dialog_agent.system.Dialog_System">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.system.</code><code class="sig-name descname">Dialog_System</code><span class="sig-paren">(</span><em class="sig-param">nlu_model</em>, <em class="sig-param">tracker</em>, <em class="sig-param">policy</em>, <em class="sig-param">nlg_model</em>, <em class="sig-param">mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.system.Dialog_System" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.dialog_agent.agent.PipelineAgent" title="tatk.dialog_agent.agent.PipelineAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.PipelineAgent</span></code></a></p>
+<p>Pipeline dialog system</p>
+<dl class="method">
+<dt id="tatk.dialog_agent.system.Dialog_System.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.system.Dialog_System.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the parameters for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.system.Dialog_System.response">
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">sess</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.system.Dialog_System.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the response of system bot.
+Args:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>input (dict or str): Preorder user output. The variable type depends on the user model’s configuration,</dt><dd><p>i.e., if the user.nlg is not None, type(input) == str; else if user.nlg is None, type(input) = dict.</p>
+</dd>
+</dl>
+<p>sess (Session):</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>output (str or dict): The output of system agent.
+action (dict): The dialog act of the output of system agent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.dialog_agent.user">
+<span id="tatk-dialog-agent-user-module"></span><h2>tatk.dialog_agent.user module<a class="headerlink" href="#module-tatk.dialog_agent.user" title="Permalink to this headline">¶</a></h2>
+<p>User simulator derived from PipelineAgent</p>
+<dl class="class">
+<dt id="tatk.dialog_agent.user.User_Simulator">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.user.</code><code class="sig-name descname">User_Simulator</code><span class="sig-paren">(</span><em class="sig-param">nlu_model</em>, <em class="sig-param">policy</em>, <em class="sig-param">nlg_model</em>, <em class="sig-param">mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.user.User_Simulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.dialog_agent.agent.PipelineAgent" title="tatk.dialog_agent.agent.PipelineAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.PipelineAgent</span></code></a></p>
+<p>Pipeline user simulator</p>
+<dl class="method">
+<dt id="tatk.dialog_agent.user.User_Simulator.init_response">
+<code class="sig-name descname">init_response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.user.User_Simulator.init_response" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.user.User_Simulator.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.user.User_Simulator.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the parameters for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.user.User_Simulator.response">
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">sess=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.user.User_Simulator.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the response of user.
+Args:</p>
+<blockquote>
+<div><p>input: Preorder system output, a 1) string if self.mode == 0, else 2) dialog act if self.mode == 1.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>output (str): User response, a 1) string if self.mode == 0, else 2) dialog act if self.mode == 1.
+session_over (boolean): True to terminate session, else session continues.
+reward (float): The reward given by the user.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="tatk.dst.html" class="btn btn-neutral" title="tatk.dst package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, thu-coai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

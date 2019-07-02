@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk &mdash; tatk  documentation</title>
+  <title>tatk.nlu package &mdash; tatk  documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tatk.nlg package" href="tatk.nlg.html" />
+    <link rel="prev" title="tatk.policy package" href="tatk.policy.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,10 +82,14 @@
             
             
               <p class="caption"><span class="caption-text">Package Reference:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.nlu package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.nlu.nlu">tatk.nlu.nlu module</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
@@ -133,13 +139,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>tatk</li>
+      <li>tatk.nlu package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.nlu.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -152,57 +158,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk">
-<h1>tatk<a class="headerlink" href="#tatk" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.html">tatk package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.agent">tatk.dialog_agent.agent module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.session">tatk.dialog_agent.session module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.system">tatk.dialog_agent.system module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.user">tatk.dialog_agent.user module</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.html#module-tatk.dst">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.html#module-tatk.e2e">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.html#module-tatk.nlu.nlu">tatk.nlu.nlu module</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.util.html">tatk.util package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.util.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.util.html#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.html#module-tatk">Module contents</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="tatk-nlu-package">
+<h1>tatk.nlu package<a class="headerlink" href="#tatk-nlu-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.nlu.nlu">
+<span id="tatk-nlu-nlu-module"></span><h2>tatk.nlu.nlu module<a class="headerlink" href="#module-tatk.nlu.nlu" title="Permalink to this headline">¶</a></h2>
+<p>Natural Language Understanding Interface</p>
+<dl class="class">
+<dt id="tatk.nlu.nlu.NLU">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.nlu.</code><code class="sig-name descname">NLU</code><a class="headerlink" href="#tatk.nlu.nlu.NLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base class for NLU model.</p>
+<dl class="method">
+<dt id="tatk.nlu.nlu.NLU.parse">
+<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">utterance</em>, <em class="sig-param">sess=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the dialog act of a natural language utterance and apply error model.
+Args:</p>
+<blockquote>
+<div><p>utterance (str): A natural language utterance.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>output (dict): The dialog act of utterance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -211,6 +195,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tatk.nlg.html" class="btn btn-neutral float-right" title="tatk.nlg package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tatk.policy.html" class="btn btn-neutral" title="tatk.policy package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tasktk.usr package &mdash; Tasktk  documentation</title>
+  <title>tatk.e2e package &mdash; tatk  documentation</title>
   
 
   
@@ -24,6 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -33,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tatk.dst package" href="tatk.dst.html" />
+    <link rel="prev" title="tatk.nlg package" href="tatk.nlg.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -48,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Tasktk
+            <a href="index.html" class="icon icon-home"> tatk
           
 
           
@@ -78,9 +81,18 @@
               
             
             
-              <p class="caption"><span class="caption-text">Package Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="nlu.html">NLU</a></li>
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.e2e package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.e2e">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
 </ul>
 
             
@@ -95,7 +107,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Tasktk</a>
+          <a href="index.html">tatk</a>
         
       </nav>
 
@@ -126,13 +138,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>tasktk.usr package</li>
+      <li>tatk.e2e package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/tasktk.usr.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.e2e.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -145,47 +157,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tasktk-usr-package">
-<h1>tasktk.usr package<a class="headerlink" href="#tasktk-usr-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-tasktk.usr.simulator">
-<span id="tasktk-usr-simulator-module"></span><h2>tasktk.usr.simulator module<a class="headerlink" href="#module-tasktk.usr.simulator" title="Permalink to this headline">¶</a></h2>
-<p>Created on Jan 1st, 2019</p>
-<p>&#64;author: zhangzthu</p>
-<dl class="class">
-<dt id="tasktk.usr.simulator.User_Simulator">
-<em class="property">class </em><code class="descclassname">tasktk.usr.simulator.</code><code class="descname">User_Simulator</code><span class="sig-paren">(</span><em>nlu_model</em>, <em>tracker</em>, <em>policy</em>, <em>nlg_model</em>, <em>mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tasktk.usr.simulator.User_Simulator" title="Permalink to this definition">¶</a></dt>
-<dd><p>An aggregation of user simulator components.</p>
-<dl class="method">
-<dt id="tasktk.usr.simulator.User_Simulator.init_session">
-<code class="descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tasktk.usr.simulator.User_Simulator.init_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Init the parameters for a new session.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tasktk.usr.simulator.User_Simulator.response">
-<code class="descname">response</code><span class="sig-paren">(</span><em>input</em><span class="sig-paren">)</span><a class="headerlink" href="#tasktk.usr.simulator.User_Simulator.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate the response of user.
-:param input: Preorder system output, a 1) string if self.mode == 0, else 2) dialog act if self.mode == 1.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">User response, a 1) string if self.mode == 0, else 2) dialog act if self.mode == 1.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">output</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-tasktk.usr">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tasktk.usr" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="tatk-e2e-package">
+<h1>tatk.e2e package<a class="headerlink" href="#tatk-e2e-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-tatk.e2e">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tatk.e2e" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -194,6 +169,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tatk.dst.html" class="btn btn-neutral float-right" title="tatk.dst package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tatk.nlg.html" class="btn btn-neutral" title="tatk.nlg package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

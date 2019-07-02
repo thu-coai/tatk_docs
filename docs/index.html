@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tasktk documentation &mdash; Tasktk  documentation</title>
+  <title>Welcome to tatk’s documentation! &mdash; tatk  documentation</title>
   
 
   
@@ -24,6 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="NLU" href="nlu.html" /> 
+    <link rel="next" title="tatk.util package" href="tatk.util.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -49,7 +50,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Tasktk
+            <a href="#" class="icon icon-home"> tatk
           
 
           
@@ -79,9 +80,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Package Reference</span></p>
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nlu.html">NLU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
 </ul>
 
             
@@ -96,7 +103,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Tasktk</a>
+          <a href="#">tatk</a>
         
       </nav>
 
@@ -121,24 +128,19 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Tasktk documentation</li>
+      <li>Welcome to tatk’s documentation!</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <!-- User defined GitHub URL -->
-              <a href="https://github.com/xjli/DialogZone" class="fa fa-github"> Edit on GitHub</a>
-            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -151,29 +153,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tasktk-documentation">
-<h1>Tasktk documentation<a class="headerlink" href="#tasktk-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This is a toolkit for developing task-oriented dialog system. We followed the classical pipeline framework, where there are 4 seperated components: NLU, DST, Policy and NLG.</p>
-<p>We offered the base class and some SOTA baseline models (coming soon) for each component. Specially, the NLU, DST and NLG models are trained individually, while the Policy is trained within a complete pipeline model in a RL-based manner.</p>
+  <div class="section" id="welcome-to-tatk-s-documentation">
+<h1>Welcome to tatk’s documentation!<a class="headerlink" href="#welcome-to-tatk-s-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Package Reference</span></p>
+<p class="caption"><span class="caption-text">Package Reference:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nlu.html">NLU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#module-tatk.nlu.nlu">tatk.nlu.nlu module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.html#module-tatk.e2e">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#module-tatk.dst">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dialog_agent.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.agent">tatk.dialog_agent.agent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.session">tatk.dialog_agent.session module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.system">tatk.dialog_agent.system module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.user">tatk.dialog_agent.user module</a></li>
+</ul>
+</li>
 </ul>
 </div>
-</div>
-<div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>This is an introductino demo.</p>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 
@@ -185,7 +217,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="nlu.html" class="btn btn-neutral float-right" title="NLU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.util.html" class="btn btn-neutral float-right" title="tatk.util package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

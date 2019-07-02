@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>NLU &mdash; Tasktk  documentation</title>
+  <title>tatk.util package &mdash; tatk  documentation</title>
   
 
   
@@ -24,6 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,7 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tasktk documentation" href="index.html" /> 
+    <link rel="next" title="tatk.policy package" href="tatk.policy.html" />
+    <link rel="prev" title="Welcome to tatk’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -49,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Tasktk
+            <a href="index.html" class="icon icon-home"> tatk
           
 
           
@@ -79,12 +81,19 @@
               
             
             
-              <p class="caption"><span class="caption-text">Package Reference</span></p>
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">NLU</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#nlu-class">NLU class</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
 </ul>
 
             
@@ -99,7 +108,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Tasktk</a>
+          <a href="index.html">tatk</a>
         
       </nav>
 
@@ -130,13 +139,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>NLU</li>
+      <li>tatk.util package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/nlu.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.util.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -149,11 +158,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nlu">
-<h1>NLU<a class="headerlink" href="#nlu" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="nlu-class">
-<h2>NLU class<a class="headerlink" href="#nlu-class" title="Permalink to this headline">¶</a></h2>
-<p>Metric-like class</p>
+  <div class="section" id="tatk-util-package">
+<h1>tatk.util package<a class="headerlink" href="#tatk-util-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.util.kb_query">
+<span id="tatk-util-kb-query-module"></span><h2>tatk.util.kb_query module<a class="headerlink" href="#module-tatk.util.kb_query" title="Permalink to this headline">¶</a></h2>
+<p>Base Class for Knowledge Base Query</p>
+<dl class="class">
+<dt id="tatk.util.kb_query.KBquery">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.util.kb_query.</code><code class="sig-name descname">KBquery</code><a class="headerlink" href="#tatk.util.kb_query.KBquery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.util.kb_query.KBquery.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">constrains</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.kb_query.KBquery.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -165,8 +188,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="tatk.policy.html" class="btn btn-neutral float-right" title="tatk.policy package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="index.html" class="btn btn-neutral" title="Tasktk documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to tatk’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

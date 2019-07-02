@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk &mdash; tatk  documentation</title>
+  <title>tatk.dst package &mdash; tatk  documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tatk.dialog_agent package" href="tatk.dialog_agent.html" />
+    <link rel="prev" title="tatk.e2e package" href="tatk.e2e.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,13 +82,18 @@
             
             
               <p class="caption"><span class="caption-text">Package Reference:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.dst package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dst">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
 </ul>
 
@@ -133,13 +140,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>tatk</li>
+      <li>tatk.dst package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.dst.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -152,57 +159,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk">
-<h1>tatk<a class="headerlink" href="#tatk" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.html">tatk package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.agent">tatk.dialog_agent.agent module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.session">tatk.dialog_agent.session module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.system">tatk.dialog_agent.system module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dialog_agent.html#module-tatk.dialog_agent.user">tatk.dialog_agent.user module</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.html#module-tatk.dst">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.html#module-tatk.e2e">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.html#module-tatk.nlu.nlu">tatk.nlu.nlu module</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.util.html">tatk.util package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tatk.util.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.util.html#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.html#module-tatk">Module contents</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="tatk-dst-package">
+<h1>tatk.dst package<a class="headerlink" href="#tatk-dst-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.dst.state_tracker">
+<span id="tatk-dst-state-tracker-module"></span><h2>tatk.dst.state_tracker module<a class="headerlink" href="#module-tatk.dst.state_tracker" title="Permalink to this headline">¶</a></h2>
+<p>Dialog State Tracker Interface</p>
+<dl class="class">
+<dt id="tatk.dst.state_tracker.Tracker">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.state_tracker.</code><code class="sig-name descname">Tracker</code><a class="headerlink" href="#tatk.dst.state_tracker.Tracker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base class for dialog state tracker models.</p>
+<dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.init_session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">user_act=None</em>, <em class="sig-param">sess=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update dialog state.
+Args:</p>
+<blockquote>
+<div><p>sess (Session Object):</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>new_state (tuple): Updated dialog state, with the same form of previous state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.dst">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tatk.dst" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -211,6 +204,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tatk.dialog_agent.html" class="btn btn-neutral float-right" title="tatk.dialog_agent package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tatk.e2e.html" class="btn btn-neutral" title="tatk.e2e package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
