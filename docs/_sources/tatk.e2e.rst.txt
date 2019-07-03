@@ -5,6 +5,7 @@ Module contents
 ---------------
 
 .. automodule:: tatk.e2e
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__

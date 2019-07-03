@@ -4,11 +4,58 @@ tatk.policy package
 Submodules
 ----------
 
+tatk.policy.pg module
+---------------------
+
+.. automodule:: tatk.policy.pg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.policy module
 -------------------------
 
 .. automodule:: tatk.policy.policy
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.ppo module
+----------------------
+
+.. automodule:: tatk.policy.ppo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.rlmodule module
+---------------------------
+
+.. automodule:: tatk.policy.rlmodule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.rule module
+-----------------------
+
+.. automodule:: tatk.policy.rule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vector module
+-------------------------
+
+.. automodule:: tatk.policy.vector
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 

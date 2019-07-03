@@ -8,8 +8,9 @@ tatk.nlu.nlu module
 -------------------
 
 .. automodule:: tatk.nlu.nlu
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
 
 

@@ -8,15 +8,9 @@ tatk.dst.state\_tracker module
 ------------------------------
 
 .. automodule:: tatk.dst.state_tracker
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
 
 
-Module contents
----------------
-
-.. automodule:: tatk.dst
-    :members:
-    :undoc-members:
-    :show-inheritance:
