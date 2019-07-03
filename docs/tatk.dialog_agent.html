@@ -87,6 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.dialog_agent package</a><ul>
@@ -346,12 +347,10 @@ user_first (boolean): True if user speak firstly, else system speak first.</p>
 <dl class="method">
 <dt id="tatk.dialog_agent.session.BiSession.next_response">
 <code class="sig-name descname">next_response</code><span class="sig-paren">(</span><em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.BiSession.next_response" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generated the next response.
-Args:</p>
-<blockquote>
-<div><p>observation (str or dict): The agent observation of next agent.</p>
-</div></blockquote>
+<dd><p>Generated the next response.</p>
 <dl class="simple">
+<dt>Args:</dt><dd><p>observation (str or dict): The agent observation of next agent.</p>
+</dd>
 <dt>Returns:</dt><dd><p>response (str or dict): The agent’s response.</p>
 </dd>
 </dl>
@@ -362,12 +361,10 @@ Args:</p>
 <code class="sig-name descname">next_turn</code><span class="sig-paren">(</span><em class="sig-param">last_observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.BiSession.next_turn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Conduct a new turn of dialog, which consists of the system response and user response.
 The variable type of responses can be either 1) str or 2) dialog act, depends on the dialog mode settings of the
-two agents which are supposed to be the same.
-Args:</p>
-<blockquote>
-<div><p>last_observation: Last agent response.</p>
-</div></blockquote>
+two agents which are supposed to be the same.</p>
 <dl class="simple">
+<dt>Args:</dt><dd><p>last_observation: Last agent response.</p>
+</dd>
 <dt>Returns:</dt><dd><p>sys_response: The response of system.
 user_response:The response of user simulator.
 session_over (boolean): True if session ends, else session continues.
@@ -409,12 +406,10 @@ reward (float): The reward given by the user.</p>
 <dl class="method">
 <dt id="tatk.dialog_agent.session.Session.next_response">
 <em class="property">abstract </em><code class="sig-name descname">next_response</code><span class="sig-paren">(</span><em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.Session.next_response" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generated the next response.
-Args:</p>
-<blockquote>
-<div><p>observation (str or dict): The agent observation of next agent.</p>
-</div></blockquote>
+<dd><p>Generated the next response.</p>
 <dl class="simple">
+<dt>Args:</dt><dd><p>observation (str or dict): The agent observation of next agent.</p>
+</dd>
 <dt>Returns:</dt><dd><p>response (str or dict): The agent’s response.</p>
 </dd>
 </dl>

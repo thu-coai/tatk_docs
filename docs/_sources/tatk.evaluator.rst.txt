@@ -1,0 +1,25 @@
+tatk.evaluator package
+======================
+
+Submodules
+----------
+
+tatk.evaluator.evaluator module
+-------------------------------
+
+.. automodule:: tatk.evaluator.evaluator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.evaluator.multiwoz\_eval module
+------------------------------------
+
+.. automodule:: tatk.evaluator.multiwoz_eval
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

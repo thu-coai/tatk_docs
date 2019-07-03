@@ -102,6 +102,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
@@ -214,15 +215,13 @@
 <dl class="method">
 <dt id="tatk.policy.policy.Policy.predict">
 <em class="property">abstract </em><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.policy.Policy.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict the next agent action given dialog state.
-Args:</p>
-<blockquote>
-<div><dl class="simple">
+<dd><p>Predict the next agent action given dialog state.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
 <dt>state (tuple or dict): when the DST and Policy module are separated, the type of state is tuple.</dt><dd><p>else when they are aggregated together, the type of state is dict (dialog act).</p>
 </dd>
 </dl>
-</div></blockquote>
-<dl class="simple">
+</dd>
 <dt>Returns:</dt><dd><p>action (dict): The next dialog action.</p>
 </dd>
 </dl>
@@ -256,12 +255,10 @@ Args:</p>
 <dl class="method">
 <dt id="tatk.policy.vector.Vector.action_devectorize">
 <code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.Vector.action_devectorize" title="Permalink to this definition">¶</a></dt>
-<dd><p>recover an action
-Args:</p>
-<blockquote>
-<div><p>action_vec (np.array): Dialog act vector</p>
-</div></blockquote>
+<dd><p>recover an action</p>
 <dl class="simple">
+<dt>Args:</dt><dd><p>action_vec (np.array): Dialog act vector</p>
+</dd>
 <dt>Returns:</dt><dd><p>action (tuple): Dialog act</p>
 </dd>
 </dl>
@@ -276,12 +273,10 @@ Args:</p>
 <dl class="method">
 <dt id="tatk.policy.vector.Vector.state_vectorize">
 <code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.Vector.state_vectorize" title="Permalink to this definition">¶</a></dt>
-<dd><p>vectorize a state
-Args:</p>
-<blockquote>
-<div><p>state (tuple): Dialog state</p>
-</div></blockquote>
+<dd><p>vectorize a state</p>
 <dl class="simple">
+<dt>Args:</dt><dd><p>state (tuple): Dialog state</p>
+</dd>
 <dt>Returns:</dt><dd><p>state_vec (np.array): Dialog state vector</p>
 </dd>
 </dl>

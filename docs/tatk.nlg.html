@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.e2e package" href="tatk.e2e.html" />
+    <link rel="next" title="tatk.evaluator package" href="tatk.evaluator.html" />
     <link rel="prev" title="tatk.nlu package" href="tatk.nlu.html" /> 
 </head>
 
@@ -92,6 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
@@ -175,12 +176,10 @@
 <dl class="method">
 <dt id="tatk.nlg.nlg.NLG.generate">
 <em class="property">abstract </em><code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a natural language utterance conditioned on the dialog act.
-Args:</p>
-<blockquote>
-<div><p>action (dict): The dialog action produced by dialog policy module, which is in dialog act format.</p>
-</div></blockquote>
+<dd><p>Generate a natural language utterance conditioned on the dialog act.</p>
 <dl class="simple">
+<dt>Args:</dt><dd><p>action (dict): The dialog action produced by dialog policy module, which is in dialog act format.</p>
+</dd>
 <dt>Returns:</dt><dd><p>response (str): A natural langauge utterance.</p>
 </dd>
 </dl>
@@ -199,7 +198,7 @@ Args:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.e2e.html" class="btn btn-neutral float-right" title="tatk.e2e package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.evaluator.html" class="btn btn-neutral float-right" title="tatk.evaluator package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tatk.nlu.html" class="btn btn-neutral" title="tatk.nlu package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
