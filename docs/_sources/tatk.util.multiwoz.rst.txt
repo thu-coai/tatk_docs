@@ -1,0 +1,43 @@
+tatk.util.multiwoz package
+==========================
+
+Submodules
+----------
+
+tatk.util.multiwoz.dbquery module
+---------------------------------
+
+.. automodule:: tatk.util.multiwoz.dbquery
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.util.multiwoz.lexicalize module
+------------------------------------
+
+.. automodule:: tatk.util.multiwoz.lexicalize
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.util.multiwoz.multiwoz\_slot\_trans module
+-----------------------------------------------
+
+.. automodule:: tatk.util.multiwoz.multiwoz_slot_trans
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.util.multiwoz.state module
+-------------------------------
+
+.. automodule:: tatk.util.multiwoz.state
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

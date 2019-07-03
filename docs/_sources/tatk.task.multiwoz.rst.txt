@@ -1,0 +1,16 @@
+tatk.task.multiwoz package
+==========================
+
+Submodules
+----------
+
+tatk.task.multiwoz.goal\_generator module
+-----------------------------------------
+
+.. automodule:: tatk.task.multiwoz.goal_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

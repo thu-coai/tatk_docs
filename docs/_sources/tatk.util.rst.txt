@@ -1,6 +1,14 @@
 tatk.util package
 =================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.util.camrest
+   tatk.util.multiwoz
+
 Submodules
 ----------
 

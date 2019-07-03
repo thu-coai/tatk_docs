@@ -1,0 +1,34 @@
+tatk.policy.multiwoz package
+============================
+
+Submodules
+----------
+
+tatk.policy.multiwoz.policy\_agenda\_multiwoz module
+----------------------------------------------------
+
+.. automodule:: tatk.policy.multiwoz.policy_agenda_multiwoz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.multiwoz.rule\_based\_multiwoz\_bot module
+------------------------------------------------------
+
+.. automodule:: tatk.policy.multiwoz.rule_based_multiwoz_bot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.multiwoz.vector\_multiwoz module
+--------------------------------------------
+
+.. automodule:: tatk.policy.multiwoz.vector_multiwoz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

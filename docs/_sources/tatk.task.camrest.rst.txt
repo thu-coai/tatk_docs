@@ -1,0 +1,11 @@
+tatk.task.camrest package
+=========================
+
+Module contents
+---------------
+
+.. automodule:: tatk.task.camrest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__

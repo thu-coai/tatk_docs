@@ -1,0 +1,34 @@
+tatk.util.camrest package
+=========================
+
+Submodules
+----------
+
+tatk.util.camrest.dbquery module
+--------------------------------
+
+.. automodule:: tatk.util.camrest.dbquery
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.util.camrest.lexicalize module
+-----------------------------------
+
+.. automodule:: tatk.util.camrest.lexicalize
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.util.camrest.state module
+------------------------------
+
+.. automodule:: tatk.util.camrest.state
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

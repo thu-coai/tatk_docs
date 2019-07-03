@@ -1,0 +1,19 @@
+tatk.task package
+=================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.task.camrest
+   tatk.task.multiwoz
+
+Module contents
+---------------
+
+.. automodule:: tatk.task
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__

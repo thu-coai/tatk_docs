@@ -1,6 +1,14 @@
 tatk.policy package
 ===================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.policy.camrest
+   tatk.policy.multiwoz
+
 Submodules
 ----------
 
