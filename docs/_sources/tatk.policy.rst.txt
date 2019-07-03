@@ -12,15 +12,6 @@ Subpackages
 Submodules
 ----------
 
-tatk.policy.pg module
----------------------
-
-.. automodule:: tatk.policy.pg
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
 tatk.policy.policy module
 -------------------------
 
@@ -30,28 +21,10 @@ tatk.policy.policy module
    :show-inheritance:
    :special-members: __init__
 
-tatk.policy.ppo module
-----------------------
-
-.. automodule:: tatk.policy.ppo
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
 tatk.policy.rlmodule module
 ---------------------------
 
 .. automodule:: tatk.policy.rlmodule
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
-tatk.policy.rule module
------------------------
-
-.. automodule:: tatk.policy.rule
    :members:
    :undoc-members:
    :show-inheritance:

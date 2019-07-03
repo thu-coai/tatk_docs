@@ -4,6 +4,15 @@ tatk.policy.multiwoz package
 Submodules
 ----------
 
+tatk.policy.multiwoz.data\_loader module
+----------------------------------------
+
+.. automodule:: tatk.policy.multiwoz.data_loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.multiwoz.policy\_agenda\_multiwoz module
 ----------------------------------------------------
 

@@ -1,11 +1,16 @@
 tatk.task.camrest package
 =========================
 
-Module contents
----------------
+Submodules
+----------
 
-.. automodule:: tatk.task.camrest
+tatk.task.camrest.goal\_generator module
+----------------------------------------
+
+.. automodule:: tatk.task.camrest.goal_generator
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
+
+
