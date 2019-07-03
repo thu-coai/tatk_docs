@@ -88,7 +88,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="tatk.task.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.task.camrest package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-task-camrest-goal-generator-module">tatk.task.camrest.goal_generator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.task.camrest.goal_generator">tatk.task.camrest.goal_generator module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.task.multiwoz.html">tatk.task.multiwoz package</a></li>
@@ -175,8 +175,40 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-task-camrest-goal-generator-module">
-<h2>tatk.task.camrest.goal_generator module<a class="headerlink" href="#tatk-task-camrest-goal-generator-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.task.camrest.goal_generator">
+<span id="tatk-task-camrest-goal-generator-module"></span><h2>tatk.task.camrest.goal_generator module<a class="headerlink" href="#module-tatk.task.camrest.goal_generator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.task.camrest.goal_generator.GoalGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.task.camrest.goal_generator.</code><code class="sig-name descname">GoalGenerator</code><span class="sig-paren">(</span><em class="sig-param">goal_model_path='/home/travis/build/thu-coai/tatk/data/camrest/goal/goal_model.pkl'</em>, <em class="sig-param">corpus_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.task.camrest.goal_generator.GoalGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>User goal generator.</p>
+<dl class="method">
+<dt id="tatk.task.camrest.goal_generator.GoalGenerator.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">goal_model_path='/home/travis/build/thu-coai/tatk/data/camrest/goal/goal_model.pkl'</em>, <em class="sig-param">corpus_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.task.camrest.goal_generator.GoalGenerator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>goal_model_path: path to a goal model 
+corpus_path: path to a dialog corpus to build a goal model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.task.camrest.goal_generator.GoalGenerator.build_message">
+<code class="sig-name descname">build_message</code><span class="sig-paren">(</span><em class="sig-param">user_goal</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.task.camrest.goal_generator.GoalGenerator.build_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.task.camrest.goal_generator.GoalGenerator.get_user_goal">
+<code class="sig-name descname">get_user_goal</code><span class="sig-paren">(</span><em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.task.camrest.goal_generator.GoalGenerator.get_user_goal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.task.camrest.goal_generator.nomial_sample">
+<code class="sig-prename descclassname">tatk.task.camrest.goal_generator.</code><code class="sig-name descname">nomial_sample</code><span class="sig-paren">(</span><em class="sig-param">counter: collections.Counter</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.task.camrest.goal_generator.nomial_sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 

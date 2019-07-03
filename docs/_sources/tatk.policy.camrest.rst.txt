@@ -4,6 +4,15 @@ tatk.policy.camrest package
 Submodules
 ----------
 
+tatk.policy.camrest.data\_loader module
+---------------------------------------
+
+.. automodule:: tatk.policy.camrest.data_loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.camrest.policy\_agenda\_camrest module
 --------------------------------------------------
 
