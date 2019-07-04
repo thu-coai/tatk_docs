@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk.nlg package &mdash; tatk  documentation</title>
+  <title>tatk.nlu.svm.multiwoz package &mdash; tatk  documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.evaluator package" href="tatk.evaluator.html" />
-    <link rel="prev" title="tatk.nlu.svm.multiwoz package" href="tatk.nlu.svm.multiwoz.html" /> 
+    <link rel="next" title="tatk.nlg package" href="tatk.nlg.html" />
+    <link rel="prev" title="tatk.nlu.svm package" href="tatk.nlu.svm.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,12 +86,26 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.nlg package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tatk.nlu.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tatk.nlu.svm.html">tatk.nlu.svm package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="tatk.nlu.svm.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#tatk-nlu-svm-classifier-module">tatk.nlu.svm.Classifier module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.Features">tatk.nlu.svm.Features module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.Tuples">tatk.nlu.svm.Tuples module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.dataset_walker">tatk.nlu.svm.dataset_walker module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.sutils">tatk.nlu.svm.sutils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#tatk-nlu-svm-train-module">tatk.nlu.svm.train module</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#module-tatk.nlu.nlu">tatk.nlu.nlu module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
@@ -141,13 +155,17 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>tatk.nlg package</li>
+          <li><a href="tatk.nlu.html">tatk.nlu package</a> &raquo;</li>
+        
+          <li><a href="tatk.nlu.svm.html">tatk.nlu.svm package</a> &raquo;</li>
+        
+      <li>tatk.nlu.svm.multiwoz package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/tatk.nlg.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.nlu.svm.multiwoz.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,32 +178,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk-nlg-package">
-<h1>tatk.nlg package<a class="headerlink" href="#tatk-nlg-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tatk-nlu-svm-multiwoz-package">
+<h1>tatk.nlu.svm.multiwoz package<a class="headerlink" href="#tatk-nlu-svm-multiwoz-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.nlg.nlg">
-<span id="tatk-nlg-nlg-module"></span><h2>tatk.nlg.nlg module<a class="headerlink" href="#module-tatk.nlg.nlg" title="Permalink to this headline">¶</a></h2>
-<p>Natural Language Generation Interface</p>
-<dl class="class">
-<dt id="tatk.nlg.nlg.NLG">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.nlg.nlg.</code><code class="sig-name descname">NLG</code><a class="headerlink" href="#tatk.nlg.nlg.NLG" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Base class for NLG model.</p>
-<dl class="method">
-<dt id="tatk.nlg.nlg.NLG.generate">
-<em class="property">abstract </em><code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a natural language utterance conditioned on the dialog act.</p>
+<div class="section" id="tatk-nlu-svm-multiwoz-evaluate-module">
+<h2>tatk.nlu.svm.multiwoz.evaluate module<a class="headerlink" href="#tatk-nlu-svm-multiwoz-evaluate-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-nlu-svm-multiwoz-nlu-module">
+<h2>tatk.nlu.svm.multiwoz.nlu module<a class="headerlink" href="#tatk-nlu-svm-multiwoz-nlu-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.nlu.svm.multiwoz.preprocess">
+<span id="tatk-nlu-svm-multiwoz-preprocess-module"></span><h2>tatk.nlu.svm.multiwoz.preprocess module<a class="headerlink" href="#module-tatk.nlu.svm.multiwoz.preprocess" title="Permalink to this headline">¶</a></h2>
+<p>Preprocess multiwoz data for SVMNLU.
+Usage:</p>
+<blockquote>
+<div><p>python preprocess [mode=all|usr|sys]
+mode: which side data will be use</p>
+</div></blockquote>
 <dl class="simple">
-<dt>Args:</dt><dd><p>action (dict): The dialog action produced by dialog policy module, which is in dialog act format.</p>
+<dt>Require:</dt><dd><ul class="simple">
+<li><p><cite>../../../../data/multiwoz/[train|val|test].json.zip</cite> data file</p></li>
+<li><p><cite>../../../../data/multiwoz/db</cite> database dir</p></li>
+</ul>
 </dd>
-<dt>Returns:</dt><dd><p>response (str): A natural langauge utterance.</p>
+<dt>Output:</dt><dd><ul class="simple">
+<li><p><cite>config/ontology_multiwoz_[mode].json</cite> ontology file</p></li>
+<li><p><cite>data/[mode]_data/</cite> processed data dir</p></li>
+</ul>
 </dd>
 </dl>
-</dd></dl>
-
-</dd></dl>
+<dl class="function">
+<dt id="tatk.nlu.svm.multiwoz.preprocess.read_zipped_json">
+<code class="sig-prename descclassname">tatk.nlu.svm.multiwoz.preprocess.</code><code class="sig-name descname">read_zipped_json</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.multiwoz.preprocess.read_zipped_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 </div>
@@ -198,10 +225,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.evaluator.html" class="btn btn-neutral float-right" title="tatk.evaluator package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.nlg.html" class="btn btn-neutral float-right" title="tatk.nlg package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.nlu.svm.multiwoz.html" class="btn btn-neutral" title="tatk.nlu.svm.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.nlu.svm.html" class="btn btn-neutral" title="tatk.nlu.svm package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

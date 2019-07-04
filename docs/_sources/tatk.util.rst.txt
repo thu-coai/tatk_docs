@@ -12,6 +12,15 @@ Subpackages
 Submodules
 ----------
 
+tatk.util.file\_util module
+---------------------------
+
+.. automodule:: tatk.util.file_util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.util.kb\_query module
 --------------------------
 

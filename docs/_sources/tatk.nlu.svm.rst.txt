@@ -1,0 +1,68 @@
+tatk.nlu.svm package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.nlu.svm.multiwoz
+
+Submodules
+----------
+
+tatk.nlu.svm.Classifier module
+------------------------------
+
+.. automodule:: tatk.nlu.svm.Classifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.svm.Features module
+----------------------------
+
+.. automodule:: tatk.nlu.svm.Features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.svm.Tuples module
+--------------------------
+
+.. automodule:: tatk.nlu.svm.Tuples
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.svm.dataset\_walker module
+-----------------------------------
+
+.. automodule:: tatk.nlu.svm.dataset_walker
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.svm.sutils module
+--------------------------
+
+.. automodule:: tatk.nlu.svm.sutils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.svm.train module
+-------------------------
+
+.. automodule:: tatk.nlu.svm.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

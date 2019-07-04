@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tatk.nlu.svm package &mdash; tatk  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tatk.nlu.svm.multiwoz package" href="tatk.nlu.svm.multiwoz.html" />
+    <link rel="prev" title="tatk.nlu package" href="tatk.nlu.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tatk
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tatk.nlu.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlu.svm package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-classifier-module">tatk.nlu.svm.Classifier module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.Features">tatk.nlu.svm.Features module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.Tuples">tatk.nlu.svm.Tuples module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.dataset_walker">tatk.nlu.svm.dataset_walker module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.sutils">tatk.nlu.svm.sutils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-train-module">tatk.nlu.svm.train module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#module-tatk.nlu.nlu">tatk.nlu.nlu module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tatk</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tatk.nlu.html">tatk.nlu package</a> &raquo;</li>
+        
+      <li>tatk.nlu.svm package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tatk.nlu.svm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tatk-nlu-svm-package">
+<h1>tatk.nlu.svm package<a class="headerlink" href="#tatk-nlu-svm-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html">tatk.nlu.svm.multiwoz package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#tatk-nlu-svm-multiwoz-evaluate-module">tatk.nlu.svm.multiwoz.evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#tatk-nlu-svm-multiwoz-nlu-module">tatk.nlu.svm.multiwoz.nlu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#module-tatk.nlu.svm.multiwoz.preprocess">tatk.nlu.svm.multiwoz.preprocess module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-nlu-svm-classifier-module">
+<h2>tatk.nlu.svm.Classifier module<a class="headerlink" href="#tatk-nlu-svm-classifier-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.nlu.svm.Features">
+<span id="tatk-nlu-svm-features-module"></span><h2>tatk.nlu.svm.Features module<a class="headerlink" href="#module-tatk.nlu.svm.Features" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.cnNgram">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">cnNgram</code><span class="sig-paren">(</span><em class="sig-param">words</em>, <em class="sig-param">logp</em>, <em class="sig-param">delta=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnNgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnNgram.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">words</em>, <em class="sig-param">logp</em>, <em class="sig-param">delta=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnNgram.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnNgram.logscore">
+<code class="sig-name descname">logscore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnNgram.logscore" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnNgram.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnNgram.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnNgram.string_repn">
+<code class="sig-name descname">string_repn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnNgram.string_repn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnNgram.word_list">
+<code class="sig-name descname">word_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnNgram.word_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Features.cn_ngram_merge">
+<code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">cn_ngram_merge</code><span class="sig-paren">(</span><em class="sig-param">ngrams</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cn_ngram_merge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Features.cn_ngram_prune">
+<code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">cn_ngram_prune</code><span class="sig-paren">(</span><em class="sig-param">ngrams</em>, <em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cn_ngram_prune" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Features.cn_ngram_replaced">
+<code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">cn_ngram_replaced</code><span class="sig-paren">(</span><em class="sig-param">ngram</em>, <em class="sig-param">searchwords</em>, <em class="sig-param">replacement</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cn_ngram_replaced" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.cnet">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">cnet</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnet.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnet.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnet.calculate">
+<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnet.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.cnet.tuple_calculate">
+<code class="sig-name descname">tuple_calculate</code><span class="sig-paren">(</span><em class="sig-param">this_tuple</em>, <em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.cnet.tuple_calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Features.get_cnngrams">
+<code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">get_cnngrams</code><span class="sig-paren">(</span><em class="sig-param">cnet</em>, <em class="sig-param">max_ngrams</em>, <em class="sig-param">max_length</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.get_cnngrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Features.get_ngrams">
+<code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">get_ngrams</code><span class="sig-paren">(</span><em class="sig-param">sentence</em>, <em class="sig-param">max_length</em>, <em class="sig-param">skip_ngrams=False</em>, <em class="sig-param">add_tags=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.get_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.lastSys">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">lastSys</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.lastSys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.lastSys.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.lastSys.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.lastSys.calculate">
+<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.lastSys.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.lastSys.tuple_calculate">
+<code class="sig-name descname">tuple_calculate</code><span class="sig-paren">(</span><em class="sig-param">this_tuple</em>, <em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.lastSys.tuple_calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.nbest">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">nbest</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbest.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbest.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbest.calculate">
+<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbest.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbest.calculate_sent">
+<code class="sig-name descname">calculate_sent</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbest.calculate_sent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbest.tuple_calculate">
+<code class="sig-name descname">tuple_calculate</code><span class="sig-paren">(</span><em class="sig-param">this_tuple</em>, <em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbest.tuple_calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.nbestLengths">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">nbestLengths</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestLengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbestLengths.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestLengths.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbestLengths.calculate">
+<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestLengths.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbestLengths.tuple_calculate">
+<code class="sig-name descname">tuple_calculate</code><span class="sig-paren">(</span><em class="sig-param">this_tuple</em>, <em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestLengths.tuple_calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.nbestScores">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">nbestScores</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestScores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbestScores.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestScores.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbestScores.calculate">
+<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestScores.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.nbestScores.tuple_calculate">
+<code class="sig-name descname">tuple_calculate</code><span class="sig-paren">(</span><em class="sig-param">this_tuple</em>, <em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.nbestScores.tuple_calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Features.valueIdentifying">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Features.</code><code class="sig-name descname">valueIdentifying</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.valueIdentifying" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.valueIdentifying.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.valueIdentifying.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.valueIdentifying.calculate">
+<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.valueIdentifying.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Features.valueIdentifying.tuple_calculate">
+<code class="sig-name descname">tuple_calculate</code><span class="sig-paren">(</span><em class="sig-param">this_tuple</em>, <em class="sig-param">log_turn</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Features.valueIdentifying.tuple_calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.nlu.svm.Tuples">
+<span id="tatk-nlu-svm-tuples-module"></span><h2>tatk.nlu.svm.Tuples module<a class="headerlink" href="#module-tatk.nlu.svm.Tuples" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.nlu.svm.Tuples.actual_value">
+<code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">actual_value</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.actual_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Tuples.genericValue">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">genericValue</code><span class="sig-paren">(</span><em class="sig-param">slot</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.genericValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Tuples.genericValue.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">slot</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.genericValue.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Tuples.generic_to_specific">
+<code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">generic_to_specific</code><span class="sig-paren">(</span><em class="sig-param">tup</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.generic_to_specific" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Tuples.is_generic">
+<code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">is_generic</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.is_generic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Tuples.makes_valid_act">
+<code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">makes_valid_act</code><span class="sig-paren">(</span><em class="sig-param">tuples</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.makes_valid_act" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Tuples.tuple_to_act">
+<code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">tuple_to_act</code><span class="sig-paren">(</span><em class="sig-param">t</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuple_to_act" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Tuples.tuples">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Tuples.</code><code class="sig-name descname">tuples</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Tuples.tuples.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuples.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Tuples.tuples.activeTuples">
+<code class="sig-name descname">activeTuples</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuples.activeTuples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Tuples.tuples.activeTuples_sent">
+<code class="sig-name descname">activeTuples_sent</code><span class="sig-paren">(</span><em class="sig-param">log_turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuples.activeTuples_sent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Tuples.tuples.distributionToNbest">
+<code class="sig-name descname">distributionToNbest</code><span class="sig-paren">(</span><em class="sig-param">tuple_distribution</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuples.distributionToNbest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Tuples.tuples.uactsToTuples">
+<code class="sig-name descname">uactsToTuples</code><span class="sig-paren">(</span><em class="sig-param">uacts</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Tuples.tuples.uactsToTuples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.nlu.svm.dataset_walker">
+<span id="tatk-nlu-svm-dataset-walker-module"></span><h2>tatk.nlu.svm.dataset_walker module<a class="headerlink" href="#module-tatk.nlu.svm.dataset_walker" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.svm.dataset_walker.Call">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.dataset_walker.</code><code class="sig-name descname">Call</code><span class="sig-paren">(</span><em class="sig-param">applog_filename</em>, <em class="sig-param">labels_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.dataset_walker.Call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.dataset_walker.Call.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">applog_filename</em>, <em class="sig-param">labels_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.dataset_walker.Call.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.dataset_walker.dataset_walker">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.dataset_walker.</code><code class="sig-name descname">dataset_walker</code><span class="sig-paren">(</span><em class="sig-param">dataListFile</em>, <em class="sig-param">labels=False</em>, <em class="sig-param">dataroot=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.dataset_walker.dataset_walker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.dataset_walker.dataset_walker.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">dataListFile</em>, <em class="sig-param">labels=False</em>, <em class="sig-param">dataroot=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.dataset_walker.dataset_walker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.nlu.svm.sutils">
+<span id="tatk-nlu-svm-sutils-module"></span><h2>tatk.nlu.svm.sutils module<a class="headerlink" href="#module-tatk.nlu.svm.sutils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.nlu.svm.sutils.import_class">
+<code class="sig-prename descclassname">tatk.nlu.svm.sutils.</code><code class="sig-name descname">import_class</code><span class="sig-paren">(</span><em class="sig-param">cl</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.sutils.import_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.sutils.powerset">
+<code class="sig-prename descclassname">tatk.nlu.svm.sutils.</code><code class="sig-name descname">powerset</code><span class="sig-paren">(</span><em class="sig-param">[1,2,3]) --&gt; () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.sutils.powerset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.sutils.svm_to_libsvm">
+<code class="sig-prename descclassname">tatk.nlu.svm.sutils.</code><code class="sig-name descname">svm_to_libsvm</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.sutils.svm_to_libsvm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tatk-nlu-svm-train-module">
+<h2>tatk.nlu.svm.train module<a class="headerlink" href="#tatk-nlu-svm-train-module" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tatk.nlu.svm.multiwoz.html" class="btn btn-neutral float-right" title="tatk.nlu.svm.multiwoz package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tatk.nlu.html" class="btn btn-neutral" title="tatk.nlu package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, thu-coai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

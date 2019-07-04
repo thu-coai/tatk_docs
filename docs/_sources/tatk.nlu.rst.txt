@@ -1,6 +1,13 @@
 tatk.nlu package
 ================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.nlu.svm
+
 Submodules
 ----------
 
