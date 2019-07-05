@@ -30,4 +30,13 @@ tatk.util.kb\_query module
    :show-inheritance:
    :special-members: __init__
 
+tatk.util.train\_util module
+----------------------------
+
+.. automodule:: tatk.util.train_util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 

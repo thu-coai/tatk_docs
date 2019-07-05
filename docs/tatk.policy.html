@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.policy.camrest package" href="tatk.policy.camrest.html" />
+    <link rel="next" title="tatk.policy.vector package" href="tatk.policy.vector.html" />
     <link rel="prev" title="tatk.task.multiwoz package" href="tatk.task.multiwoz.html" /> 
 </head>
 
@@ -87,14 +87,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.policy package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tatk.policy.camrest.html">tatk.policy.camrest package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.policy.multiwoz.html">tatk.policy.multiwoz package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.policy.policy">tatk.policy.policy module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tatk-policy-rlmodule-module">tatk.policy.rlmodule module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tatk.policy.vector">tatk.policy.vector module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.policy.vec">tatk.policy.vec module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
@@ -173,20 +172,10 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.policy.camrest.html">tatk.policy.camrest package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.camrest.html#tatk-policy-camrest-data-loader-module">tatk.policy.camrest.data_loader module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.camrest.html#tatk-policy-camrest-policy-agenda-camrest-module">tatk.policy.camrest.policy_agenda_camrest module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.camrest.html#tatk-policy-camrest-rule-based-camrest-bot-module">tatk.policy.camrest.rule_based_camrest_bot module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.camrest.html#tatk-policy-camrest-vector-camrest-module">tatk.policy.camrest.vector_camrest module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.policy.multiwoz.html">tatk.policy.multiwoz package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.multiwoz.html#tatk-policy-multiwoz-data-loader-module">tatk.policy.multiwoz.data_loader module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.multiwoz.html#tatk-policy-multiwoz-policy-agenda-multiwoz-module">tatk.policy.multiwoz.policy_agenda_multiwoz module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.multiwoz.html#tatk-policy-multiwoz-rule-based-multiwoz-bot-module">tatk.policy.multiwoz.rule_based_multiwoz_bot module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.multiwoz.html#tatk-policy-multiwoz-vector-multiwoz-module">tatk.policy.multiwoz.vector_multiwoz module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#module-tatk.policy.vector.vector_camrest">tatk.policy.vector.vector_camrest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#module-tatk.policy.vector.vector_multiwoz">tatk.policy.vector.vector_multiwoz module</a></li>
 </ul>
 </li>
 </ul>
@@ -230,22 +219,22 @@
 <div class="section" id="tatk-policy-rlmodule-module">
 <h2>tatk.policy.rlmodule module<a class="headerlink" href="#tatk-policy-rlmodule-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.policy.vector">
-<span id="tatk-policy-vector-module"></span><h2>tatk.policy.vector module<a class="headerlink" href="#module-tatk.policy.vector" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.policy.vec">
+<span id="tatk-policy-vec-module"></span><h2>tatk.policy.vec module<a class="headerlink" href="#module-tatk.policy.vec" title="Permalink to this headline">¶</a></h2>
 <p>Vector Interface</p>
 <dl class="class">
-<dt id="tatk.policy.vector.Vector">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vector.</code><code class="sig-name descname">Vector</code><a class="headerlink" href="#tatk.policy.vector.Vector" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.policy.vec.Vector">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vec.</code><code class="sig-name descname">Vector</code><a class="headerlink" href="#tatk.policy.vec.Vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
-<dt id="tatk.policy.vector.Vector.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.Vector.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.policy.vec.Vector.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="tatk.policy.vector.Vector.action_devectorize">
-<code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.Vector.action_devectorize" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.policy.vec.Vector.action_devectorize">
+<code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.action_devectorize" title="Permalink to this definition">¶</a></dt>
 <dd><p>recover an action</p>
 <dl class="simple">
 <dt>Args:</dt><dd><p>action_vec (np.array): Dialog act vector</p>
@@ -256,14 +245,14 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="tatk.policy.vector.Vector.generate_dict">
-<code class="sig-name descname">generate_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.Vector.generate_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.policy.vec.Vector.generate_dict">
+<code class="sig-name descname">generate_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.generate_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>init the dict for mapping state/action into vector</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="tatk.policy.vector.Vector.state_vectorize">
-<code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.Vector.state_vectorize" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.policy.vec.Vector.state_vectorize">
+<code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.state_vectorize" title="Permalink to this definition">¶</a></dt>
 <dd><p>vectorize a state</p>
 <dl class="simple">
 <dt>Args:</dt><dd><p>state (tuple): Dialog state</p>
@@ -286,7 +275,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.policy.camrest.html" class="btn btn-neutral float-right" title="tatk.policy.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.policy.vector.html" class="btn btn-neutral float-right" title="tatk.policy.vector package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tatk.task.multiwoz.html" class="btn btn-neutral" title="tatk.task.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

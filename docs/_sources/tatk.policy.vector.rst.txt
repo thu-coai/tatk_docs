@@ -1,0 +1,25 @@
+tatk.policy.vector package
+==========================
+
+Submodules
+----------
+
+tatk.policy.vector.vector\_camrest module
+-----------------------------------------
+
+.. automodule:: tatk.policy.vector.vector_camrest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vector.vector\_multiwoz module
+------------------------------------------
+
+.. automodule:: tatk.policy.vector.vector_multiwoz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

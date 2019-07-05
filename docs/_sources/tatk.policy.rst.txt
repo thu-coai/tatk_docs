@@ -6,8 +6,7 @@ Subpackages
 
 .. toctree::
 
-   tatk.policy.camrest
-   tatk.policy.multiwoz
+   tatk.policy.vector
 
 Submodules
 ----------
@@ -30,10 +29,10 @@ tatk.policy.rlmodule module
    :show-inheritance:
    :special-members: __init__
 
-tatk.policy.vector module
--------------------------
+tatk.policy.vec module
+----------------------
 
-.. automodule:: tatk.policy.vector
+.. automodule:: tatk.policy.vec
    :members:
    :undoc-members:
    :show-inheritance:
