@@ -12,6 +12,15 @@ Subpackages
 Submodules
 ----------
 
+tatk.util.allennlp\_file\_utils module
+--------------------------------------
+
+.. automodule:: tatk.util.allennlp_file_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.util.file\_util module
 ---------------------------
 
