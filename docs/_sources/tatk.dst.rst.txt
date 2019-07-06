@@ -1,6 +1,14 @@
 tatk.dst package
 ================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.dst.mdbt
+   tatk.dst.rule
+
 Submodules
 ----------
 

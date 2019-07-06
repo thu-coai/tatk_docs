@@ -91,12 +91,12 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlu.svm package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-classifier-module">tatk.nlu.svm.Classifier module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.Classifier">tatk.nlu.svm.Classifier module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.Features">tatk.nlu.svm.Features module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.Tuples">tatk.nlu.svm.Tuples module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.dataset_walker">tatk.nlu.svm.dataset_walker module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.sutils">tatk.nlu.svm.sutils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-train-module">tatk.nlu.svm.train module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.svm.train">tatk.nlu.svm.train module</a></li>
 </ul>
 </li>
 </ul>
@@ -195,8 +195,154 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-svm-classifier-module">
-<h2>tatk.nlu.svm.Classifier module<a class="headerlink" href="#tatk-nlu-svm-classifier-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.svm.Classifier">
+<span id="tatk-nlu-svm-classifier-module"></span><h2>tatk.nlu.svm.Classifier module<a class="headerlink" href="#module-tatk.nlu.svm.Classifier" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.svm.Classifier.SGD">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Classifier.</code><code class="sig-name descname">SGD</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SGD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SGD.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SGD.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SGD.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">params</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SGD.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SGD.params">
+<code class="sig-name descname">params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SGD.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SGD.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SGD.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SGD.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SGD.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Classifier.SVM">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Classifier.</code><code class="sig-name descname">SVM</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SVM.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SVM.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">params</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SVM.params">
+<code class="sig-name descname">params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SVM.pickC">
+<code class="sig-name descname">pickC</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM.pickC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SVM.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.SVM.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.SVM.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.nlu.svm.Classifier.classifier">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.Classifier.</code><code class="sig-name descname">classifier</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.cacheFeature">
+<code class="sig-name descname">cacheFeature</code><span class="sig-paren">(</span><em class="sig-param">dw</em>, <em class="sig-param">config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.cacheFeature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.createDictionary">
+<code class="sig-name descname">createDictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.createDictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.decodeToFile">
+<code class="sig-name descname">decodeToFile</code><span class="sig-paren">(</span><em class="sig-param">dw</em>, <em class="sig-param">output_fname</em>, <em class="sig-param">config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.decodeToFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.decode_sent">
+<code class="sig-name descname">decode_sent</code><span class="sig-paren">(</span><em class="sig-param">sentinfo</em>, <em class="sig-param">output_fname</em>, <em class="sig-param">config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.decode_sent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.export">
+<code class="sig-name descname">export</code><span class="sig-paren">(</span><em class="sig-param">models_fname</em>, <em class="sig-param">dictionary_fname</em>, <em class="sig-param">config_fname</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.export" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.extractFeatures">
+<code class="sig-name descname">extractFeatures</code><span class="sig-paren">(</span><em class="sig-param">dw</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.extractFeatures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.extractFeatures2">
+<code class="sig-name descname">extractFeatures2</code><span class="sig-paren">(</span><em class="sig-param">sentinfo</em>, <em class="sig-param">log_input_key='batch'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.extractFeatures2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">fname</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">save_fname</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.svm.Classifier.classifier.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">dw</em>, <em class="sig-param">config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.classifier.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Classifier.toSparse">
+<code class="sig-prename descclassname">tatk.nlu.svm.Classifier.</code><code class="sig-name descname">toSparse</code><span class="sig-paren">(</span><em class="sig-param">baseX</em>, <em class="sig-param">X</em>, <em class="sig-param">dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.toSparse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.Classifier.trainSVMwrapper">
+<code class="sig-prename descclassname">tatk.nlu.svm.Classifier.</code><code class="sig-name descname">trainSVMwrapper</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.Classifier.trainSVMwrapper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-tatk.nlu.svm.Features">
 <span id="tatk-nlu-svm-features-module"></span><h2>tatk.nlu.svm.Features module<a class="headerlink" href="#module-tatk.nlu.svm.Features" title="Permalink to this headline">¶</a></h2>
@@ -512,8 +658,18 @@
 <dd></dd></dl>
 
 </div>
-<div class="section" id="tatk-nlu-svm-train-module">
-<h2>tatk.nlu.svm.train module<a class="headerlink" href="#tatk-nlu-svm-train-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.svm.train">
+<span id="tatk-nlu-svm-train-module"></span><h2>tatk.nlu.svm.train module<a class="headerlink" href="#module-tatk.nlu.svm.train" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.nlu.svm.train.train">
+<code class="sig-prename descclassname">tatk.nlu.svm.train.</code><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.train.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.svm.train.usage">
+<code class="sig-prename descclassname">tatk.nlu.svm.train.</code><code class="sig-name descname">usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.train.usage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
