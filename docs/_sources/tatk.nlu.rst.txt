@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   tatk.nlu.bert
    tatk.nlu.svm
 
 Submodules

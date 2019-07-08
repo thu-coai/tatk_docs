@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   tatk.nlu.svm.camrest
    tatk.nlu.svm.multiwoz
 
 Submodules

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk.nlu.svm package &mdash; tatk  documentation</title>
+  <title>tatk.nlu.bert package &mdash; tatk  documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.nlu.svm.camrest package" href="tatk.nlu.svm.camrest.html" />
-    <link rel="prev" title="tatk.nlu.bert.multiwoz package" href="tatk.nlu.bert.multiwoz.html" /> 
+    <link rel="next" title="tatk.nlu.bert.camrest package" href="tatk.nlu.bert.camrest.html" />
+    <link rel="prev" title="tatk.nlu package" href="tatk.nlu.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,18 +88,16 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="tatk.nlu.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlu.bert.html">tatk.nlu.bert package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlu.svm package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlu.bert package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-classifier-module">tatk.nlu.svm.Classifier module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-features-module">tatk.nlu.svm.Features module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-tuples-module">tatk.nlu.svm.Tuples module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-dataset-walker-module">tatk.nlu.svm.dataset_walker module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-sutils-module">tatk.nlu.svm.sutils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-svm-train-module">tatk.nlu.svm.train module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-bert-dataloader-module">tatk.nlu.bert.dataloader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-bert-model-module">tatk.nlu.bert.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-bert-test-module">tatk.nlu.bert.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-bert-train-module">tatk.nlu.bert.train module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.nlu.svm.html">tatk.nlu.svm package</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlu.html#submodules">Submodules</a></li>
@@ -158,13 +156,13 @@
         
           <li><a href="tatk.nlu.html">tatk.nlu package</a> &raquo;</li>
         
-      <li>tatk.nlu.svm package</li>
+      <li>tatk.nlu.bert package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/tatk.nlu.svm.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.nlu.bert.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -177,24 +175,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk-nlu-svm-package">
-<h1>tatk.nlu.svm package<a class="headerlink" href="#tatk-nlu-svm-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tatk-nlu-bert-package">
+<h1>tatk.nlu.bert package<a class="headerlink" href="#tatk-nlu-bert-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.svm.camrest.html">tatk.nlu.svm.camrest package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.camrest.html#tatk-nlu-svm-camrest-evaluate-module">tatk.nlu.svm.camrest.evaluate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.camrest.html#tatk-nlu-svm-camrest-nlu-module">tatk.nlu.svm.camrest.nlu module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.camrest.html#tatk-nlu-svm-camrest-preprocess-module">tatk.nlu.svm.camrest.preprocess module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.bert.camrest.html">tatk.nlu.bert.camrest package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.camrest.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.camrest.html#tatk-nlu-bert-camrest-evaluate-module">tatk.nlu.bert.camrest.evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.camrest.html#tatk-nlu-bert-camrest-nlu-module">tatk.nlu.bert.camrest.nlu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.camrest.html#tatk-nlu-bert-camrest-postprocess-module">tatk.nlu.bert.camrest.postprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.camrest.html#tatk-nlu-bert-camrest-preprocess-module">tatk.nlu.bert.camrest.preprocess module</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html">tatk.nlu.svm.multiwoz package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#tatk-nlu-svm-multiwoz-evaluate-module">tatk.nlu.svm.multiwoz.evaluate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#tatk-nlu-svm-multiwoz-nlu-module">tatk.nlu.svm.multiwoz.nlu module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.svm.multiwoz.html#tatk-nlu-svm-multiwoz-preprocess-module">tatk.nlu.svm.multiwoz.preprocess module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.bert.multiwoz.html">tatk.nlu.bert.multiwoz package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.multiwoz.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.multiwoz.html#tatk-nlu-bert-multiwoz-evaluate-module">tatk.nlu.bert.multiwoz.evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.multiwoz.html#tatk-nlu-bert-multiwoz-nlu-module">tatk.nlu.bert.multiwoz.nlu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.multiwoz.html#tatk-nlu-bert-multiwoz-postprocess-module">tatk.nlu.bert.multiwoz.postprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.bert.multiwoz.html#tatk-nlu-bert-multiwoz-preprocess-module">tatk.nlu.bert.multiwoz.preprocess module</a></li>
 </ul>
 </li>
 </ul>
@@ -203,23 +203,17 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-svm-classifier-module">
-<h2>tatk.nlu.svm.Classifier module<a class="headerlink" href="#tatk-nlu-svm-classifier-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tatk-nlu-bert-dataloader-module">
+<h2>tatk.nlu.bert.dataloader module<a class="headerlink" href="#tatk-nlu-bert-dataloader-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-svm-features-module">
-<h2>tatk.nlu.svm.Features module<a class="headerlink" href="#tatk-nlu-svm-features-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tatk-nlu-bert-model-module">
+<h2>tatk.nlu.bert.model module<a class="headerlink" href="#tatk-nlu-bert-model-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-svm-tuples-module">
-<h2>tatk.nlu.svm.Tuples module<a class="headerlink" href="#tatk-nlu-svm-tuples-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tatk-nlu-bert-test-module">
+<h2>tatk.nlu.bert.test module<a class="headerlink" href="#tatk-nlu-bert-test-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-svm-dataset-walker-module">
-<h2>tatk.nlu.svm.dataset_walker module<a class="headerlink" href="#tatk-nlu-svm-dataset-walker-module" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tatk-nlu-svm-sutils-module">
-<h2>tatk.nlu.svm.sutils module<a class="headerlink" href="#tatk-nlu-svm-sutils-module" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tatk-nlu-svm-train-module">
-<h2>tatk.nlu.svm.train module<a class="headerlink" href="#tatk-nlu-svm-train-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tatk-nlu-bert-train-module">
+<h2>tatk.nlu.bert.train module<a class="headerlink" href="#tatk-nlu-bert-train-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -231,10 +225,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.nlu.svm.camrest.html" class="btn btn-neutral float-right" title="tatk.nlu.svm.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.nlu.bert.camrest.html" class="btn btn-neutral float-right" title="tatk.nlu.bert.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.nlu.bert.multiwoz.html" class="btn btn-neutral" title="tatk.nlu.bert.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.nlu.html" class="btn btn-neutral" title="tatk.nlu package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

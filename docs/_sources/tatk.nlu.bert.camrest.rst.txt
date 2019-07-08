@@ -1,0 +1,43 @@
+tatk.nlu.bert.camrest package
+=============================
+
+Submodules
+----------
+
+tatk.nlu.bert.camrest.evaluate module
+-------------------------------------
+
+.. automodule:: tatk.nlu.bert.camrest.evaluate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.bert.camrest.nlu module
+--------------------------------
+
+.. automodule:: tatk.nlu.bert.camrest.nlu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.bert.camrest.postprocess module
+----------------------------------------
+
+.. automodule:: tatk.nlu.bert.camrest.postprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.bert.camrest.preprocess module
+---------------------------------------
+
+.. automodule:: tatk.nlu.bert.camrest.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
