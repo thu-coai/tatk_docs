@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk.policy package &mdash; tatk  documentation</title>
+  <title>tatk.dst.mdbt.multiwoz package &mdash; tatk  documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.policy.vector package" href="tatk.policy.vector.html" />
-    <link rel="prev" title="tatk.task.multiwoz package" href="tatk.task.multiwoz.html" /> 
+    <link rel="next" title="tatk.dst.rule package" href="tatk.dst.rule.html" />
+    <link rel="prev" title="tatk.dst.mdbt package" href="tatk.dst.mdbt.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,22 +85,28 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.policy package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-policy-policy-module">tatk.policy.policy module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-policy-rlmodule-module">tatk.policy.rlmodule module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-policy-vec-module">tatk.policy.vec module</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tatk.dst.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tatk.dst.mdbt.html">tatk.dst.mdbt package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="tatk.dst.mdbt.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#tatk-dst-mdbt-evaluate-module">tatk.dst.mdbt.evaluate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#tatk-dst-mdbt-mdbt-module">tatk.dst.mdbt.mdbt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#tatk-dst-mdbt-mdbt-util-module">tatk.dst.mdbt.mdbt_util module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.dst.rule.html">tatk.dst.rule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#tatk-dst-state-tracker-module">tatk.dst.state_tracker module</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
 </ul>
 
@@ -147,13 +153,17 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>tatk.policy package</li>
+          <li><a href="tatk.dst.html">tatk.dst package</a> &raquo;</li>
+        
+          <li><a href="tatk.dst.mdbt.html">tatk.dst.mdbt package</a> &raquo;</li>
+        
+      <li>tatk.dst.mdbt.multiwoz package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/tatk.policy.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.dst.mdbt.multiwoz.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -166,32 +176,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk-policy-package">
-<h1>tatk.policy package<a class="headerlink" href="#tatk-policy-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#tatk-policy-vector-vector-camrest-module">tatk.policy.vector.vector_camrest module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#tatk-policy-vector-vector-multiwoz-module">tatk.policy.vector.vector_multiwoz module</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+  <div class="section" id="tatk-dst-mdbt-multiwoz-package">
+<h1>tatk.dst.mdbt.multiwoz package<a class="headerlink" href="#tatk-dst-mdbt-multiwoz-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-policy-policy-module">
-<h2>tatk.policy.policy module<a class="headerlink" href="#tatk-policy-policy-module" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tatk-policy-rlmodule-module">
-<h2>tatk.policy.rlmodule module<a class="headerlink" href="#tatk-policy-rlmodule-module" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tatk-policy-vec-module">
-<h2>tatk.policy.vec module<a class="headerlink" href="#tatk-policy-vec-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tatk-dst-mdbt-multiwoz-mdbt-module">
+<h2>tatk.dst.mdbt.multiwoz.mdbt module<a class="headerlink" href="#tatk-dst-mdbt-multiwoz-mdbt-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -203,10 +194,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.policy.vector.html" class="btn btn-neutral float-right" title="tatk.policy.vector package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.dst.rule.html" class="btn btn-neutral float-right" title="tatk.dst.rule package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.task.multiwoz.html" class="btn btn-neutral" title="tatk.task.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.dst.mdbt.html" class="btn btn-neutral" title="tatk.dst.mdbt package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

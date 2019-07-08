@@ -1,6 +1,13 @@
 tatk.dst.mdbt package
 =====================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.dst.mdbt.multiwoz
+
 Submodules
 ----------
 

@@ -88,10 +88,10 @@
 <li class="toctree-l3"><a class="reference internal" href="tatk.util.camrest.html">tatk.util.camrest package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.util.multiwoz package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.util.multiwoz.dbquery">tatk.util.multiwoz.dbquery module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.util.multiwoz.lexicalize">tatk.util.multiwoz.lexicalize module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.util.multiwoz.multiwoz_slot_trans">tatk.util.multiwoz.multiwoz_slot_trans module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.util.multiwoz.state">tatk.util.multiwoz.state module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-util-multiwoz-dbquery-module">tatk.util.multiwoz.dbquery module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-util-multiwoz-lexicalize-module">tatk.util.multiwoz.lexicalize module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-util-multiwoz-multiwoz-slot-trans-module">tatk.util.multiwoz.multiwoz_slot_trans module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-util-multiwoz-state-module">tatk.util.multiwoz.state module</a></li>
 </ul>
 </li>
 </ul>
@@ -99,7 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#tatk-util-allennlp-file-utils-module">tatk.util.allennlp_file_utils module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#tatk-util-file-util-module">tatk.util.file_util module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.html#tatk-util-kb-query-module">tatk.util.kb_query module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#tatk-util-train-util-module">tatk.util.train_util module</a></li>
 </ul>
 </li>
@@ -182,49 +182,17 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.util.multiwoz.dbquery">
-<span id="tatk-util-multiwoz-dbquery-module"></span><h2>tatk.util.multiwoz.dbquery module<a class="headerlink" href="#module-tatk.util.multiwoz.dbquery" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="tatk.util.multiwoz.dbquery.query">
-<code class="sig-prename descclassname">tatk.util.multiwoz.dbquery.</code><code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">constraints</em>, <em class="sig-param">ignore_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.multiwoz.dbquery.query" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of entities for a given domain
-based on the annotation of the belief state</p>
-</dd></dl>
-
+<div class="section" id="tatk-util-multiwoz-dbquery-module">
+<h2>tatk.util.multiwoz.dbquery module<a class="headerlink" href="#tatk-util-multiwoz-dbquery-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.util.multiwoz.lexicalize">
-<span id="tatk-util-multiwoz-lexicalize-module"></span><h2>tatk.util.multiwoz.lexicalize module<a class="headerlink" href="#module-tatk.util.multiwoz.lexicalize" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="tatk.util.multiwoz.lexicalize.deflat_da">
-<code class="sig-prename descclassname">tatk.util.multiwoz.lexicalize.</code><code class="sig-name descname">deflat_da</code><span class="sig-paren">(</span><em class="sig-param">meta</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.multiwoz.lexicalize.deflat_da" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.util.multiwoz.lexicalize.delexicalize_da">
-<code class="sig-prename descclassname">tatk.util.multiwoz.lexicalize.</code><code class="sig-name descname">delexicalize_da</code><span class="sig-paren">(</span><em class="sig-param">meta</em>, <em class="sig-param">requestable</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.multiwoz.lexicalize.delexicalize_da" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.util.multiwoz.lexicalize.flat_da">
-<code class="sig-prename descclassname">tatk.util.multiwoz.lexicalize.</code><code class="sig-name descname">flat_da</code><span class="sig-paren">(</span><em class="sig-param">meta</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.multiwoz.lexicalize.flat_da" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.util.multiwoz.lexicalize.lexicalize_da">
-<code class="sig-prename descclassname">tatk.util.multiwoz.lexicalize.</code><code class="sig-name descname">lexicalize_da</code><span class="sig-paren">(</span><em class="sig-param">meta</em>, <em class="sig-param">entities</em>, <em class="sig-param">state</em>, <em class="sig-param">requestable</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.multiwoz.lexicalize.lexicalize_da" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-util-multiwoz-lexicalize-module">
+<h2>tatk.util.multiwoz.lexicalize module<a class="headerlink" href="#tatk-util-multiwoz-lexicalize-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.util.multiwoz.multiwoz_slot_trans">
-<span id="tatk-util-multiwoz-multiwoz-slot-trans-module"></span><h2>tatk.util.multiwoz.multiwoz_slot_trans module<a class="headerlink" href="#module-tatk.util.multiwoz.multiwoz_slot_trans" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tatk-util-multiwoz-multiwoz-slot-trans-module">
+<h2>tatk.util.multiwoz.multiwoz_slot_trans module<a class="headerlink" href="#tatk-util-multiwoz-multiwoz-slot-trans-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.util.multiwoz.state">
-<span id="tatk-util-multiwoz-state-module"></span><h2>tatk.util.multiwoz.state module<a class="headerlink" href="#module-tatk.util.multiwoz.state" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="tatk.util.multiwoz.state.default_state">
-<code class="sig-prename descclassname">tatk.util.multiwoz.state.</code><code class="sig-name descname">default_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.multiwoz.state.default_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-util-multiwoz-state-module">
+<h2>tatk.util.multiwoz.state module<a class="headerlink" href="#tatk-util-multiwoz-state-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

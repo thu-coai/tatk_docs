@@ -1,0 +1,16 @@
+tatk.dst.mdbt.multiwoz package
+==============================
+
+Submodules
+----------
+
+tatk.dst.mdbt.multiwoz.mdbt module
+----------------------------------
+
+.. automodule:: tatk.dst.mdbt.multiwoz.mdbt
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

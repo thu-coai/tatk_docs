@@ -89,16 +89,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="tatk.policy.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.policy.vector package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.vector.vector_camrest">tatk.policy.vector.vector_camrest module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.vector.vector_multiwoz">tatk.policy.vector.vector_multiwoz module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-policy-vector-vector-camrest-module">tatk.policy.vector.vector_camrest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-policy-vector-vector-multiwoz-module">tatk.policy.vector.vector_multiwoz module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#tatk-policy-policy-module">tatk.policy.policy module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#tatk-policy-rlmodule-module">tatk.policy.rlmodule module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.vec">tatk.policy.vec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#tatk-policy-vec-module">tatk.policy.vec module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
@@ -178,137 +178,11 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.policy.vector.vector_camrest">
-<span id="tatk-policy-vector-vector-camrest-module"></span><h2>tatk.policy.vector.vector_camrest module<a class="headerlink" href="#module-tatk.policy.vector.vector_camrest" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vector.vector_camrest.</code><code class="sig-name descname">CamrestVector</code><span class="sig-paren">(</span><em class="sig-param">voc_file</em>, <em class="sig-param">voc_opp_file</em>, <em class="sig-param">character='sys'</em>, <em class="sig-param">intent_file='/home/travis/build/thu-coai/tatk/data/camrest/trackable_intent.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.policy.html#tatk.policy.vec.Vector" title="tatk.policy.vec.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.policy.vec.Vector</span></code></a></p>
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">voc_file</em>, <em class="sig-param">voc_opp_file</em>, <em class="sig-param">character='sys'</em>, <em class="sig-param">intent_file='/home/travis/build/thu-coai/tatk/data/camrest/trackable_intent.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.action_devectorize">
-<code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.action_devectorize" title="Permalink to this definition">¶</a></dt>
-<dd><p>recover an action
-Args:</p>
-<blockquote>
-<div><p>action_vec (np.array): Dialog act vector</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>action (tuple): Dialog act</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.action_vectorize">
-<code class="sig-name descname">action_vectorize</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.action_vectorize" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.generate_dict">
-<code class="sig-name descname">generate_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.generate_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>init the dict for mapping state/action into vector</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.one_hot_vector">
-<code class="sig-name descname">one_hot_vector</code><span class="sig-paren">(</span><em class="sig-param">num</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.one_hot_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return number of available entities for particular domain.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.pointer">
-<code class="sig-name descname">pointer</code><span class="sig-paren">(</span><em class="sig-param">turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.pointer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_camrest.CamrestVector.state_vectorize">
-<code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_camrest.CamrestVector.state_vectorize" title="Permalink to this definition">¶</a></dt>
-<dd><p>vectorize a state
-Args:</p>
-<blockquote>
-<div><p>state (tuple): Dialog state
-action (tuple): Dialog act</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>state_vec (np.array): Dialog state vector</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-policy-vector-vector-camrest-module">
+<h2>tatk.policy.vector.vector_camrest module<a class="headerlink" href="#tatk-policy-vector-vector-camrest-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.policy.vector.vector_multiwoz">
-<span id="tatk-policy-vector-vector-multiwoz-module"></span><h2>tatk.policy.vector.vector_multiwoz module<a class="headerlink" href="#module-tatk.policy.vector.vector_multiwoz" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vector.vector_multiwoz.</code><code class="sig-name descname">MultiWozVector</code><span class="sig-paren">(</span><em class="sig-param">voc_file</em>, <em class="sig-param">voc_opp_file</em>, <em class="sig-param">character='sys'</em>, <em class="sig-param">intent_file='/home/travis/build/thu-coai/tatk/data/multiwoz/trackable_intent.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.policy.html#tatk.policy.vec.Vector" title="tatk.policy.vec.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.policy.vec.Vector</span></code></a></p>
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">voc_file</em>, <em class="sig-param">voc_opp_file</em>, <em class="sig-param">character='sys'</em>, <em class="sig-param">intent_file='/home/travis/build/thu-coai/tatk/data/multiwoz/trackable_intent.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.action_devectorize">
-<code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.action_devectorize" title="Permalink to this definition">¶</a></dt>
-<dd><p>recover an action
-Args:</p>
-<blockquote>
-<div><p>action_vec (np.array): Dialog act vector</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>action (tuple): Dialog act</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.action_vectorize">
-<code class="sig-name descname">action_vectorize</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.action_vectorize" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.generate_dict">
-<code class="sig-name descname">generate_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.generate_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>init the dict for mapping state/action into vector</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.one_hot_vector">
-<code class="sig-name descname">one_hot_vector</code><span class="sig-paren">(</span><em class="sig-param">num</em>, <em class="sig-param">domain</em>, <em class="sig-param">vector</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.one_hot_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return number of available entities for particular domain.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.pointer">
-<code class="sig-name descname">pointer</code><span class="sig-paren">(</span><em class="sig-param">turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.pointer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.vector.vector_multiwoz.MultiWozVector.state_vectorize">
-<code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_multiwoz.MultiWozVector.state_vectorize" title="Permalink to this definition">¶</a></dt>
-<dd><p>vectorize a state
-Args:</p>
-<blockquote>
-<div><p>state (tuple): Dialog state
-action (tuple): Dialog act</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>state_vec (np.array): Dialog state vector</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-policy-vector-vector-multiwoz-module">
+<h2>tatk.policy.vector.vector_multiwoz module<a class="headerlink" href="#tatk-policy-vector-vector-multiwoz-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

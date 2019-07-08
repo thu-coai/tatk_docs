@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="tatk.dialog_agent package" href="tatk.dialog_agent.html" />
-    <link rel="prev" title="tatk.dst.mdbt package" href="tatk.dst.mdbt.html" /> 
+    <link rel="prev" title="tatk.dst.mdbt.multiwoz package" href="tatk.dst.mdbt.multiwoz.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,15 +95,15 @@
 <li class="toctree-l3"><a class="reference internal" href="tatk.dst.mdbt.html">tatk.dst.mdbt package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.dst.rule package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.dst.rule.dst_util">tatk.dst.rule.dst_util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-dst-rule-dst-util-module">tatk.dst.rule.dst_util module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tatk-dst-rule-evaluate-module">tatk.dst.rule.evaluate module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.dst.rule.rule_dst">tatk.dst.rule.rule_dst module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-dst-rule-rule-dst-module">tatk.dst.rule.rule_dst module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#tatk-dst-state-tracker-module">tatk.dst.state_tracker module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
@@ -178,95 +178,14 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.dst.rule.dst_util">
-<span id="tatk-dst-rule-dst-util-module"></span><h2>tatk.dst.rule.dst_util module<a class="headerlink" href="#module-tatk.dst.rule.dst_util" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="tatk.dst.rule.dst_util.init_state">
-<code class="sig-prename descclassname">tatk.dst.rule.dst_util.</code><code class="sig-name descname">init_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.dst_util.init_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>The init state to start a session.
-Example:
-state = {</p>
-<blockquote>
-<div><blockquote>
-<div><p>‘user_action’: None,
-‘history’: [],
-‘belief_state’: None,
-‘request_state’: {}</p>
-</div></blockquote>
-<p>}</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.rule.dst_util.minDistance">
-<code class="sig-prename descclassname">tatk.dst.rule.dst_util.</code><code class="sig-name descname">minDistance</code><span class="sig-paren">(</span><em class="sig-param">word1</em>, <em class="sig-param">word2</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.dst_util.minDistance" title="Permalink to this definition">¶</a></dt>
-<dd><p>The minimum edit distance between word 1 and 2.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.rule.dst_util.normalize_value">
-<code class="sig-prename descclassname">tatk.dst.rule.dst_util.</code><code class="sig-name descname">normalize_value</code><span class="sig-paren">(</span><em class="sig-param">value_set</em>, <em class="sig-param">domain</em>, <em class="sig-param">slot</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.dst_util.normalize_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Normalized the value produced by NLU module to map it to the ontology value space.
-Args:</p>
-<blockquote>
-<div><p>value_set (dict): The value set of task ontology.
-domain (str): The domain of the slot-value pairs.
-slot (str): The slot of the value.
-value (str): The raw value detected by NLU module.</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>value (str): The normalized value, which fits with the domain ontology.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.rule.dst_util.special_match">
-<code class="sig-prename descclassname">tatk.dst.rule.dst_util.</code><code class="sig-name descname">special_match</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">slot</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.dst_util.special_match" title="Permalink to this definition">¶</a></dt>
-<dd><p>special slot fuzzy matching</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.rule.dst_util.str_similar">
-<code class="sig-prename descclassname">tatk.dst.rule.dst_util.</code><code class="sig-name descname">str_similar</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.dst_util.str_similar" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-dst-rule-dst-util-module">
+<h2>tatk.dst.rule.dst_util module<a class="headerlink" href="#tatk-dst-rule-dst-util-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="tatk-dst-rule-evaluate-module">
 <h2>tatk.dst.rule.evaluate module<a class="headerlink" href="#tatk-dst-rule-evaluate-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.dst.rule.rule_dst">
-<span id="tatk-dst-rule-rule-dst-module"></span><h2>tatk.dst.rule.rule_dst module<a class="headerlink" href="#module-tatk.dst.rule.rule_dst" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.dst.rule.rule_dst.RuleDST">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.rule.rule_dst.</code><code class="sig-name descname">RuleDST</code><a class="headerlink" href="#tatk.dst.rule.rule_dst.RuleDST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.dst.html#tatk.dst.state_tracker.Tracker" title="tatk.dst.state_tracker.Tracker"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.state_tracker.Tracker</span></code></a></p>
-<p>Rule based DST which trivially updates new values from NLU result to states.</p>
-<dl class="method">
-<dt id="tatk.dst.rule.rule_dst.RuleDST.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.rule_dst.RuleDST.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.rule.rule_dst.RuleDST.init_session">
-<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.rule_dst.RuleDST.init_session" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.rule.rule_dst.RuleDST.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">user_act=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.rule_dst.RuleDST.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the internal dialog state variable.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>dialog_act (str or dict): The type is str when Tracker is word-level (such as NBT), and dict when it is DA-level.</p>
-</dd>
-<dt>Returns:</dt><dd><p>new_state (tuple): Updated dialog state, with the same form of previous state.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-dst-rule-rule-dst-module">
+<h2>tatk.dst.rule.rule_dst module<a class="headerlink" href="#tatk-dst-rule-rule-dst-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -281,7 +200,7 @@ value (str): The raw value detected by NLU module.</p>
         <a href="tatk.dialog_agent.html" class="btn btn-neutral float-right" title="tatk.dialog_agent package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.dst.mdbt.html" class="btn btn-neutral" title="tatk.dst.mdbt package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.dst.mdbt.multiwoz.html" class="btn btn-neutral" title="tatk.dst.mdbt.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
