@@ -91,9 +91,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-policy-policy-module">tatk.policy.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.policy.policy">tatk.policy.policy module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tatk-policy-rlmodule-module">tatk.policy.rlmodule module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-policy-vec-module">tatk.policy.vec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.policy.vec">tatk.policy.vec module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
@@ -174,8 +174,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#tatk-policy-vector-vector-camrest-module">tatk.policy.vector.vector_camrest module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#tatk-policy-vector-vector-multiwoz-module">tatk.policy.vector.vector_multiwoz module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#module-tatk.policy.vector.vector_camrest">tatk.policy.vector.vector_camrest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vector.html#module-tatk.policy.vector.vector_multiwoz">tatk.policy.vector.vector_multiwoz module</a></li>
 </ul>
 </li>
 </ul>
@@ -184,14 +184,86 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-policy-policy-module">
-<h2>tatk.policy.policy module<a class="headerlink" href="#tatk-policy-policy-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.policy.policy">
+<span id="tatk-policy-policy-module"></span><h2>tatk.policy.policy module<a class="headerlink" href="#module-tatk.policy.policy" title="Permalink to this headline">¶</a></h2>
+<p>Policy Interface</p>
+<dl class="class">
+<dt id="tatk.policy.policy.Policy">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.policy.</code><code class="sig-name descname">Policy</code><a class="headerlink" href="#tatk.policy.policy.Policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base class for policy model.</p>
+<dl class="method">
+<dt id="tatk.policy.policy.Policy.init_session">
+<em class="property">abstract </em><code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.policy.Policy.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the class variables for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.policy.Policy.predict">
+<em class="property">abstract </em><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.policy.Policy.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the next agent action given dialog state.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>state (tuple or dict): when the DST and Policy module are separated, the type of state is tuple.</dt><dd><p>else when they are aggregated together, the type of state is dict (dialog act).</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>action (dict): The next dialog action.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="tatk-policy-rlmodule-module">
 <h2>tatk.policy.rlmodule module<a class="headerlink" href="#tatk-policy-rlmodule-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-policy-vec-module">
-<h2>tatk.policy.vec module<a class="headerlink" href="#tatk-policy-vec-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.policy.vec">
+<span id="tatk-policy-vec-module"></span><h2>tatk.policy.vec module<a class="headerlink" href="#module-tatk.policy.vec" title="Permalink to this headline">¶</a></h2>
+<p>Vector Interface</p>
+<dl class="class">
+<dt id="tatk.policy.vec.Vector">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vec.</code><code class="sig-name descname">Vector</code><a class="headerlink" href="#tatk.policy.vec.Vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.policy.vec.Vector.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vec.Vector.action_devectorize">
+<code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.action_devectorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>recover an action</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>action_vec (np.array): Dialog act vector</p>
+</dd>
+<dt>Returns:</dt><dd><p>action (tuple): Dialog act</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vec.Vector.generate_dict">
+<code class="sig-name descname">generate_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.generate_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>init the dict for mapping state/action into vector</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vec.Vector.state_vectorize">
+<code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.state_vectorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>vectorize a state</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>state (tuple): Dialog state</p>
+</dd>
+<dt>Returns:</dt><dd><p>state_vec (np.array): Dialog state vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

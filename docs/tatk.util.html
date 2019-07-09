@@ -92,7 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tatk-util-allennlp-file-utils-module">tatk.util.allennlp_file_utils module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tatk-util-file-util-module">tatk.util.file_util module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-util-kb-query-module">tatk.util.kb_query module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tatk-util-train-util-module">tatk.util.train_util module</a></li>
 </ul>
 </li>
@@ -176,17 +176,17 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.camrest.html">tatk.util.camrest package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#tatk-util-camrest-dbquery-module">tatk.util.camrest.dbquery module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#tatk-util-camrest-lexicalize-module">tatk.util.camrest.lexicalize module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#tatk-util-camrest-state-module">tatk.util.camrest.state module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#module-tatk.util.camrest.dbquery">tatk.util.camrest.dbquery module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#module-tatk.util.camrest.lexicalize">tatk.util.camrest.lexicalize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.camrest.html#module-tatk.util.camrest.state">tatk.util.camrest.state module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.multiwoz.html">tatk.util.multiwoz package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#tatk-util-multiwoz-dbquery-module">tatk.util.multiwoz.dbquery module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#tatk-util-multiwoz-lexicalize-module">tatk.util.multiwoz.lexicalize module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#tatk-util-multiwoz-multiwoz-slot-trans-module">tatk.util.multiwoz.multiwoz_slot_trans module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#tatk-util-multiwoz-state-module">tatk.util.multiwoz.state module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#module-tatk.util.multiwoz.dbquery">tatk.util.multiwoz.dbquery module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#module-tatk.util.multiwoz.lexicalize">tatk.util.multiwoz.lexicalize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#module-tatk.util.multiwoz.multiwoz_slot_trans">tatk.util.multiwoz.multiwoz_slot_trans module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.util.multiwoz.html#module-tatk.util.multiwoz.state">tatk.util.multiwoz.state module</a></li>
 </ul>
 </li>
 </ul>
@@ -201,8 +201,26 @@
 <div class="section" id="tatk-util-file-util-module">
 <h2>tatk.util.file_util module<a class="headerlink" href="#tatk-util-file-util-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-util-kb-query-module">
-<h2>tatk.util.kb_query module<a class="headerlink" href="#tatk-util-kb-query-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.util.kb_query">
+<span id="tatk-util-kb-query-module"></span><h2>tatk.util.kb_query module<a class="headerlink" href="#module-tatk.util.kb_query" title="Permalink to this headline">¶</a></h2>
+<p>Base Class for Knowledge Base Query</p>
+<dl class="class">
+<dt id="tatk.util.kb_query.KBquery">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.util.kb_query.</code><code class="sig-name descname">KBquery</code><a class="headerlink" href="#tatk.util.kb_query.KBquery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.util.kb_query.KBquery.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.kb_query.KBquery.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.util.kb_query.KBquery.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">constrains</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.kb_query.KBquery.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="tatk-util-train-util-module">
 <h2>tatk.util.train_util module<a class="headerlink" href="#tatk-util-train-util-module" title="Permalink to this headline">¶</a></h2>
