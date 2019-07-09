@@ -1,0 +1,16 @@
+tatk.nlg.template\_nlg.multiwoz package
+=======================================
+
+Submodules
+----------
+
+tatk.nlg.template\_nlg.multiwoz.multiwoz\_template\_nlg module
+--------------------------------------------------------------
+
+.. automodule:: tatk.nlg.template_nlg.multiwoz.multiwoz_template_nlg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

@@ -1,0 +1,16 @@
+tatk.nlg.template\_nlg.camrest package
+======================================
+
+Submodules
+----------
+
+tatk.nlg.template\_nlg.camrest.camrest\_template\_nlg module
+------------------------------------------------------------
+
+.. automodule:: tatk.nlg.template_nlg.camrest.camrest_template_nlg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

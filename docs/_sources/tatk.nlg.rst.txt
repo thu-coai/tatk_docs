@@ -1,6 +1,13 @@
 tatk.nlg package
 ================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.nlg.template_nlg
+
 Submodules
 ----------
 
