@@ -191,61 +191,8 @@
 <div class="section" id="tatk-nlu-bert-camrest-postprocess-module">
 <h2>tatk.nlu.bert.camrest.postprocess module<a class="headerlink" href="#tatk-nlu-bert-camrest-postprocess-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.nlu.bert.camrest.preprocess">
-<span id="tatk-nlu-bert-camrest-preprocess-module"></span><h2>tatk.nlu.bert.camrest.preprocess module<a class="headerlink" href="#module-tatk.nlu.bert.camrest.preprocess" title="Permalink to this headline">¶</a></h2>
-<p>Preprocess camrest data for BertNLU.
-Usage:</p>
-<blockquote>
-<div><p>python preprocess [mode=all|usr|sys]
-mode: which side data will be use</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Require:</dt><dd><ul class="simple">
-<li><p><cite>../../../../data/camrest/[train|val|test].json.zip</cite> data file</p></li>
-</ul>
-</dd>
-<dt>Output:</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><cite>data/[mode]_data/</cite> processed data dir</dt><dd><ul>
-<li><dl class="simple">
-<dt><cite>data.pkl</cite>: data[data_key=train|val|test] is a list of [tokens,tags,intents],</dt><dd><p>tokens: list of words; tags: list of BIO tags(e.g. B-domain-intent+slot); intent: list of ‘domain-intent+slot*value’.</p>
-</dd>
-</dl>
-</li>
-<li><p><cite>intent_vocab.pkl</cite>: list of all intents (format: ‘domain-intent+slot*value’)</p></li>
-<li><p><cite>tag_vocab.pkl</cite>: list of all tags (format: ‘O’|’B-domain-intent+slot’|’B-domain-intent+slot’)</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<dl class="function">
-<dt id="tatk.nlu.bert.camrest.preprocess.das2tags">
-<code class="sig-prename descclassname">tatk.nlu.bert.camrest.preprocess.</code><code class="sig-name descname">das2tags</code><span class="sig-paren">(</span><em class="sig-param">sen</em>, <em class="sig-param">das</em>, <em class="sig-param">all_tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.preprocess.das2tags" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.nlu.bert.camrest.preprocess.get_idx">
-<code class="sig-prename descclassname">tatk.nlu.bert.camrest.preprocess.</code><code class="sig-name descname">get_idx</code><span class="sig-paren">(</span><em class="sig-param">phrase</em>, <em class="sig-param">utt</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.preprocess.get_idx" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.nlu.bert.camrest.preprocess.phrase_idx_utt">
-<code class="sig-prename descclassname">tatk.nlu.bert.camrest.preprocess.</code><code class="sig-name descname">phrase_idx_utt</code><span class="sig-paren">(</span><em class="sig-param">phrase</em>, <em class="sig-param">utt</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.preprocess.phrase_idx_utt" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.nlu.bert.camrest.preprocess.phrase_in_utt">
-<code class="sig-prename descclassname">tatk.nlu.bert.camrest.preprocess.</code><code class="sig-name descname">phrase_in_utt</code><span class="sig-paren">(</span><em class="sig-param">phrase</em>, <em class="sig-param">utt</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.preprocess.phrase_in_utt" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.nlu.bert.camrest.preprocess.read_zipped_json">
-<code class="sig-prename descclassname">tatk.nlu.bert.camrest.preprocess.</code><code class="sig-name descname">read_zipped_json</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.preprocess.read_zipped_json" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-nlu-bert-camrest-preprocess-module">
+<h2>tatk.nlu.bert.camrest.preprocess module<a class="headerlink" href="#tatk-nlu-bert-camrest-preprocess-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

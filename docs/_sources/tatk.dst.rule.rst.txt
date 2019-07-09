@@ -1,34 +1,18 @@
 tatk.dst.rule package
 =====================
 
-Submodules
-----------
+Subpackages
+-----------
 
-tatk.dst.rule.dst\_util module
-------------------------------
+.. toctree::
 
-.. automodule:: tatk.dst.rule.dst_util
+   tatk.dst.rule.multiwoz
+
+Module contents
+---------------
+
+.. automodule:: tatk.dst.rule
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
-
-tatk.dst.rule.evaluate module
------------------------------
-
-.. automodule:: tatk.dst.rule.evaluate
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
-tatk.dst.rule.rule\_dst module
-------------------------------
-
-.. automodule:: tatk.dst.rule.rule_dst
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
-
