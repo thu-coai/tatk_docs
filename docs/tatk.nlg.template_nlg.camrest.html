@@ -177,15 +177,15 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.nlg.template_nlg.camrest.camrest_template_nlg">
-<span id="tatk-nlg-template-nlg-camrest-camrest-template-nlg-module"></span><h2>tatk.nlg.template_nlg.camrest.camrest_template_nlg module<a class="headerlink" href="#module-tatk.nlg.template_nlg.camrest.camrest_template_nlg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlg.template_nlg.camrest.nlg">
+<span id="tatk-nlg-template-nlg-camrest-nlg-module"></span><h2>tatk.nlg.template_nlg.camrest.nlg module<a class="headerlink" href="#module-tatk.nlg.template_nlg.camrest.nlg" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.nlg.template_nlg.camrest.camrest_template_nlg.</code><code class="sig-name descname">CamrestTemplateNLG</code><span class="sig-paren">(</span><em class="sig-param">is_user</em>, <em class="sig-param">mode='manual'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.nlg.template_nlg.camrest.nlg.TemplateNLG">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlg.template_nlg.camrest.nlg.</code><code class="sig-name descname">TemplateNLG</code><span class="sig-paren">(</span><em class="sig-param">is_user</em>, <em class="sig-param">mode='manual'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.nlg.TemplateNLG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="tatk.nlg.html#tatk.nlg.nlg.NLG" title="tatk.nlg.nlg.NLG"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.nlg.nlg.NLG</span></code></a></p>
 <dl class="method">
-<dt id="tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">is_user</em>, <em class="sig-param">mode='manual'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.nlg.template_nlg.camrest.nlg.TemplateNLG.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">is_user</em>, <em class="sig-param">mode='manual'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.nlg.TemplateNLG.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -200,23 +200,23 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG.generate">
-<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG.generate" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.nlg.template_nlg.camrest.nlg.TemplateNLG.generate">
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.nlg.TemplateNLG.generate" title="Permalink to this definition">¶</a></dt>
 <dd><p>NLG for Multiwoz dataset
 :param dialog_acts: {da1:[[slot1,value1],…], da2:…}
 :return: generated sentence</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG.read_json">
-<em class="property">static </em><code class="sig-name descname">read_json</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.camrest_template_nlg.CamrestTemplateNLG.read_json" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.nlg.template_nlg.camrest.nlg.TemplateNLG.read_json">
+<em class="property">static </em><code class="sig-name descname">read_json</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.nlg.TemplateNLG.read_json" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
-<dt id="tatk.nlg.template_nlg.camrest.camrest_template_nlg.test">
-<code class="sig-prename descclassname">tatk.nlg.template_nlg.camrest.camrest_template_nlg.</code><code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.camrest_template_nlg.test" title="Permalink to this definition">¶</a></dt>
+<dt id="tatk.nlg.template_nlg.camrest.nlg.test">
+<code class="sig-prename descclassname">tatk.nlg.template_nlg.camrest.nlg.</code><code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.camrest.nlg.test" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
