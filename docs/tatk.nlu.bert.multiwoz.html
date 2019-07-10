@@ -91,9 +91,9 @@
 <li class="toctree-l3 current"><a class="reference internal" href="tatk.nlu.bert.html">tatk.nlu.bert package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="tatk.nlu.bert.html#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#tatk-nlu-bert-dataloader-module">tatk.nlu.bert.dataloader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#tatk-nlu-bert-model-module">tatk.nlu.bert.model module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#tatk-nlu-bert-test-module">tatk.nlu.bert.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#module-tatk.nlu.bert.dataloader">tatk.nlu.bert.dataloader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#module-tatk.nlu.bert.model">tatk.nlu.bert.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#module-tatk.nlu.bert.test">tatk.nlu.bert.test module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.bert.html#tatk-nlu-bert-train-module">tatk.nlu.bert.train module</a></li>
 </ul>
 </li>
@@ -182,17 +182,92 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-bert-multiwoz-evaluate-module">
-<h2>tatk.nlu.bert.multiwoz.evaluate module<a class="headerlink" href="#tatk-nlu-bert-multiwoz-evaluate-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.bert.multiwoz.evaluate">
+<span id="tatk-nlu-bert-multiwoz-evaluate-module"></span><h2>tatk.nlu.bert.multiwoz.evaluate module<a class="headerlink" href="#module-tatk.nlu.bert.multiwoz.evaluate" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate BertNLU models on multiwoz test dataset
+Metric: dataset level Precision/Recall/F1
+Usage: PYTHONPATH=../../../.. python evaluate.py [usr|sys|all]</p>
 </div>
-<div class="section" id="tatk-nlu-bert-multiwoz-nlu-module">
-<h2>tatk.nlu.bert.multiwoz.nlu module<a class="headerlink" href="#tatk-nlu-bert-multiwoz-nlu-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.bert.multiwoz.nlu">
+<span id="tatk-nlu-bert-multiwoz-nlu-module"></span><h2>tatk.nlu.bert.multiwoz.nlu module<a class="headerlink" href="#module-tatk.nlu.bert.multiwoz.nlu" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.bert.multiwoz.nlu.BERTNLU">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.bert.multiwoz.nlu.</code><code class="sig-name descname">BERTNLU</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">model_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.nlu.BERTNLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.nlu.html#tatk.nlu.nlu.NLU" title="tatk.nlu.nlu.NLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.nlu.nlu.NLU</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.bert.multiwoz.nlu.BERTNLU.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">model_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.nlu.BERTNLU.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.bert.multiwoz.nlu.BERTNLU.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">utterance</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.nlu.BERTNLU.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the dialog act of a natural language utterance.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>utterance (str): A natural language utterance.</p>
+</dd>
+<dt>Returns:</dt><dd><p>output (dict): The dialog act of utterance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="tatk-nlu-bert-multiwoz-postprocess-module">
-<h2>tatk.nlu.bert.multiwoz.postprocess module<a class="headerlink" href="#tatk-nlu-bert-multiwoz-postprocess-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.bert.multiwoz.postprocess">
+<span id="tatk-nlu-bert-multiwoz-postprocess-module"></span><h2>tatk.nlu.bert.multiwoz.postprocess module<a class="headerlink" href="#module-tatk.nlu.bert.multiwoz.postprocess" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.nlu.bert.multiwoz.postprocess.intent2triples">
+<code class="sig-prename descclassname">tatk.nlu.bert.multiwoz.postprocess.</code><code class="sig-name descname">intent2triples</code><span class="sig-paren">(</span><em class="sig-param">intent_seq</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.postprocess.intent2triples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.bert.multiwoz.postprocess.recover_intent">
+<code class="sig-prename descclassname">tatk.nlu.bert.multiwoz.postprocess.</code><code class="sig-name descname">recover_intent</code><span class="sig-paren">(</span><em class="sig-param">dataloader</em>, <em class="sig-param">intent_logits</em>, <em class="sig-param">tag_logits</em>, <em class="sig-param">tag_mask_tensor</em>, <em class="sig-param">ori_word_seq</em>, <em class="sig-param">new2ori</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.postprocess.recover_intent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlu.bert.multiwoz.postprocess.tag2triples">
+<code class="sig-prename descclassname">tatk.nlu.bert.multiwoz.postprocess.</code><code class="sig-name descname">tag2triples</code><span class="sig-paren">(</span><em class="sig-param">word_seq</em>, <em class="sig-param">tag_seq</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.postprocess.tag2triples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="tatk-nlu-bert-multiwoz-preprocess-module">
-<h2>tatk.nlu.bert.multiwoz.preprocess module<a class="headerlink" href="#tatk-nlu-bert-multiwoz-preprocess-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.bert.multiwoz.preprocess">
+<span id="tatk-nlu-bert-multiwoz-preprocess-module"></span><h2>tatk.nlu.bert.multiwoz.preprocess module<a class="headerlink" href="#module-tatk.nlu.bert.multiwoz.preprocess" title="Permalink to this headline">¶</a></h2>
+<p>Preprocess multiwoz data for BertNLU.
+Usage:</p>
+<blockquote>
+<div><p>python preprocess [mode=all|usr|sys]
+mode: which side data will be use</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Require:</dt><dd><ul class="simple">
+<li><p><cite>../../../../data/multiwoz/[train|val|test].json.zip</cite> data file</p></li>
+</ul>
+</dd>
+<dt>Output:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><cite>data/[mode]_data/</cite> processed data dir</dt><dd><ul>
+<li><dl class="simple">
+<dt><cite>data.pkl</cite>: data[data_key=train|val|test] is a list of [tokens,tags,intents],</dt><dd><p>tokens: list of words; tags: list of BIO tags(e.g. B-domain-intent+slot); intent: list of ‘domain-intent+slot*value’.</p>
+</dd>
+</dl>
+</li>
+<li><p><cite>intent_vocab.pkl</cite>: list of all intents (format: ‘domain-intent+slot*value’)</p></li>
+<li><p><cite>tag_vocab.pkl</cite>: list of all tags (format: ‘O’|’B-domain-intent+slot’|’B-domain-intent+slot’)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="function">
+<dt id="tatk.nlu.bert.multiwoz.preprocess.read_zipped_json">
+<code class="sig-prename descclassname">tatk.nlu.bert.multiwoz.preprocess.</code><code class="sig-name descname">read_zipped_json</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.multiwoz.preprocess.read_zipped_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 

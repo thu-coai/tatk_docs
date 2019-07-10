@@ -215,8 +215,89 @@ value (str): The raw value detected by NLU module.</p>
 <dd></dd></dl>
 
 </div>
-<div class="section" id="tatk-dst-rule-multiwoz-evaluate-module">
-<h2>tatk.dst.rule.multiwoz.evaluate module<a class="headerlink" href="#tatk-dst-rule-multiwoz-evaluate-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.dst.rule.multiwoz.evaluate">
+<span id="tatk-dst-rule-multiwoz-evaluate-module"></span><h2>tatk.dst.rule.multiwoz.evaluate module<a class="headerlink" href="#module-tatk.dst.rule.multiwoz.evaluate" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.dst.rule.multiwoz.evaluate.NLU_DST">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">NLU_DST</code><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.NLU_DST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.NLU_DST.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.NLU_DST.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.NLU_DST.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.NLU_DST.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.NLU_DST.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">action</em>, <em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.NLU_DST.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.dst.rule.multiwoz.evaluate.ResultStat">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">ResultStat</code><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.ResultStat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.ResultStat.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.ResultStat.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.ResultStat.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">slot</em>, <em class="sig-param">score</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.ResultStat.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>score = 1 or 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.ResultStat.all_acc">
+<code class="sig-name descname">all_acc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.ResultStat.all_acc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.ResultStat.domain_acc">
+<code class="sig-name descname">domain_acc</code><span class="sig-paren">(</span><em class="sig-param">domain</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.ResultStat.domain_acc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.evaluate.ResultStat.slot_acc">
+<code class="sig-name descname">slot_acc</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">slot</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.ResultStat.slot_acc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.rule.multiwoz.evaluate.convert2acc">
+<code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">convert2acc</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.convert2acc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.rule.multiwoz.evaluate.evaluate">
+<code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">test_result</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.rule.multiwoz.evaluate.load_data">
+<code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param">path='../../../../data/multiwoz/test.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Note that the path parameter indicates the path of testing file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.rule.multiwoz.evaluate.match_goal">
+<code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">match_goal</code><span class="sig-paren">(</span><em class="sig-param">pred_state</em>, <em class="sig-param">goal</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.match_goal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.rule.multiwoz.evaluate.run_test">
+<code class="sig-prename descclassname">tatk.dst.rule.multiwoz.evaluate.</code><code class="sig-name descname">run_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.evaluate.run_test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-tatk.dst.rule.multiwoz.state_tracker">
 <span id="tatk-dst-rule-multiwoz-state-tracker-module"></span><h2>tatk.dst.rule.multiwoz.state_tracker module<a class="headerlink" href="#module-tatk.dst.rule.multiwoz.state_tracker" title="Permalink to this headline">¶</a></h2>
