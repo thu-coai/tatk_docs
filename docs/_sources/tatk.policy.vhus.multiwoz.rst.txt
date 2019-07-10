@@ -1,0 +1,34 @@
+tatk.policy.vhus.multiwoz package
+=================================
+
+Submodules
+----------
+
+tatk.policy.vhus.multiwoz.train module
+--------------------------------------
+
+.. automodule:: tatk.policy.vhus.multiwoz.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vhus.multiwoz.usermanager module
+--------------------------------------------
+
+.. automodule:: tatk.policy.vhus.multiwoz.usermanager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vhus.multiwoz.vhus module
+-------------------------------------
+
+.. automodule:: tatk.policy.vhus.multiwoz.vhus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

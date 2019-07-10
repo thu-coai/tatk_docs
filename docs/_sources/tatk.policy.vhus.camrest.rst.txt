@@ -1,0 +1,34 @@
+tatk.policy.vhus.camrest package
+================================
+
+Submodules
+----------
+
+tatk.policy.vhus.camrest.train module
+-------------------------------------
+
+.. automodule:: tatk.policy.vhus.camrest.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vhus.camrest.usermanager module
+-------------------------------------------
+
+.. automodule:: tatk.policy.vhus.camrest.usermanager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vhus.camrest.vhus module
+------------------------------------
+
+.. automodule:: tatk.policy.vhus.camrest.vhus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

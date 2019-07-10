@@ -1,0 +1,33 @@
+tatk.policy.vhus package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.policy.vhus.camrest
+   tatk.policy.vhus.multiwoz
+
+Submodules
+----------
+
+tatk.policy.vhus.usermodule module
+----------------------------------
+
+.. automodule:: tatk.policy.vhus.usermodule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vhus.util module
+----------------------------
+
+.. automodule:: tatk.policy.vhus.util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
