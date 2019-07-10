@@ -1,0 +1,1265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tatk.e2e.rnn_rullout package &mdash; tatk  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tatk.e2e.rnn_rullout.engines package" href="tatk.e2e.rnn_rullout.engines.html" />
+    <link rel="prev" title="tatk.e2e package" href="tatk.e2e.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tatk
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tatk.e2e.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.e2e.rnn_rullout package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-action-gen-module">tatk.e2e.rnn_rullout.action_gen module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-agent-module">tatk.e2e.rnn_rullout.agent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-avg-rank-module">tatk.e2e.rnn_rullout.avg_rank module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-chat-module">tatk.e2e.rnn_rullout.chat module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.config">tatk.e2e.rnn_rullout.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.data">tatk.e2e.rnn_rullout.data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.dialog">tatk.e2e.rnn_rullout.dialog module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.domain">tatk.e2e.rnn_rullout.domain module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.eval_selfplay">tatk.e2e.rnn_rullout.eval_selfplay module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.metric">tatk.e2e.rnn_rullout.metric module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-reinforce-module">tatk.e2e.rnn_rullout.reinforce module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-rnn-model-module">tatk.e2e.rnn_rullout.rnn_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.rnnrollout">tatk.e2e.rnn_rullout.rnnrollout module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-selfplay-module">tatk.e2e.rnn_rullout.selfplay module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.split">tatk.e2e.rnn_rullout.split module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-test-module">tatk.e2e.rnn_rullout.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-train-module">tatk.e2e.rnn_rullout.train module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.e2e.rnn_rullout.utils">tatk.e2e.rnn_rullout.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-e2e-rnn-rullout-vis-module">tatk.e2e.rnn_rullout.vis module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.html#module-tatk.e2e">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tatk</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tatk.e2e.html">tatk.e2e package</a> &raquo;</li>
+        
+      <li>tatk.e2e.rnn_rullout package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tatk.e2e.rnn_rullout.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tatk-e2e-rnn-rullout-package">
+<h1>tatk.e2e.rnn_rullout package<a class="headerlink" href="#tatk-e2e-rnn-rullout-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.rnn_rullout.engines.html">tatk.e2e.rnn_rullout.engines package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.engines.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.engines.html#tatk-e2e-rnn-rullout-engines-engine-module">tatk.e2e.rnn_rullout.engines.engine module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.engines.html#tatk-e2e-rnn-rullout-engines-latent-clustering-engine-module">tatk.e2e.rnn_rullout.engines.latent_clustering_engine module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.engines.html#tatk-e2e-rnn-rullout-engines-rnn-engine-module">tatk.e2e.rnn_rullout.engines.rnn_engine module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.engines.html#tatk-e2e-rnn-rullout-engines-selection-engine-module">tatk.e2e.rnn_rullout.engines.selection_engine module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html">tatk.e2e.rnn_rullout.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#tatk-e2e-rnn-rullout-models-attn-module">tatk.e2e.rnn_rullout.models.attn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#module-tatk.e2e.rnn_rullout.models.ctx_encoder">tatk.e2e.rnn_rullout.models.ctx_encoder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#tatk-e2e-rnn-rullout-models-latent-clustering-model-module">tatk.e2e.rnn_rullout.models.latent_clustering_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#tatk-e2e-rnn-rullout-models-modules-module">tatk.e2e.rnn_rullout.models.modules module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#tatk-e2e-rnn-rullout-models-rnn-model-module">tatk.e2e.rnn_rullout.models.rnn_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#tatk-e2e-rnn-rullout-models-selection-model-module">tatk.e2e.rnn_rullout.models.selection_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.rnn_rullout.models.html#module-tatk.e2e.rnn_rullout.models.utils">tatk.e2e.rnn_rullout.models.utils module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-action-gen-module">
+<h2>tatk.e2e.rnn_rullout.action_gen module<a class="headerlink" href="#tatk-e2e-rnn-rullout-action-gen-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-agent-module">
+<h2>tatk.e2e.rnn_rullout.agent module<a class="headerlink" href="#tatk-e2e-rnn-rullout-agent-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-avg-rank-module">
+<h2>tatk.e2e.rnn_rullout.avg_rank module<a class="headerlink" href="#tatk-e2e-rnn-rullout-avg-rank-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-chat-module">
+<h2>tatk.e2e.rnn_rullout.chat module<a class="headerlink" href="#tatk-e2e-rnn-rullout-chat-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.config">
+<span id="tatk-e2e-rnn-rullout-config-module"></span><h2>tatk.e2e.rnn_rullout.config module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.config" title="Permalink to this headline">¶</a></h2>
+<p>Configuration script. Stores variables and settings used across application</p>
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.data">
+<span id="tatk-e2e-rnn-rullout-data-module"></span><h2>tatk.e2e.rnn_rullout.data module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.data.CountDictionary">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">CountDictionary</code><span class="sig-paren">(</span><em class="sig-param">init=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.CountDictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.data.Dictionary" title="tatk.e2e.rnn_rullout.data.Dictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.data.Dictionary</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.CountDictionary.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">init=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.CountDictionary.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.CountDictionary.get_idx">
+<code class="sig-name descname">get_idx</code><span class="sig-paren">(</span><em class="sig-param">words</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.CountDictionary.get_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.CountDictionary.get_key">
+<code class="sig-name descname">get_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.CountDictionary.get_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.CountDictionary.read_tag">
+<code class="sig-name descname">read_tag</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">tag</em>, <em class="sig-param">init_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.CountDictionary.read_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">Dictionary</code><span class="sig-paren">(</span><em class="sig-param">init=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">init=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.add_word">
+<code class="sig-name descname">add_word</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.add_word" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.get_idx">
+<code class="sig-name descname">get_idx</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.get_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.get_word">
+<code class="sig-name descname">get_word</code><span class="sig-paren">(</span><em class="sig-param">idx</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.get_word" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.i2w">
+<code class="sig-name descname">i2w</code><span class="sig-paren">(</span><em class="sig-param">idx</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.i2w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.read_tag">
+<code class="sig-name descname">read_tag</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">tag</em>, <em class="sig-param">freq_cutoff=-1</em>, <em class="sig-param">init_dict=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.read_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.Dictionary.w2i">
+<code class="sig-name descname">w2i</code><span class="sig-paren">(</span><em class="sig-param">words</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.Dictionary.w2i" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.data.ItemDictionary">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">ItemDictionary</code><span class="sig-paren">(</span><em class="sig-param">selection_size</em>, <em class="sig-param">init=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.ItemDictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.data.Dictionary" title="tatk.e2e.rnn_rullout.data.Dictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.data.Dictionary</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.ItemDictionary.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">selection_size</em>, <em class="sig-param">init=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.ItemDictionary.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.ItemDictionary.read_tag">
+<code class="sig-name descname">read_tag</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">tag</em>, <em class="sig-param">init_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.ItemDictionary.read_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.ItemDictionary.w2i">
+<code class="sig-name descname">w2i</code><span class="sig-paren">(</span><em class="sig-param">words</em>, <em class="sig-param">inv=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.ItemDictionary.w2i" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.data.PhraseCorpus">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">PhraseCorpus</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">path</em>, <em class="sig-param">freq_cutoff=2</em>, <em class="sig-param">train='train.txt'</em>, <em class="sig-param">valid='val.txt'</em>, <em class="sig-param">test='test.txt'</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">sep_sel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.PhraseCorpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.data.WordCorpus" title="tatk.e2e.rnn_rullout.data.WordCorpus"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.data.WordCorpus</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.PhraseCorpus.tokenize">
+<code class="sig-name descname">tokenize</code><span class="sig-paren">(</span><em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.PhraseCorpus.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.data.SentenceCorpus">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">SentenceCorpus</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">path</em>, <em class="sig-param">freq_cutoff=2</em>, <em class="sig-param">train='train.txt'</em>, <em class="sig-param">valid='val.txt'</em>, <em class="sig-param">test='test.txt'</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">sep_sel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.SentenceCorpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.data.WordCorpus" title="tatk.e2e.rnn_rullout.data.WordCorpus"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.data.WordCorpus</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.data.WordCorpus">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">WordCorpus</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">path</em>, <em class="sig-param">freq_cutoff=2</em>, <em class="sig-param">train='train.txt'</em>, <em class="sig-param">valid='val.txt'</em>, <em class="sig-param">test='test.txt'</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">sep_sel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.WordCorpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.WordCorpus.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">path</em>, <em class="sig-param">freq_cutoff=2</em>, <em class="sig-param">train='train.txt'</em>, <em class="sig-param">valid='val.txt'</em>, <em class="sig-param">test='test.txt'</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">sep_sel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.WordCorpus.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.WordCorpus.test_dataset">
+<code class="sig-name descname">test_dataset</code><span class="sig-paren">(</span><em class="sig-param">bsz</em>, <em class="sig-param">shuffle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.WordCorpus.test_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.WordCorpus.tokenize">
+<code class="sig-name descname">tokenize</code><span class="sig-paren">(</span><em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.WordCorpus.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.WordCorpus.train_dataset">
+<code class="sig-name descname">train_dataset</code><span class="sig-paren">(</span><em class="sig-param">bsz</em>, <em class="sig-param">shuffle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.WordCorpus.train_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.data.WordCorpus.valid_dataset">
+<code class="sig-name descname">valid_dataset</code><span class="sig-paren">(</span><em class="sig-param">bsz</em>, <em class="sig-param">shuffle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.WordCorpus.valid_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.data.create_dicts_from_file">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">create_dicts_from_file</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">file_name</em>, <em class="sig-param">freq_cutoff</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.create_dicts_from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.data.get_tag">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">get_tag</code><span class="sig-paren">(</span><em class="sig-param">tokens</em>, <em class="sig-param">tag</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.get_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.data.read_lines">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.data.</code><code class="sig-name descname">read_lines</code><span class="sig-paren">(</span><em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.data.read_lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.dialog">
+<span id="tatk-e2e-rnn-rullout-dialog-module"></span><h2>tatk.e2e.rnn_rullout.dialog module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.dialog" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.dialog.Dialog">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.dialog.</code><code class="sig-name descname">Dialog</code><span class="sig-paren">(</span><em class="sig-param">agents</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.Dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.Dialog.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">agents</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.Dialog.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.Dialog.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">ctxs</em>, <em class="sig-param">logger</em>, <em class="sig-param">max_words=5000</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.Dialog.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.Dialog.show_metrics">
+<code class="sig-name descname">show_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.Dialog.show_metrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.dialog.</code><code class="sig-name descname">DialogLogger</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em>, <em class="sig-param">log_file=None</em>, <em class="sig-param">append=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.CODE2ITEM">
+<code class="sig-name descname">CODE2ITEM</code><em class="property"> = [('item0', 'book'), ('item1', 'hat'), ('item2', 'ball')]</em><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.CODE2ITEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em>, <em class="sig-param">log_file=None</em>, <em class="sig-param">append=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.dump">
+<code class="sig-name descname">dump</code><span class="sig-paren">(</span><em class="sig-param">s</em>, <em class="sig-param">forced=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_agreement">
+<code class="sig-name descname">dump_agreement</code><span class="sig-paren">(</span><em class="sig-param">agree</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_agreement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_choice">
+<code class="sig-name descname">dump_choice</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_ctx">
+<code class="sig-name descname">dump_ctx</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_ctx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_reward">
+<code class="sig-name descname">dump_reward</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">agree</em>, <em class="sig-param">reward</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_reward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_sent">
+<code class="sig-name descname">dump_sent</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">sent</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger.dump_sent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.dialog.</code><code class="sig-name descname">DialogSelfTrainLogger</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em>, <em class="sig-param">log_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.dialog.DialogLogger" title="tatk.e2e.rnn_rullout.dialog.DialogLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.dialog.DialogLogger</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em>, <em class="sig-param">log_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_agreement">
+<code class="sig-name descname">dump_agreement</code><span class="sig-paren">(</span><em class="sig-param">agree</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_agreement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_choice">
+<code class="sig-name descname">dump_choice</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_ctx">
+<code class="sig-name descname">dump_ctx</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_ctx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_reward">
+<code class="sig-name descname">dump_reward</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">agree</em>, <em class="sig-param">reward</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.dialog.DialogSelfTrainLogger.dump_reward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.domain">
+<span id="tatk-e2e-rnn-rullout-domain-module"></span><h2>tatk.e2e.rnn_rullout.domain module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.domain" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.domain.</code><code class="sig-name descname">Domain</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Domain interface.</p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.generate_choices">
+<code class="sig-name descname">generate_choices</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.generate_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.input_length">
+<code class="sig-name descname">input_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.input_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.parse_choice">
+<code class="sig-name descname">parse_choice</code><span class="sig-paren">(</span><em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.parse_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.parse_context">
+<code class="sig-name descname">parse_context</code><span class="sig-paren">(</span><em class="sig-param">ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.parse_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.parse_human_choice">
+<code class="sig-name descname">parse_human_choice</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">output</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.parse_human_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.score_choices">
+<code class="sig-name descname">score_choices</code><span class="sig-paren">(</span><em class="sig-param">choices</em>, <em class="sig-param">ctxs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.score_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.Domain.selection_length">
+<code class="sig-name descname">selection_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.Domain.selection_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.domain.</code><code class="sig-name descname">ObjectDivisionDomain</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.domain.Domain" title="tatk.e2e.rnn_rullout.domain.Domain"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.domain.Domain</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.generate_choices">
+<code class="sig-name descname">generate_choices</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">with_disagreement=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.generate_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.input_length">
+<code class="sig-name descname">input_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.input_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.num_choices">
+<code class="sig-name descname">num_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.num_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.parse_choice">
+<code class="sig-name descname">parse_choice</code><span class="sig-paren">(</span><em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.parse_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.parse_context">
+<code class="sig-name descname">parse_context</code><span class="sig-paren">(</span><em class="sig-param">ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.parse_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.parse_human_choice">
+<code class="sig-name descname">parse_human_choice</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">output</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.parse_human_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.score_choices">
+<code class="sig-name descname">score_choices</code><span class="sig-paren">(</span><em class="sig-param">choices</em>, <em class="sig-param">ctxs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.score_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.selection_length">
+<code class="sig-name descname">selection_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain.selection_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.domain.</code><code class="sig-name descname">ObjectTradeDomain</code><span class="sig-paren">(</span><em class="sig-param">max_items=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain" title="tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.domain.ObjectDivisionDomain</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">max_items=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.generate_choices">
+<code class="sig-name descname">generate_choices</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.generate_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.input_length">
+<code class="sig-name descname">input_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.input_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.parse_human_choice">
+<code class="sig-name descname">parse_human_choice</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">output</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.parse_human_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">choice</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.score_choices">
+<code class="sig-name descname">score_choices</code><span class="sig-paren">(</span><em class="sig-param">choices</em>, <em class="sig-param">ctxs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.score_choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.selection_length">
+<code class="sig-name descname">selection_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.ObjectTradeDomain.selection_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.domain.get_domain">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.domain.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.domain.get_domain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.eval_selfplay">
+<span id="tatk-e2e-rnn-rullout-eval-selfplay-module"></span><h2>tatk.e2e.rnn_rullout.eval_selfplay module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.eval_selfplay" title="Permalink to this headline">¶</a></h2>
+<p>Script to evaluate selfplay.
+It computes agreement rate, average score and Pareto optimality.</p>
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.eval_selfplay.compute_score">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.eval_selfplay.</code><code class="sig-name descname">compute_score</code><span class="sig-paren">(</span><em class="sig-param">vals</em>, <em class="sig-param">picks</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.eval_selfplay.compute_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the score of the selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.eval_selfplay.gen_choices">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.eval_selfplay.</code><code class="sig-name descname">gen_choices</code><span class="sig-paren">(</span><em class="sig-param">cnts</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">choice=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.eval_selfplay.gen_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate all the valid choices.
+It generates both yours and your opponent choices.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.eval_selfplay.main">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.eval_selfplay.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.eval_selfplay.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.eval_selfplay.parse_line">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.eval_selfplay.</code><code class="sig-name descname">parse_line</code><span class="sig-paren">(</span><em class="sig-param">line</em>, <em class="sig-param">domain</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.eval_selfplay.parse_line" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.eval_selfplay.parse_log">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.eval_selfplay.</code><code class="sig-name descname">parse_log</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">domain</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.eval_selfplay.parse_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the log file produced by selfplay.
+See the format of that log file to get more details.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.metric">
+<span id="tatk-e2e-rnn-rullout-metric-module"></span><h2>tatk.e2e.rnn_rullout.metric module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.metric" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.AverageMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">AverageMetric</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.AverageMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.metric.NumericMetric" title="tatk.e2e.rnn_rullout.metric.NumericMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.metric.NumericMetric</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.AverageMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.AverageMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">MetricsContainer</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.dict">
+<code class="sig-name descname">dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_average">
+<code class="sig-name descname">register_average</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_average" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_moving_average">
+<code class="sig-name descname">register_moving_average</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_moving_average" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_moving_percentage">
+<code class="sig-name descname">register_moving_percentage</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_moving_percentage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_ngram">
+<code class="sig-name descname">register_ngram</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_ngram" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_percentage">
+<code class="sig-name descname">register_percentage</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_percentage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_similarity">
+<code class="sig-name descname">register_similarity</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_similarity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_time">
+<code class="sig-name descname">register_time</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.register_uniqueness">
+<code class="sig-name descname">register_uniqueness</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.register_uniqueness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MetricsContainer.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MetricsContainer.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingAverageMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">MovingAverageMetric</code><span class="sig-paren">(</span><em class="sig-param">window=100</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingAverageMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric" title="tatk.e2e.rnn_rullout.metric.MovingNumericMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.metric.MovingNumericMetric</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingAverageMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingAverageMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingNumericMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">MovingNumericMetric</code><span class="sig-paren">(</span><em class="sig-param">window=100</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingNumericMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">window=100</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingNumericMetric.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingNumericMetric.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingNumericMetric.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingPercentageMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">MovingPercentageMetric</code><span class="sig-paren">(</span><em class="sig-param">window=100</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingPercentageMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.metric.MovingNumericMetric" title="tatk.e2e.rnn_rullout.metric.MovingNumericMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.metric.MovingNumericMetric</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.MovingPercentageMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.MovingPercentageMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.NGramMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">NGramMetric</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">ngram=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NGramMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.metric.TextMetric" title="tatk.e2e.rnn_rullout.metric.TextMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.metric.TextMetric</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.NGramMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">ngram=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NGramMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.NGramMetric.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">sen</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NGramMetric.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.NumericMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">NumericMetric</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NumericMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.NumericMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NumericMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.NumericMetric.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">k</em>, <em class="sig-param">n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NumericMetric.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.NumericMetric.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NumericMetric.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.NumericMetric.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.NumericMetric.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.PercentageMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">PercentageMetric</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.PercentageMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tatk.e2e.rnn_rullout.metric.NumericMetric" title="tatk.e2e.rnn_rullout.metric.NumericMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.e2e.rnn_rullout.metric.NumericMetric</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.PercentageMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.PercentageMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.SimilarityMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">SimilarityMetric</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.SimilarityMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.SimilarityMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.SimilarityMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.SimilarityMetric.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">sen</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.SimilarityMetric.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.SimilarityMetric.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.SimilarityMetric.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.SimilarityMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.SimilarityMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.SimilarityMetric.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.SimilarityMetric.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.TextMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">TextMetric</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TextMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TextMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TextMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TextMetric.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TextMetric.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TextMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TextMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TextMetric.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TextMetric.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.TimeMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">TimeMetric</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TimeMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TimeMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TimeMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TimeMetric.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TimeMetric.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TimeMetric.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TimeMetric.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TimeMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TimeMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.TimeMetric.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.TimeMetric.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.metric.UniquenessMetric">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.metric.</code><code class="sig-name descname">UniquenessMetric</code><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.UniquenessMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.UniquenessMetric.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.UniquenessMetric.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.UniquenessMetric.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">sen</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.UniquenessMetric.record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.UniquenessMetric.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.UniquenessMetric.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.UniquenessMetric.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.UniquenessMetric.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.metric.UniquenessMetric.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.metric.UniquenessMetric.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-reinforce-module">
+<h2>tatk.e2e.rnn_rullout.reinforce module<a class="headerlink" href="#tatk-e2e-rnn-rullout-reinforce-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-rnn-model-module">
+<h2>tatk.e2e.rnn_rullout.rnn_model module<a class="headerlink" href="#tatk-e2e-rnn-rullout-rnn-model-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.rnnrollout">
+<span id="tatk-e2e-rnn-rullout-rnnrollout-module"></span><h2>tatk.e2e.rnn_rullout.rnnrollout module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.rnnrollout" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.rnnrollout.</code><code class="sig-name descname">RNNRolloutAgent</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">args</em>, <em class="sig-param">name='Alice'</em>, <em class="sig-param">train=False</em>, <em class="sig-param">diverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.dialog_agent.html#tatk.dialog_agent.agent.Agent" title="tatk.dialog_agent.agent.Agent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.Agent</span></code></a></p>
+<p>RNN dialog agent with rollout decoding.</p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">args</em>, <em class="sig-param">name='Alice'</em>, <em class="sig-param">train=False</em>, <em class="sig-param">diverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor of RNNRollout model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.choose">
+<code class="sig-name descname">choose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.choose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.feed_context">
+<code class="sig-name descname">feed_context</code><span class="sig-paren">(</span><em class="sig-param">context</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.feed_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.feed_partner_context">
+<code class="sig-name descname">feed_partner_context</code><span class="sig-paren">(</span><em class="sig-param">partner_context</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.feed_partner_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the class variables to prepare for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.load_model">
+<code class="sig-name descname">load_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.load_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">inpt</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.response">
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate agent response given user input.
+The data type of input and response can be either str or dict, condition on the form of agent.
+Example:</p>
+<blockquote>
+<div><p>If the agent is a pipeline agent with NLU, DST and Policy, then type(input) == str and
+type(response) == dict.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Args:</dt><dd><p>observation (str or dict): The input to the agent.</p>
+</dd>
+<dt>Returns:</dt><dd><p>response (str or dict): The response generated by the agent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">agree</em>, <em class="sig-param">reward</em>, <em class="sig-param">choice=None</em>, <em class="sig-param">partner_choice=None</em>, <em class="sig-param">partner_input=None</em>, <em class="sig-param">partner_reward=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">max_words=20</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.rnnrollout.RNNRolloutAgent.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-selfplay-module">
+<h2>tatk.e2e.rnn_rullout.selfplay module<a class="headerlink" href="#tatk-e2e-rnn-rullout-selfplay-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.split">
+<span id="tatk-e2e-rnn-rullout-split-module"></span><h2>tatk.e2e.rnn_rullout.split module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.split" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.split.conv">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.split.</code><code class="sig-name descname">conv</code><span class="sig-paren">(</span><em class="sig-param">line</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.split.conv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.split.dialog_len">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.split.</code><code class="sig-name descname">dialog_len</code><span class="sig-paren">(</span><em class="sig-param">line</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.split.dialog_len" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.split.find">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.split.</code><code class="sig-name descname">find</code><span class="sig-paren">(</span><em class="sig-param">tokens</em>, <em class="sig-param">tag</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.split.find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.split.invert">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.split.</code><code class="sig-name descname">invert</code><span class="sig-paren">(</span><em class="sig-param">cnts</em>, <em class="sig-param">sel</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.split.invert" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.split.main">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.split.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.split.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.split.select">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.split.</code><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param">line</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.split.select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-test-module">
+<h2>tatk.e2e.rnn_rullout.test module<a class="headerlink" href="#tatk-e2e-rnn-rullout-test-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-train-module">
+<h2>tatk.e2e.rnn_rullout.train module<a class="headerlink" href="#tatk-e2e-rnn-rullout-train-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.e2e.rnn_rullout.utils">
+<span id="tatk-e2e-rnn-rullout-utils-module"></span><h2>tatk.e2e.rnn_rullout.utils module<a class="headerlink" href="#module-tatk.e2e.rnn_rullout.utils" title="Permalink to this headline">¶</a></h2>
+<p>Various helpers.</p>
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.utils.ContextGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">ContextGenerator</code><span class="sig-paren">(</span><em class="sig-param">context_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ContextGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Dialogue context generator. Generates contexes from the file.</p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.utils.ContextGenerator.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">context_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ContextGenerator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.utils.ContextGenerator.iter">
+<code class="sig-name descname">iter</code><span class="sig-paren">(</span><em class="sig-param">nepoch=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ContextGenerator.iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.utils.ContextGenerator.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ContextGenerator.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.e2e.rnn_rullout.utils.ManualContextGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">ManualContextGenerator</code><span class="sig-paren">(</span><em class="sig-param">num_types=3</em>, <em class="sig-param">num_objects=10</em>, <em class="sig-param">max_score=10</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ManualContextGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Dialogue context generator. Takes contexes from stdin.</p>
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.utils.ManualContextGenerator.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">num_types=3</em>, <em class="sig-param">num_objects=10</em>, <em class="sig-param">max_score=10</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ManualContextGenerator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.rnn_rullout.utils.ManualContextGenerator.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.ManualContextGenerator.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.utils.backward_hook">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">backward_hook</code><span class="sig-paren">(</span><em class="sig-param">grad</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.backward_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for backward pass.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.utils.load_model">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">load_model</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">map_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.load_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads model from a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.utils.prob_random">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">prob_random</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.prob_random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints out the states of various RNGs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.utils.save_model">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">save_model</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.save_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serializes model to a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.utils.set_seed">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">set_seed</code><span class="sig-paren">(</span><em class="sig-param">seed</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.set_seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets random seed everywhere.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.rnn_rullout.utils.use_cuda">
+<code class="sig-prename descclassname">tatk.e2e.rnn_rullout.utils.</code><code class="sig-name descname">use_cuda</code><span class="sig-paren">(</span><em class="sig-param">enabled</em>, <em class="sig-param">device_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.rnn_rullout.utils.use_cuda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verifies if CUDA is available and sets default device to be device_id.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="tatk-e2e-rnn-rullout-vis-module">
+<h2>tatk.e2e.rnn_rullout.vis module<a class="headerlink" href="#tatk-e2e-rnn-rullout-vis-module" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tatk.e2e.rnn_rullout.engines.html" class="btn btn-neutral float-right" title="tatk.e2e.rnn_rullout.engines package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tatk.e2e.html" class="btn btn-neutral" title="tatk.e2e package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, thu-coai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

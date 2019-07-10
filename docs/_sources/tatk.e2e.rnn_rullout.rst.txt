@@ -1,0 +1,186 @@
+tatk.e2e.rnn\_rullout package
+=============================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.e2e.rnn_rullout.engines
+   tatk.e2e.rnn_rullout.models
+
+Submodules
+----------
+
+tatk.e2e.rnn\_rullout.action\_gen module
+----------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.action_gen
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.agent module
+----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.agent
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.avg\_rank module
+--------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.avg_rank
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.chat module
+---------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.chat
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.config module
+-----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.data module
+---------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.dialog module
+-----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.dialog
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.domain module
+-----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.domain
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.eval\_selfplay module
+-------------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.eval_selfplay
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.metric module
+-----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.metric
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.reinforce module
+--------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.reinforce
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.rnn\_model module
+---------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.rnn_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.rnnrollout module
+---------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.rnnrollout
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.selfplay module
+-------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.selfplay
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.split module
+----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.split
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.test module
+---------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.train module
+----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.utils module
+----------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.rnn\_rullout.vis module
+--------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.vis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
