@@ -1,0 +1,34 @@
+tatk.e2e.sequicity.multiwoz package
+===================================
+
+Submodules
+----------
+
+tatk.e2e.sequicity.multiwoz.e2e module
+--------------------------------------
+
+.. automodule:: tatk.e2e.sequicity.multiwoz.e2e
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.sequicity.multiwoz.metric module
+-----------------------------------------
+
+.. automodule:: tatk.e2e.sequicity.multiwoz.metric
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.sequicity.multiwoz.reader module
+-----------------------------------------
+
+.. automodule:: tatk.e2e.sequicity.multiwoz.reader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

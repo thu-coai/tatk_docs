@@ -7,12 +7,18 @@ Subpackages
 .. toctree::
 
    tatk.e2e.rnn_rullout
+   tatk.e2e.sequicity
 
-Module contents
----------------
+Submodules
+----------
 
-.. automodule:: tatk.e2e
+tatk.e2e.e2e module
+-------------------
+
+.. automodule:: tatk.e2e.e2e
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
+
+

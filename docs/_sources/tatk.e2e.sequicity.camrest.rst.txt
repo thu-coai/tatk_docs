@@ -1,0 +1,25 @@
+tatk.e2e.sequicity.camrest package
+==================================
+
+Submodules
+----------
+
+tatk.e2e.sequicity.camrest.metric module
+----------------------------------------
+
+.. automodule:: tatk.e2e.sequicity.camrest.metric
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.e2e.sequicity.camrest.reader module
+----------------------------------------
+
+.. automodule:: tatk.e2e.sequicity.camrest.reader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
