@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   tatk.dst.rule.camrest
    tatk.dst.rule.multiwoz
 
 Module contents
