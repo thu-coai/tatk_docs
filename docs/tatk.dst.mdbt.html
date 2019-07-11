@@ -96,15 +96,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tatk-dst-mdbt-evaluate-module">tatk.dst.mdbt.evaluate module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.dst.mdbt.mdbt">tatk.dst.mdbt.mdbt module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.dst.mdbt.mdbt_util">tatk.dst.mdbt.mdbt_util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-dst-mdbt-mdbt-module">tatk.dst.mdbt.mdbt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-dst-mdbt-mdbt-util-module">tatk.dst.mdbt.mdbt_util module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.dst.rule.html">tatk.dst.rule package</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#tatk-dst-state-tracker-module">tatk.dst.state_tracker module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
@@ -182,7 +182,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html">tatk.dst.mdbt.multiwoz package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#module-tatk.dst.mdbt.multiwoz.mdbt">tatk.dst.mdbt.multiwoz.mdbt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#tatk-dst-mdbt-multiwoz-mdbt-module">tatk.dst.mdbt.multiwoz.mdbt module</a></li>
 </ul>
 </li>
 </ul>
@@ -194,233 +194,11 @@
 <div class="section" id="tatk-dst-mdbt-evaluate-module">
 <h2>tatk.dst.mdbt.evaluate module<a class="headerlink" href="#tatk-dst-mdbt-evaluate-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.dst.mdbt.mdbt">
-<span id="tatk-dst-mdbt-mdbt-module"></span><h2>tatk.dst.mdbt.mdbt module<a class="headerlink" href="#module-tatk.dst.mdbt.mdbt" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.dst.mdbt.mdbt.MDBT">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.mdbt.mdbt.</code><code class="sig-name descname">MDBT</code><span class="sig-paren">(</span><em class="sig-param">ontology_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">slots</em>, <em class="sig-param">data_dir='data/mdbt'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.dst.html#tatk.dst.state_tracker.Tracker" title="tatk.dst.state_tracker.Tracker"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.state_tracker.Tracker</span></code></a></p>
-<p>A multi-domain belief tracker, adopted from <a class="reference external" href="https://github.com/osmanio2/multi-domain-belief-tracking">https://github.com/osmanio2/multi-domain-belief-tracking</a>.</p>
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">ontology_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">slots</em>, <em class="sig-param">data_dir='data/mdbt'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.detect_requestable_slots">
-<code class="sig-name descname">detect_requestable_slots</code><span class="sig-paren">(</span><em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.detect_requestable_slots" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.init_session">
-<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.init_session" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.normalize_history">
-<code class="sig-name descname">normalize_history</code><span class="sig-paren">(</span><em class="sig-param">history</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.normalize_history" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replace zero-length history.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.restore">
-<code class="sig-name descname">restore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.restore" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">user_act=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the dialog state.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-dst-mdbt-mdbt-module">
+<h2>tatk.dst.mdbt.mdbt module<a class="headerlink" href="#tatk-dst-mdbt-mdbt-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.dst.mdbt.mdbt_util">
-<span id="tatk-dst-mdbt-mdbt-util-module"></span><h2>tatk.dst.mdbt.mdbt_util module<a class="headerlink" href="#module-tatk.dst.mdbt.mdbt_util" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.dst.mdbt.mdbt_util.GRU">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">GRU</code><span class="sig-paren">(</span><em class="sig-param">W_h</em>, <em class="sig-param">U_h</em>, <em class="sig-param">M_h</em>, <em class="sig-param">W_m</em>, <em class="sig-param">U_m</em>, <em class="sig-param">label_size</em>, <em class="sig-param">reuse=None</em>, <em class="sig-param">binary_output=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.GRU" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tensorflow.python.ops.rnn_cell_impl.RNNCell</span></code></p>
-<p>Create a Gated Recurrent unit to unroll the network through time
-for combining the current and previous belief states</p>
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt_util.GRU.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">W_h</em>, <em class="sig-param">U_h</em>, <em class="sig-param">M_h</em>, <em class="sig-param">W_m</em>, <em class="sig-param">U_m</em>, <em class="sig-param">label_size</em>, <em class="sig-param">reuse=None</em>, <em class="sig-param">binary_output=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.GRU.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt_util.GRU.output_size">
-<em class="property">property </em><code class="sig-name descname">output_size</code><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.GRU.output_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Integer or TensorShape: size of outputs produced by this cell.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt_util.GRU.state_size">
-<em class="property">property </em><code class="sig-name descname">state_size</code><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.GRU.state_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>size(s) of state(s) used by this cell.</p>
-<p>It can be represented by an Integer, a TensorShape or a tuple of Integers
-or TensorShapes.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.define_CNN_model">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">define_CNN_model</code><span class="sig-paren">(</span><em class="sig-param">utter</em>, <em class="sig-param">num_filters=300</em>, <em class="sig-param">name='r'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.define_CNN_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Better code for defining the CNN model.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.evaluate_model">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">evaluate_model</code><span class="sig-paren">(</span><em class="sig-param">sess</em>, <em class="sig-param">model_variables</em>, <em class="sig-param">val_data</em>, <em class="sig-param">summary</em>, <em class="sig-param">batch_id</em>, <em class="sig-param">i</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.evaluate_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluate the model against validation set
-:param sess: training session
-:param model_variables: all model input variables
-:param val_data: validation data
-:param summary: For tensorboard
-:param batch_id: where we are in the training data
-:param i: the index of the validation data to load
-:return: evaluation accuracy and the summary</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.generate_batch">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">generate_batch</code><span class="sig-paren">(</span><em class="sig-param">dialogues</em>, <em class="sig-param">batch_no</em>, <em class="sig-param">batch_size</em>, <em class="sig-param">ontology_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.generate_batch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate examples for minibatch training
-:param dialogues: list(num of turns, user_input vectors, system_response vectors, labels)
-:param batch_no: where we are in the training data
-:param batch_size: number of dialogues to generate
-:param ontology_size: no_slots
-:return: list(user_input, system_response, labels, user_sentence_length, system_sentence_length, number of turns)</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.get_available_devs">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">get_available_devs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.get_available_devs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.get_metrics">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">get_metrics</code><span class="sig-paren">(</span><em class="sig-param">predictions</em>, <em class="sig-param">true_predictions</em>, <em class="sig-param">no_turns</em>, <em class="sig-param">mask</em>, <em class="sig-param">num_slots</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.get_metrics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.load_ontology">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">load_ontology</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">word_vectors</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.load_ontology" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the ontology from a file
-:param url: to the ontology
-:param word_vectors: dictionary of the word embeddings [words, vector_dimension]
-:return: list([domain-slot-value]), [no_slots, vector_dimension]</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.load_word_vectors">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">load_word_vectors</code><span class="sig-paren">(</span><em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.load_word_vectors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the word embeddings from the url
-:param url: to the word vectors
-:return: dict of word and vector values</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.load_woz_data">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">load_woz_data</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">word_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">url=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.load_woz_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the woz3 data and extract feature vectors
-:param data: the data to load
-:param word_vectors: word embeddings
-:param ontology: list of domain-slot-value
-:param url: Is the data coming from a url, default true
-:return: list(num of turns, user_input vectors, system_response vectors, labels)</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.lstm_model">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">lstm_model</code><span class="sig-paren">(</span><em class="sig-param">text_input</em>, <em class="sig-param">utterance_length</em>, <em class="sig-param">num_hidden</em>, <em class="sig-param">name</em>, <em class="sig-param">net_type</em>, <em class="sig-param">bidir</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.lstm_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Define an Lstm model that will run across the user input and system act
-:param text_input: [batch_size, max_num_turns, max_utterance_size, vector_dimension]
-:param utterance_length: number words in every utterance [batch_size, max_num_turns, 1]
-:param num_hidden: – int –
-:param name: The name of lstm network
-:param net_type: type of the network (“lstm” or “gru” or “rnn”)
-:param bidir: use a bidirectional network – bool –
-:return: output at each state [batch_size, max_num_turns, max_utterance_size, num_hidden],</p>
-<blockquote>
-<div><p>output of the final state [batch_size, max_num_turns, num_hidden]</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.model_definition">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">model_definition</code><span class="sig-paren">(</span><em class="sig-param">ontology</em>, <em class="sig-param">num_slots</em>, <em class="sig-param">slots</em>, <em class="sig-param">num_hidden=None</em>, <em class="sig-param">net_type=None</em>, <em class="sig-param">bidir=None</em>, <em class="sig-param">test=False</em>, <em class="sig-param">dev=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.model_definition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create neural belief tracker model that is defined in my notes. It consists of encoding the user and system input,
-then use the ontology to decode the encoder in manner that detects if a domain-slot-value class is mentioned
-:param ontology: numpy array of the embedded vectors of the ontology [num_slots, 3*vector_dimension]
-:param num_slots: number of ontology classes –int–
-:param slots: indices of the values of each slot list of lists of ints
-:param num_hidden: Number of hidden units or dimension of the hidden space
-:param net_type: The type of the encoder network cnn, lstm, gru, rnn …etc
-:param bidir: For recurrent networks should it be bidirectional
-:param test: This is testing mode (no back-propagation)
-:param dev: Device to run the model on (cpu or gpu)
-:return: All input variable/placeholders output metrics (precision, recall, f1-score) and trainer</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.normalise_word_vectors">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">normalise_word_vectors</code><span class="sig-paren">(</span><em class="sig-param">word_vectors</em>, <em class="sig-param">norm=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.normalise_word_vectors" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method normalises the collection of word vectors provided in the word_vectors dictionary.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.process_booking">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">process_booking</code><span class="sig-paren">(</span><em class="sig-param">ontolog_term</em>, <em class="sig-param">usr_input</em>, <em class="sig-param">previous_terms</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.process_booking" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.process_history">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">process_history</code><span class="sig-paren">(</span><em class="sig-param">sessions</em>, <em class="sig-param">word_vectors</em>, <em class="sig-param">ontology</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.process_history" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the woz3 data and extract feature vectors
-:param data: the data to load
-:param word_vectors: word embeddings
-:param ontology: list of domain-slot-value
-:param url: Is the data coming from a url, default true
-:return: list(num of turns, user_input vectors, system_response vectors, labels)</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.process_text">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">process_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">word_vectors</em>, <em class="sig-param">ontology=None</em>, <em class="sig-param">print_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.process_text" title="Permalink to this definition">¶</a></dt>
-<dd><p>Process a line/sentence converting words to feature vectors
-:param text: sentence
-:param word_vectors: word embeddings
-:param ontology: The ontology to do exact matching
-:param print_mode: Log the cases where the word is not in the pre-trained word vectors
-:return: [length of sentence, 300]</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.process_turn">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">process_turn</code><span class="sig-paren">(</span><em class="sig-param">turn</em>, <em class="sig-param">word_vectors</em>, <em class="sig-param">ontology</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.process_turn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Process a single turn extracting and processing user text, system response and labels
-:param turn: dict
-:param word_vectors: word embeddings
-:param ontology: list(domain-slot-value)
-:return: ([utterance length, 300], [utterance length, 300], [no_slots])</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.track_dialogue">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">track_dialogue</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">ontology</em>, <em class="sig-param">predictions</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.track_dialogue" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.dst.mdbt.mdbt_util.xavier_vector">
-<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">xavier_vector</code><span class="sig-paren">(</span><em class="sig-param">word</em>, <em class="sig-param">D=300</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.xavier_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a D-dimensional vector for the word.</p>
-<p>We hash the word to always get the same vector for the given word.</p>
-</dd></dl>
-
+<div class="section" id="tatk-dst-mdbt-mdbt-util-module">
+<h2>tatk.dst.mdbt.mdbt_util module<a class="headerlink" href="#tatk-dst-mdbt-mdbt-util-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

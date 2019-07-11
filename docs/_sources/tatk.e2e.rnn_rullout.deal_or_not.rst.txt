@@ -1,0 +1,16 @@
+tatk.e2e.rnn\_rullout.deal\_or\_not package
+===========================================
+
+Submodules
+----------
+
+tatk.e2e.rnn\_rullout.deal\_or\_not.model module
+------------------------------------------------
+
+.. automodule:: tatk.e2e.rnn_rullout.deal_or_not.model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

@@ -89,7 +89,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="tatk.policy.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="tatk.policy.mdrg.html">tatk.policy.mdrg package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="tatk.policy.mdrg.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.policy.mdrg.html#module-tatk.policy.mdrg">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.policy.mdrg.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a></li>
@@ -97,9 +97,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.rlmodule">tatk.policy.rlmodule module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.vec">tatk.policy.vec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#tatk-policy-policy-module">tatk.policy.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#tatk-policy-rlmodule-module">tatk.policy.rlmodule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#tatk-policy-vec-module">tatk.policy.vec module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
@@ -187,8 +187,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#tatk-policy-mdrg-multiwoz-utils-dbpointer-module">tatk.policy.mdrg.multiwoz.utils.dbPointer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#tatk-policy-mdrg-multiwoz-utils-dbquery-module">tatk.policy.mdrg.multiwoz.utils.dbquery module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#tatk-policy-mdrg-multiwoz-utils-delexicalize-module">tatk.policy.mdrg.multiwoz.utils.delexicalize module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#module-tatk.policy.mdrg.multiwoz.utils.nlp">tatk.policy.mdrg.multiwoz.utils.nlp module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#module-tatk.policy.mdrg.multiwoz.utils.util">tatk.policy.mdrg.multiwoz.utils.util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#tatk-policy-mdrg-multiwoz-utils-nlp-module">tatk.policy.mdrg.multiwoz.utils.nlp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.mdrg.multiwoz.utils.html#tatk-policy-mdrg-multiwoz-utils-util-module">tatk.policy.mdrg.multiwoz.utils.util module</a></li>
 </ul>
 </li>
 </ul>
@@ -200,289 +200,14 @@
 <div class="section" id="tatk-policy-mdrg-multiwoz-create-delex-data-module">
 <h2>tatk.policy.mdrg.multiwoz.create_delex_data module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-create-delex-data-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.policy.mdrg.multiwoz.default_policy">
-<span id="tatk-policy-mdrg-multiwoz-default-policy-module"></span><h2>tatk.policy.mdrg.multiwoz.default_policy module<a class="headerlink" href="#module-tatk.policy.mdrg.multiwoz.default_policy" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.default_policy.DefaultPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.default_policy.</code><code class="sig-name descname">DefaultPolicy</code><span class="sig-paren">(</span><em class="sig-param">hidden_size_pol</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">db_size</em>, <em class="sig-param">bs_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.default_policy.DefaultPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.default_policy.DefaultPolicy.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">hidden_size_pol</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">db_size</em>, <em class="sig-param">bs_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.default_policy.DefaultPolicy.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.default_policy.DefaultPolicy.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">encodings</em>, <em class="sig-param">db_tensor</em>, <em class="sig-param">bs_tensor</em>, <em class="sig-param">act_tensor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.default_policy.DefaultPolicy.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-policy-mdrg-multiwoz-default-policy-module">
+<h2>tatk.policy.mdrg.multiwoz.default_policy module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-default-policy-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="tatk-policy-mdrg-multiwoz-evaluator-module">
 <h2>tatk.policy.mdrg.multiwoz.evaluator module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-evaluator-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.policy.mdrg.multiwoz.model">
-<span id="tatk-policy-mdrg-multiwoz-model-module"></span><h2>tatk.policy.mdrg.multiwoz.model module<a class="headerlink" href="#module-tatk.policy.mdrg.multiwoz.model" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.model.Attn">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">Attn</code><span class="sig-paren">(</span><em class="sig-param">method</em>, <em class="sig-param">hidden_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Attn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Attn.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">method</em>, <em class="sig-param">hidden_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Attn.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Attn.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">hidden</em>, <em class="sig-param">encoder_outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Attn.forward" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>hidden</strong> – previous hidden state of the decoder, in shape (layers*directions,B,H)</p></li>
-<li><p><strong>encoder_outputs</strong> – encoder outputs from Encoder, in shape (T,B,H)</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>:return</dt><dd><p>attention energies in shape (B,T)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Attn.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">hidden</em>, <em class="sig-param">encoder_outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Attn.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.model.BeamSearchNode">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">BeamSearchNode</code><span class="sig-paren">(</span><em class="sig-param">h</em>, <em class="sig-param">prevNode</em>, <em class="sig-param">wordid</em>, <em class="sig-param">logp</em>, <em class="sig-param">leng</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.BeamSearchNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.BeamSearchNode.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">h</em>, <em class="sig-param">prevNode</em>, <em class="sig-param">wordid</em>, <em class="sig-param">logp</em>, <em class="sig-param">leng</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.BeamSearchNode.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.BeamSearchNode.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">repeatPenalty</em>, <em class="sig-param">tokenReward</em>, <em class="sig-param">scoreTable</em>, <em class="sig-param">alpha=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.BeamSearchNode.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.model.DecoderRNN">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">DecoderRNN</code><span class="sig-paren">(</span><em class="sig-param">embedding_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">output_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">dropout=0.1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.DecoderRNN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.DecoderRNN.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">embedding_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">output_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">dropout=0.1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.DecoderRNN.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.DecoderRNN.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">hidden</em>, <em class="sig-param">not_used</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.DecoderRNN.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.model.EncoderRNN">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">EncoderRNN</code><span class="sig-paren">(</span><em class="sig-param">input_size</em>, <em class="sig-param">embedding_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">depth</em>, <em class="sig-param">dropout</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.EncoderRNN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.EncoderRNN.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">input_size</em>, <em class="sig-param">embedding_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">depth</em>, <em class="sig-param">dropout</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.EncoderRNN.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.EncoderRNN.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_seqs</em>, <em class="sig-param">input_lens</em>, <em class="sig-param">hidden=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.EncoderRNN.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>forward procedure. <strong>No need for inputs to be sorted</strong>
-:param input_seqs: Variable of [T,B]
-:param hidden:
-:param input_lens: <em>numpy array</em> of len for each input sequence
-:return:</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">input_lang_index2word</em>, <em class="sig-param">output_lang_index2word</em>, <em class="sig-param">input_lang_word2index</em>, <em class="sig-param">output_lang_word2index</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">input_lang_index2word</em>, <em class="sig-param">output_lang_index2word</em>, <em class="sig-param">input_lang_word2index</em>, <em class="sig-param">output_lang_word2index</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.build_model">
-<code class="sig-name descname">build_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.build_model" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.clipGradients">
-<code class="sig-name descname">clipGradients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.clipGradients" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.cuda_">
-<code class="sig-name descname">cuda_</code><span class="sig-paren">(</span><em class="sig-param">var</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.cuda_" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.decode">
-<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">target_tensor</em>, <em class="sig-param">decoder_hidden</em>, <em class="sig-param">encoder_outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_tensor</em>, <em class="sig-param">input_lengths</em>, <em class="sig-param">target_tensor</em>, <em class="sig-param">target_lengths</em>, <em class="sig-param">db_tensor</em>, <em class="sig-param">bs_tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given the user sentence, user belief state and database pointer,
-encode the sentence, decide what policy vector construct and
-feed it as the first hiddent state to the decoder.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.getCount">
-<code class="sig-name descname">getCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.getCount" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.greedy_decode">
-<code class="sig-name descname">greedy_decode</code><span class="sig-paren">(</span><em class="sig-param">decoder_hidden</em>, <em class="sig-param">encoder_outputs</em>, <em class="sig-param">target_tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.greedy_decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.input_index2word">
-<code class="sig-name descname">input_index2word</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.input_index2word" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.input_word2index">
-<code class="sig-name descname">input_word2index</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.input_word2index" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.loadModel">
-<code class="sig-name descname">loadModel</code><span class="sig-paren">(</span><em class="sig-param">iter=0</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.loadModel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.output_index2word">
-<code class="sig-name descname">output_index2word</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.output_index2word" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.output_word2index">
-<code class="sig-name descname">output_word2index</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.output_word2index" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.predict">
-<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">input_tensor</em>, <em class="sig-param">input_lengths</em>, <em class="sig-param">target_tensor</em>, <em class="sig-param">target_lengths</em>, <em class="sig-param">db_tensor</em>, <em class="sig-param">bs_tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.predict" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.printGrad">
-<code class="sig-name descname">printGrad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.printGrad" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.saveModel">
-<code class="sig-name descname">saveModel</code><span class="sig-paren">(</span><em class="sig-param">iter</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.saveModel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.setOptimizers">
-<code class="sig-name descname">setOptimizers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.setOptimizers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.Model.train">
-<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">input_tensor</em>, <em class="sig-param">input_lengths</em>, <em class="sig-param">target_tensor</em>, <em class="sig-param">target_lengths</em>, <em class="sig-param">db_tensor</em>, <em class="sig-param">bs_tensor</em>, <em class="sig-param">dial_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.Model.train" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the module in training mode.</p>
-<p>This has any effect only on certain modules. See documentations of
-particular modules for details of their behaviors in training/evaluation
-mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
-etc.</p>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>Module: self</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="tatk.policy.mdrg.multiwoz.model.SeqAttnDecoderRNN">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">SeqAttnDecoderRNN</code><span class="sig-paren">(</span><em class="sig-param">embedding_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">output_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">dropout_p=0.1</em>, <em class="sig-param">max_length=30</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.SeqAttnDecoderRNN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.SeqAttnDecoderRNN.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">embedding_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">output_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">dropout_p=0.1</em>, <em class="sig-param">max_length=30</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.SeqAttnDecoderRNN.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mdrg.multiwoz.model.SeqAttnDecoderRNN.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">hidden</em>, <em class="sig-param">encoder_outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.SeqAttnDecoderRNN.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="function">
-<dt id="tatk.policy.mdrg.multiwoz.model.init_gru">
-<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">init_gru</code><span class="sig-paren">(</span><em class="sig-param">gru</em>, <em class="sig-param">gain=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.init_gru" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.policy.mdrg.multiwoz.model.init_lstm">
-<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">init_lstm</code><span class="sig-paren">(</span><em class="sig-param">cell</em>, <em class="sig-param">gain=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.init_lstm" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.policy.mdrg.multiwoz.model.whatCellType">
-<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.model.</code><code class="sig-name descname">whatCellType</code><span class="sig-paren">(</span><em class="sig-param">input_size</em>, <em class="sig-param">hidden_size</em>, <em class="sig-param">cell_type</em>, <em class="sig-param">dropout_rate</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.model.whatCellType" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-policy-mdrg-multiwoz-model-module">
+<h2>tatk.policy.mdrg.multiwoz.model module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-model-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="tatk-policy-mdrg-multiwoz-policy-module">
 <h2>tatk.policy.mdrg.multiwoz.policy module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-policy-module" title="Permalink to this headline">¶</a></h2>

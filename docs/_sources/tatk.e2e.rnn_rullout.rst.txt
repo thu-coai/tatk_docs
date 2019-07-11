@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   tatk.e2e.rnn_rullout.deal_or_not
    tatk.e2e.rnn_rullout.engines
    tatk.e2e.rnn_rullout.models
 
@@ -129,37 +130,10 @@ tatk.e2e.rnn\_rullout.rnnrollout module
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.selfplay module
--------------------------------------
-
-.. automodule:: tatk.e2e.rnn_rullout.selfplay
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
 tatk.e2e.rnn\_rullout.split module
 ----------------------------------
 
 .. automodule:: tatk.e2e.rnn_rullout.split
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
-tatk.e2e.rnn\_rullout.test module
----------------------------------
-
-.. automodule:: tatk.e2e.rnn_rullout.test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
-tatk.e2e.rnn\_rullout.train module
-----------------------------------
-
-.. automodule:: tatk.e2e.rnn_rullout.train
    :members:
    :undoc-members:
    :show-inheritance:
