@@ -1,0 +1,18 @@
+tatk.policy.mdrg package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.policy.mdrg.multiwoz
+
+Module contents
+---------------
+
+.. automodule:: tatk.policy.mdrg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__

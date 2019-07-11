@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tatk.policy.mdrg.multiwoz.utils package &mdash; tatk  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tatk.policy.vector package" href="tatk.policy.vector.html" />
+    <link rel="prev" title="tatk.policy.mdrg.multiwoz package" href="tatk.policy.mdrg.multiwoz.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tatk
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Package Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tatk.policy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tatk.policy.mdrg.html">tatk.policy.mdrg package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="tatk.policy.mdrg.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.policy.mdrg.html#module-tatk.policy.mdrg">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.vhus.html">tatk.policy.vhus package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.rlmodule">tatk.policy.rlmodule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.vec">tatk.policy.vec module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tatk</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tatk.policy.html">tatk.policy package</a> &raquo;</li>
+        
+          <li><a href="tatk.policy.mdrg.html">tatk.policy.mdrg package</a> &raquo;</li>
+        
+          <li><a href="tatk.policy.mdrg.multiwoz.html">tatk.policy.mdrg.multiwoz package</a> &raquo;</li>
+        
+      <li>tatk.policy.mdrg.multiwoz.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tatk.policy.mdrg.multiwoz.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tatk-policy-mdrg-multiwoz-utils-package">
+<h1>tatk.policy.mdrg.multiwoz.utils package<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-policy-mdrg-multiwoz-utils-dbpointer-module">
+<h2>tatk.policy.mdrg.multiwoz.utils.dbPointer module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-utils-dbpointer-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-policy-mdrg-multiwoz-utils-dbquery-module">
+<h2>tatk.policy.mdrg.multiwoz.utils.dbquery module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-utils-dbquery-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tatk-policy-mdrg-multiwoz-utils-delexicalize-module">
+<h2>tatk.policy.mdrg.multiwoz.utils.delexicalize module<a class="headerlink" href="#tatk-policy-mdrg-multiwoz-utils-delexicalize-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tatk.policy.mdrg.multiwoz.utils.nlp">
+<span id="tatk-policy-mdrg-multiwoz-utils-nlp-module"></span><h2>tatk.policy.mdrg.multiwoz.utils.nlp module<a class="headerlink" href="#module-tatk.policy.mdrg.multiwoz.utils.nlp" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.BLEUScorer">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.nlp.</code><code class="sig-name descname">BLEUScorer</code><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.BLEUScorer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.BLEUScorer.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.BLEUScorer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.BLEUScorer.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">hypothesis</em>, <em class="sig-param">corpus</em>, <em class="sig-param">n=1</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.BLEUScorer.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.GentScorer">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.nlp.</code><code class="sig-name descname">GentScorer</code><span class="sig-paren">(</span><em class="sig-param">detectfile</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.GentScorer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.GentScorer.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">detectfile</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.GentScorer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.GentScorer.scoreBLEU">
+<code class="sig-name descname">scoreBLEU</code><span class="sig-paren">(</span><em class="sig-param">parallel_corpus</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.GentScorer.scoreBLEU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.insertSpace">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.nlp.</code><code class="sig-name descname">insertSpace</code><span class="sig-paren">(</span><em class="sig-param">token</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.insertSpace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.normalize">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.nlp.</code><code class="sig-name descname">normalize</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.normalize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.nlp.sentence_bleu_4">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.nlp.</code><code class="sig-name descname">sentence_bleu_4</code><span class="sig-paren">(</span><em class="sig-param">hyp, refs, weights=[0.25, 0.25, 0.25, 0.25]</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.nlp.sentence_bleu_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tatk.policy.mdrg.multiwoz.utils.util">
+<span id="tatk-policy-mdrg-multiwoz-utils-util-module"></span><h2>tatk.policy.mdrg.multiwoz.utils.util module<a class="headerlink" href="#module-tatk.policy.mdrg.multiwoz.utils.util" title="Permalink to this headline">¶</a></h2>
+<p>Utility functions</p>
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.asMinutes">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">asMinutes</code><span class="sig-paren">(</span><em class="sig-param">s</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.asMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.loadDialogue">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">loadDialogue</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">val_file</em>, <em class="sig-param">input_tensor</em>, <em class="sig-param">target_tensor</em>, <em class="sig-param">bs_tensor</em>, <em class="sig-param">db_tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.loadDialogue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.load_config">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">load_config</code><span class="sig-paren">(</span><em class="sig-param">basename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.load_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.load_dict">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">load_dict</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.load_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.padSequence">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">padSequence</code><span class="sig-paren">(</span><em class="sig-param">tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.padSequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.str2bool">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">str2bool</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.str2bool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.timeSince">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">timeSince</code><span class="sig-paren">(</span><em class="sig-param">since</em>, <em class="sig-param">percent</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.timeSince" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.policy.mdrg.multiwoz.utils.util.unicode_to_utf8">
+<code class="sig-prename descclassname">tatk.policy.mdrg.multiwoz.utils.util.</code><code class="sig-name descname">unicode_to_utf8</code><span class="sig-paren">(</span><em class="sig-param">d</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.utils.util.unicode_to_utf8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tatk.policy.vector.html" class="btn btn-neutral float-right" title="tatk.policy.vector package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tatk.policy.mdrg.multiwoz.html" class="btn btn-neutral" title="tatk.policy.mdrg.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, thu-coai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
