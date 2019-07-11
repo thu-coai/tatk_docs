@@ -259,11 +259,15 @@
 <dd><p>Predict the next agent action given dialog state.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
-<dt>state (tuple or dict): when the DST and Policy module are separated, the type of state is tuple.</dt><dd><p>else when they are aggregated together, the type of state is dict (dialog act).</p>
+<dt>state (tuple or dict):</dt><dd><p>when the DST and Policy module are separated, the type of state is tuple.
+else when they are aggregated together, the type of state is dict (dialog act).</p>
 </dd>
 </dl>
 </dd>
-<dt>Returns:</dt><dd><p>action (dict): The next dialog action.</p>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>action (dict):</dt><dd><p>The next dialog action.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -546,9 +550,15 @@ registered hooks while the latter silently ignores them.</p>
 <code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.action_devectorize" title="Permalink to this definition">¶</a></dt>
 <dd><p>recover an action</p>
 <dl class="simple">
-<dt>Args:</dt><dd><p>action_vec (np.array): Dialog act vector</p>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>action_vec (np.array):</dt><dd><p>Dialog act vector</p>
 </dd>
-<dt>Returns:</dt><dd><p>action (tuple): Dialog act</p>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>action (tuple):</dt><dd><p>Dialog act</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -564,9 +574,15 @@ registered hooks while the latter silently ignores them.</p>
 <code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vec.Vector.state_vectorize" title="Permalink to this definition">¶</a></dt>
 <dd><p>vectorize a state</p>
 <dl class="simple">
-<dt>Args:</dt><dd><p>state (tuple): Dialog state</p>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>state (tuple):</dt><dd><p>Dialog state</p>
 </dd>
-<dt>Returns:</dt><dd><p>state_vec (np.array): Dialog state vector</p>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>state_vec (np.array):</dt><dd><p>Dialog state vector</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
