@@ -306,6 +306,15 @@ value (str): The raw value detected by NLU module.</p>
 <em class="property">class </em><code class="sig-prename descclassname">tatk.dst.rule.multiwoz.state_tracker.</code><code class="sig-name descname">RuleDST</code><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="tatk.dst.html#tatk.dst.state_tracker.Tracker" title="tatk.dst.state_tracker.Tracker"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.state_tracker.Tracker</span></code></a></p>
 <p>Rule based DST which trivially updates new values from NLU result to states.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>state(dict):</dt><dd><p>Dialog state. Function <code class="docutils literal notranslate"><span class="pre">tatk.util.camrest.state.default_state</span></code> returns a default state.</p>
+</dd>
+<dt>value_dict(dict):</dt><dd><p>It helps check whether <code class="docutils literal notranslate"><span class="pre">user_act</span></code> has correct content.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="method">
 <dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST.__init__" title="Permalink to this definition">¶</a></dt>
@@ -315,7 +324,8 @@ value (str): The raw value detected by NLU module.</p>
 <dl class="method">
 <dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST.init_session">
 <code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST.init_session" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Initialize <code class="docutils literal notranslate"><span class="pre">self.state</span></code> with a default state, which <code class="docutils literal notranslate"><span class="pre">tatk.util.multiwoz.state.default_state</span></code> returns.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST.update">
