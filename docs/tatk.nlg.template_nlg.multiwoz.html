@@ -187,25 +187,35 @@
 <dl class="method">
 <dt id="tatk.nlg.template_nlg.multiwoz.nlg.TemplateNLG.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">is_user</em>, <em class="sig-param">mode='manual'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.multiwoz.nlg.TemplateNLG.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>is_user</strong> – if dialog_act from user or system</p></li>
-<li><p><strong>mode</strong> – <cite>auto</cite>: templates extracted from data without manual modification, may have no match;
-<cite>manual</cite>: templates with manual modification, sometimes verbose;
-<cite>auto_manual</cite>: use auto templates first. When fails, use manual templates.</p></li>
+<dd><dl>
+<dt>Args:</dt><dd><dl>
+<dt>is_user:</dt><dd><p>if dialog_act from user or system</p>
+</dd>
+<dt>mode:</dt><dd><ul class="simple">
+<li><p><cite>auto</cite>: templates extracted from data without manual modification, may have no match;</p></li>
+<li><p><cite>manual</cite>: templates with manual modification, sometimes verbose;</p></li>
+<li><p><cite>auto_manual</cite>: use auto templates first. When fails, use manual templates.</p></li>
 </ul>
+<p>both template are dict, <a href="#id1"><span class="problematic" id="id2">*</span></a>_template[dialog_act][slot] is a list of templates.</p>
 </dd>
 </dl>
-<p>both template are dict, <a href="#id1"><span class="problematic" id="id2">*</span></a>_template[dialog_act][slot] is a list of templates.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="tatk.nlg.template_nlg.multiwoz.nlg.TemplateNLG.generate">
 <code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.template_nlg.multiwoz.nlg.TemplateNLG.generate" title="Permalink to this definition">¶</a></dt>
-<dd><p>NLG for Multiwoz dataset
-:param dialog_acts: {da1:[[slot1,value1],…], da2:…}
-:return: generated sentence</p>
+<dd><p>NLG for Multiwoz dataset</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>dialog_acts:</dt><dd><p>{da1:[[slot1,value1],…], da2:…}</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>generated sentence</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
