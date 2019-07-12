@@ -1,0 +1,25 @@
+tatk.nlg.sclstm.camrest package
+===============================
+
+Submodules
+----------
+
+tatk.nlg.sclstm.camrest.sc\_lstm module
+---------------------------------------
+
+.. automodule:: tatk.nlg.sclstm.camrest.sc_lstm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlg.sclstm.camrest.train module
+------------------------------------
+
+.. automodule:: tatk.nlg.sclstm.camrest.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
