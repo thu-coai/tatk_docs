@@ -12,15 +12,6 @@ Subpackages
 Submodules
 ----------
 
-tatk.e2e.sequicity.Sequicity module
------------------------------------
-
-.. automodule:: tatk.e2e.sequicity.Sequicity
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
 tatk.e2e.sequicity.config module
 --------------------------------
 

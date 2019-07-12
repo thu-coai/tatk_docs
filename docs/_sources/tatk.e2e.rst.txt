@@ -9,16 +9,11 @@ Subpackages
    tatk.e2e.rnn_rullout
    tatk.e2e.sequicity
 
-Submodules
-----------
+Module contents
+---------------
 
-tatk.e2e.e2e module
--------------------
-
-.. automodule:: tatk.e2e.e2e
+.. automodule:: tatk.e2e
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
-
-
