@@ -38,10 +38,10 @@ tatk.policy.mdrg.multiwoz.evaluator module
    :show-inheritance:
    :special-members: __init__
 
-tatk.policy.mdrg.multiwoz.model module
---------------------------------------
+tatk.policy.mdrg.multiwoz.mdrg\_model module
+--------------------------------------------
 
-.. automodule:: tatk.policy.mdrg.multiwoz.model
+.. automodule:: tatk.policy.mdrg.multiwoz.mdrg_model
    :members:
    :undoc-members:
    :show-inheritance:
