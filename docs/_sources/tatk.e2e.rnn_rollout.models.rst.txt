@@ -1,67 +1,67 @@
-tatk.e2e.rnn\_rullout.models package
+tatk.e2e.rnn\_rollout.models package
 ====================================
 
 Submodules
 ----------
 
-tatk.e2e.rnn\_rullout.models.attn module
+tatk.e2e.rnn\_rollout.models.attn module
 ----------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.attn
+.. automodule:: tatk.e2e.rnn_rollout.models.attn
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.models.ctx\_encoder module
+tatk.e2e.rnn\_rollout.models.ctx\_encoder module
 ------------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.ctx_encoder
+.. automodule:: tatk.e2e.rnn_rollout.models.ctx_encoder
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.models.latent\_clustering\_model module
+tatk.e2e.rnn\_rollout.models.latent\_clustering\_model module
 -------------------------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.latent_clustering_model
+.. automodule:: tatk.e2e.rnn_rollout.models.latent_clustering_model
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.models.modules module
+tatk.e2e.rnn\_rollout.models.modules module
 -------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.modules
+.. automodule:: tatk.e2e.rnn_rollout.models.modules
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.models.rnn\_model module
+tatk.e2e.rnn\_rollout.models.rnn\_model module
 ----------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.rnn_model
+.. automodule:: tatk.e2e.rnn_rollout.models.rnn_model
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.models.selection\_model module
+tatk.e2e.rnn\_rollout.models.selection\_model module
 ----------------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.selection_model
+.. automodule:: tatk.e2e.rnn_rollout.models.selection_model
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.models.utils module
+tatk.e2e.rnn\_rollout.models.utils module
 -----------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.models.utils
+.. automodule:: tatk.e2e.rnn_rollout.models.utils
    :members:
    :undoc-members:
    :show-inheritance:

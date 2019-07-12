@@ -6,7 +6,7 @@ Subpackages
 
 .. toctree::
 
-   tatk.e2e.rnn_rullout
+   tatk.e2e.rnn_rollout
    tatk.e2e.sequicity
 
 Module contents

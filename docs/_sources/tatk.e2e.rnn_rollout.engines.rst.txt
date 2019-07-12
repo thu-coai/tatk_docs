@@ -1,40 +1,40 @@
-tatk.e2e.rnn\_rullout.engines package
+tatk.e2e.rnn\_rollout.engines package
 =====================================
 
 Submodules
 ----------
 
-tatk.e2e.rnn\_rullout.engines.engine module
+tatk.e2e.rnn\_rollout.engines.engine module
 -------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.engines.engine
+.. automodule:: tatk.e2e.rnn_rollout.engines.engine
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.engines.latent\_clustering\_engine module
+tatk.e2e.rnn\_rollout.engines.latent\_clustering\_engine module
 ---------------------------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.engines.latent_clustering_engine
+.. automodule:: tatk.e2e.rnn_rollout.engines.latent_clustering_engine
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.engines.rnn\_engine module
+tatk.e2e.rnn\_rollout.engines.rnn\_engine module
 ------------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.engines.rnn_engine
+.. automodule:: tatk.e2e.rnn_rollout.engines.rnn_engine
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.e2e.rnn\_rullout.engines.selection\_engine module
+tatk.e2e.rnn\_rollout.engines.selection\_engine module
 ------------------------------------------------------
 
-.. automodule:: tatk.e2e.rnn_rullout.engines.selection_engine
+.. automodule:: tatk.e2e.rnn_rollout.engines.selection_engine
    :members:
    :undoc-members:
    :show-inheritance:

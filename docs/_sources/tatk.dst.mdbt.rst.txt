@@ -11,15 +11,6 @@ Subpackages
 Submodules
 ----------
 
-tatk.dst.mdbt.evaluate module
------------------------------
-
-.. automodule:: tatk.dst.mdbt.evaluate
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
 tatk.dst.mdbt.mdbt module
 -------------------------
 

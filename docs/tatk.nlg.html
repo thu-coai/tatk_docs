@@ -93,7 +93,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tatk-nlg-nlg-module">tatk.nlg.nlg module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
@@ -174,17 +174,17 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html">tatk.nlg.template_nlg.camrest package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html#tatk-nlg-template-nlg-camrest-nlg-module">tatk.nlg.template_nlg.camrest.nlg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html#module-tatk.nlg.template_nlg.camrest.nlg">tatk.nlg.template_nlg.camrest.nlg module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html">tatk.nlg.template_nlg.multiwoz package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html#tatk-nlg-template-nlg-multiwoz-nlg-module">tatk.nlg.template_nlg.multiwoz.nlg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html#module-tatk.nlg.template_nlg.multiwoz.nlg">tatk.nlg.template_nlg.multiwoz.nlg module</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.html#module-tatk.nlg.template_nlg">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -193,8 +193,34 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlg-nlg-module">
-<h2>tatk.nlg.nlg module<a class="headerlink" href="#tatk-nlg-nlg-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlg.nlg">
+<span id="tatk-nlg-nlg-module"></span><h2>tatk.nlg.nlg module<a class="headerlink" href="#module-tatk.nlg.nlg" title="Permalink to this headline">¶</a></h2>
+<p>Natural Language Generation Interface</p>
+<dl class="class">
+<dt id="tatk.nlg.nlg.NLG">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlg.nlg.</code><code class="sig-name descname">NLG</code><a class="headerlink" href="#tatk.nlg.nlg.NLG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base class for NLG model.</p>
+<dl class="method">
+<dt id="tatk.nlg.nlg.NLG.generate">
+<em class="property">abstract </em><code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a natural language utterance conditioned on the dialog act.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>action (dict):</dt><dd><p>The dialog action produced by dialog policy module, which is in dialog act format.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>response (str):</dt><dd><p>A natural langauge utterance.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

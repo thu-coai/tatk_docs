@@ -91,20 +91,20 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="tatk.e2e.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="tatk.e2e.rnn_rullout.html">tatk.e2e.rnn_rullout package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.e2e.rnn_rollout.html">tatk.e2e.rnn_rollout package</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="tatk.e2e.sequicity.html">tatk.e2e.sequicity package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="tatk.e2e.sequicity.html#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#tatk-e2e-sequicity-config-module">tatk.e2e.sequicity.config module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#tatk-e2e-sequicity-metric-module">tatk.e2e.sequicity.metric module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#tatk-e2e-sequicity-model-module">tatk.e2e.sequicity.model module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#tatk-e2e-sequicity-reader-module">tatk.e2e.sequicity.reader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#tatk-e2e-sequicity-tsd-net-module">tatk.e2e.sequicity.tsd_net module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#module-tatk.e2e.sequicity.config">tatk.e2e.sequicity.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#module-tatk.e2e.sequicity.metric">tatk.e2e.sequicity.metric module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#module-tatk.e2e.sequicity.model">tatk.e2e.sequicity.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#module-tatk.e2e.sequicity.reader">tatk.e2e.sequicity.reader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.e2e.sequicity.html#module-tatk.e2e.sequicity.tsd_net">tatk.e2e.sequicity.tsd_net module</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.e2e.html#module-tatk.e2e">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
@@ -182,8 +182,66 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-e2e-sequicity-camrest-sequicity-module">
-<h2>tatk.e2e.sequicity.camrest.sequicity module<a class="headerlink" href="#tatk-e2e-sequicity-camrest-sequicity-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.e2e.sequicity.camrest.sequicity">
+<span id="tatk-e2e-sequicity-camrest-sequicity-module"></span><h2>tatk.e2e.sequicity.camrest.sequicity module<a class="headerlink" href="#module-tatk.e2e.sequicity.camrest.sequicity" title="Permalink to this headline">¶</a></h2>
+<p>Sequicity is an end-to-end task-oriented dialog system based on a single sequence-to-sequence model that uses belief span to track dialog believes. We adapt the code from github to work in multiwoz corpus.</p>
+<p>Reference:</p>
+<p>Lei, W., Jin, X., Kan, M. Y., Ren, Z., He, X., &amp; Yin, D. (2018, July). Sequicity: Simplifying task-oriented dialogue systems with single sequence-to-sequence architectures. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) (pp. 1437-1447).</p>
+<dl class="class">
+<dt id="tatk.e2e.sequicity.camrest.sequicity.Sequicity">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.e2e.sequicity.camrest.sequicity.</code><code class="sig-name descname">Sequicity</code><span class="sig-paren">(</span><em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/sequicity_camrest.pkl'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.sequicity.camrest.sequicity.Sequicity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.dialog_agent.html#tatk.dialog_agent.agent.Agent" title="tatk.dialog_agent.agent.Agent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.Agent</span></code></a></p>
+<dl class="method">
+<dt id="tatk.e2e.sequicity.camrest.sequicity.Sequicity.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/sequicity_camrest.pkl'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.sequicity.camrest.sequicity.Sequicity.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequicity initialization</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>model_file (str):</dt><dd><p>trained model path or url. default=”<a class="reference external" href="https://tatk-data.s3-ap-northeast-1.amazonaws.com/sequicity_camrest.pkl">https://tatk-data.s3-ap-northeast-1.amazonaws.com/sequicity_camrest.pkl</a>”</p>
+</dd>
+</dl>
+</dd>
+<dt>Example:</dt><dd><p>sequicity = Sequicity()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.sequicity.camrest.sequicity.Sequicity.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.sequicity.camrest.sequicity.Sequicity.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the class variables to prepare for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.sequicity.camrest.sequicity.Sequicity.response">
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">usr</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.sequicity.camrest.sequicity.Sequicity.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate agent response given user input.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>observation (str):</dt><dd><p>The input to the agent.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>response (str):</dt><dd><p>The response generated by the agent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.e2e.sequicity.camrest.sequicity.Sequicity.z2degree">
+<code class="sig-name descname">z2degree</code><span class="sig-paren">(</span><em class="sig-param">gen_z</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.sequicity.camrest.sequicity.Sequicity.z2degree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.e2e.sequicity.camrest.sequicity.denormalize">
+<code class="sig-prename descclassname">tatk.e2e.sequicity.camrest.sequicity.</code><code class="sig-name descname">denormalize</code><span class="sig-paren">(</span><em class="sig-param">uttr</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.e2e.sequicity.camrest.sequicity.denormalize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
