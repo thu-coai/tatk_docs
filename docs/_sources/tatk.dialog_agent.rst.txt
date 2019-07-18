@@ -13,6 +13,15 @@ tatk.dialog\_agent.agent module
    :show-inheritance:
    :special-members: __init__
 
+tatk.dialog\_agent.env module
+-----------------------------
+
+.. automodule:: tatk.dialog_agent.env
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.dialog\_agent.session module
 ---------------------------------
 

@@ -1,0 +1,16 @@
+tatk.policy.ppo package
+=======================
+
+Submodules
+----------
+
+tatk.policy.ppo.ppo module
+--------------------------
+
+.. automodule:: tatk.policy.ppo.ppo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

@@ -93,6 +93,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.dialog_agent package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.agent">tatk.dialog_agent.agent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.env">tatk.dialog_agent.env module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.dialog_agent.session">tatk.dialog_agent.session module</a></li>
 </ul>
 </li>
@@ -319,6 +320,33 @@ matching.</p>
 <code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent.response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate agent response using the agent modules.</p>
 </dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.dialog_agent.env">
+<span id="tatk-dialog-agent-env-module"></span><h2>tatk.dialog_agent.env module<a class="headerlink" href="#module-tatk.dialog_agent.env" title="Permalink to this headline">¶</a></h2>
+<p>Created on Wed Jul 17 14:27:34 2019</p>
+<p>&#64;author: truthless</p>
+<dl class="class">
+<dt id="tatk.dialog_agent.env.Environment">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.env.</code><code class="sig-name descname">Environment</code><span class="sig-paren">(</span><em class="sig-param">sys_nlg</em>, <em class="sig-param">usr</em>, <em class="sig-param">sys_nlu</em>, <em class="sig-param">sys_dst</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.env.Environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.dialog_agent.env.Environment.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">sys_nlg</em>, <em class="sig-param">usr</em>, <em class="sig-param">sys_nlu</em>, <em class="sig-param">sys_dst</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.env.Environment.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.env.Environment.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.env.Environment.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.env.Environment.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.env.Environment.step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

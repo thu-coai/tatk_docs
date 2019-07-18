@@ -1,0 +1,16 @@
+tatk.policy.pg package
+======================
+
+Submodules
+----------
+
+tatk.policy.pg.pg module
+------------------------
+
+.. automodule:: tatk.policy.pg.pg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
