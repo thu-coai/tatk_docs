@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.vhus.camrest.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.vhus.camrest.html#module-tatk.policy.vhus.camrest.train">tatk.policy.vhus.camrest.train module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.policy.vhus.camrest.html#module-tatk.policy.vhus.camrest.usermanager">tatk.policy.vhus.camrest.usermanager module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vhus.camrest.html#module-tatk.policy.vhus.camrest.vhus">tatk.policy.vhus.camrest.vhus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.vhus.camrest.html#tatk-policy-vhus-camrest-vhus-module">tatk.policy.vhus.camrest.vhus module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.policy.vhus.multiwoz.html">tatk.policy.vhus.multiwoz package</a><ul>
@@ -266,29 +266,21 @@ registered hooks while the latter silently ignores them.</p>
 <dl class="method">
 <dt id="tatk.policy.vhus.usermodule.Encoder.forward">
 <code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_var</em>, <em class="sig-param">input_lengths=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vhus.usermodule.Encoder.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Applies a multi-layer RNN to an input sequence.</p>
-<dl>
-<dt>Args:</dt><dd><dl>
-<dt>input_var (batch, seq_len):</dt><dd><p>tensor containing the features of the input sequence.</p>
-</dd>
-<dt>input_lengths (list of int, optional):</dt><dd><blockquote>
-<div><p>A list that contains the lengths of sequences</p>
+<dd><p>Applies a multi-layer RNN to an input sequence.
+Args:</p>
+<blockquote>
+<div><p>input_var (batch, seq_len): tensor containing the features of the input sequence.
+input_lengths (list of int, optional): A list that contains the lengths of sequences</p>
+<blockquote>
+<div><p>in the mini-batch</p>
 </div></blockquote>
-<p>in the mini-batch</p>
-</dd>
-</dl>
-</dd>
+</div></blockquote>
+<dl class="simple">
 <dt>Returns: output, hidden</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><strong>output</strong> (batch, seq_len, hidden_size):</dt><dd><p>variable containing the encoded features of the input sequence</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><strong>hidden</strong> (num_layers * num_directions, batch, hidden_size):</dt><dd><p>variable containing the features in the hidden state h</p>
-</dd>
-</dl>
-</li>
+<li><p><strong>output</strong> (batch, seq_len, hidden_size): variable containing the encoded features of
+the input sequence</p></li>
+<li><p><strong>hidden</strong> (num_layers * num_directions, batch, hidden_size): variable containing the
+features in the hidden state h</p></li>
 </ul>
 </dd>
 </dl>
