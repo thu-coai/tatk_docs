@@ -339,8 +339,51 @@
 <dd></dd></dl>
 
 </div>
-<div class="section" id="tatk-policy-vhus-camrest-vhus-module">
-<h2>tatk.policy.vhus.camrest.vhus module<a class="headerlink" href="#tatk-policy-vhus-camrest-vhus-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.policy.vhus.camrest.vhus">
+<span id="tatk-policy-vhus-camrest-vhus-module"></span><h2>tatk.policy.vhus.camrest.vhus module<a class="headerlink" href="#module-tatk.policy.vhus.camrest.vhus" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.policy.vhus.camrest.vhus.UserPolicyVHUS">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vhus.camrest.vhus.</code><code class="sig-name descname">UserPolicyVHUS</code><span class="sig-paren">(</span><em class="sig-param">archive_file='/home/travis/build/thu-coai/tatk/tatk/policy/vhus/camrest/models/vhus_simulator_camrest.zip'</em>, <em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/vhus_simulator_camrest.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vhus.camrest.vhus.UserPolicyVHUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.policy.html#tatk.policy.policy.Policy" title="tatk.policy.policy.Policy"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.policy.policy.Policy</span></code></a></p>
+<dl class="method">
+<dt id="tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">archive_file='/home/travis/build/thu-coai/tatk/tatk/policy/vhus/camrest/models/vhus_simulator_camrest.zip'</em>, <em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/vhus_simulator_camrest.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the class variables for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vhus.camrest.vhus.UserPolicyVHUS.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict an user act based on state and preorder system action.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>state (tuple):</dt><dd><p>Dialog state.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>usr_action (tuple):</dt><dd><p>User act.</p>
+</dd>
+<dt>session_over (boolean):</dt><dd><p>True to terminate session, otherwise session continues.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
