@@ -11,6 +11,15 @@ Subpackages
 Submodules
 ----------
 
+tatk.policy.mdrg.multiwoz.auto\_download module
+-----------------------------------------------
+
+.. automodule:: tatk.policy.mdrg.multiwoz.auto_download
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.mdrg.multiwoz.create\_delex\_data module
 ----------------------------------------------------
 
@@ -42,6 +51,15 @@ tatk.policy.mdrg.multiwoz.mdrg\_model module
 --------------------------------------------
 
 .. automodule:: tatk.policy.mdrg.multiwoz.mdrg_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.mdrg.multiwoz.model module
+--------------------------------------
+
+.. automodule:: tatk.policy.mdrg.multiwoz.model
    :members:
    :undoc-members:
    :show-inheritance:
