@@ -4,6 +4,15 @@ tatk.nlg.sclstm.camrest package
 Submodules
 ----------
 
+tatk.nlg.sclstm.camrest.evaluate module
+---------------------------------------
+
+.. automodule:: tatk.nlg.sclstm.camrest.evaluate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.nlg.sclstm.camrest.sc\_lstm module
 ---------------------------------------
 

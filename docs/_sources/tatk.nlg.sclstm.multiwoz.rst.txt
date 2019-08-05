@@ -4,6 +4,15 @@ tatk.nlg.sclstm.multiwoz package
 Submodules
 ----------
 
+tatk.nlg.sclstm.multiwoz.evaluate module
+----------------------------------------
+
+.. automodule:: tatk.nlg.sclstm.multiwoz.evaluate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.nlg.sclstm.multiwoz.sc\_lstm module
 ----------------------------------------
 
