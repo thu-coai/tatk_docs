@@ -1,0 +1,19 @@
+tatk.nlg.template package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.nlg.template.camrest
+   tatk.nlg.template.multiwoz
+
+Module contents
+---------------
+
+.. automodule:: tatk.nlg.template
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__

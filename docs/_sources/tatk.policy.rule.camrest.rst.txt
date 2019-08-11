@@ -1,0 +1,34 @@
+tatk.policy.rule.camrest package
+================================
+
+Submodules
+----------
+
+tatk.policy.rule.camrest.policy\_agenda\_camrest module
+-------------------------------------------------------
+
+.. automodule:: tatk.policy.rule.camrest.policy_agenda_camrest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.rule.camrest.rule module
+------------------------------------
+
+.. automodule:: tatk.policy.rule.camrest.rule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.rule.camrest.rule\_based\_camrest\_bot module
+---------------------------------------------------------
+
+.. automodule:: tatk.policy.rule.camrest.rule_based_camrest_bot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

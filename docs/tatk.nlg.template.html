@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk.nlg.sclstm package &mdash; tatk  documentation</title>
+  <title>tatk.nlg.template package &mdash; tatk  documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.nlg.sclstm.camrest package" href="tatk.nlg.sclstm.camrest.html" />
-    <link rel="prev" title="tatk.nlg package" href="tatk.nlg.html" /> 
+    <link rel="next" title="tatk.nlg.template.camrest package" href="tatk.nlg.template.camrest.html" />
+    <link rel="prev" title="tatk.nlg.sclstm.multiwoz package" href="tatk.nlg.sclstm.multiwoz.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,13 +89,12 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="tatk.nlg.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlg.sclstm package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tatk.nlg.sclstm.html">tatk.nlg.sclstm package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlg.template package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlg.sclstm.bleu">tatk.nlg.sclstm.bleu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlg.template">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlg.template.html">tatk.nlg.template package</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlg.html#submodules">Submodules</a></li>
@@ -153,13 +152,13 @@
         
           <li><a href="tatk.nlg.html">tatk.nlg package</a> &raquo;</li>
         
-      <li>tatk.nlg.sclstm package</li>
+      <li>tatk.nlg.template package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/tatk.nlg.sclstm.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.nlg.template.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,44 +171,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk-nlg-sclstm-package">
-<h1>tatk.nlg.sclstm package<a class="headerlink" href="#tatk-nlg-sclstm-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tatk-nlg-template-package">
+<h1>tatk.nlg.template package<a class="headerlink" href="#tatk-nlg-template-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html">tatk.nlg.sclstm.camrest package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#module-tatk.nlg.sclstm.camrest.evaluate">tatk.nlg.sclstm.camrest.evaluate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#module-tatk.nlg.sclstm.camrest.sc_lstm">tatk.nlg.sclstm.camrest.sc_lstm module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#module-tatk.nlg.sclstm.camrest.train">tatk.nlg.sclstm.camrest.train module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.template.camrest.html">tatk.nlg.template.camrest package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template.camrest.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template.camrest.html#tatk-nlg-template-camrest-evaluate-module">tatk.nlg.template.camrest.evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template.camrest.html#tatk-nlg-template-camrest-nlg-module">tatk.nlg.template.camrest.nlg module</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html">tatk.nlg.sclstm.multiwoz package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#module-tatk.nlg.sclstm.multiwoz.evaluate">tatk.nlg.sclstm.multiwoz.evaluate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#module-tatk.nlg.sclstm.multiwoz.sc_lstm">tatk.nlg.sclstm.multiwoz.sc_lstm module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#module-tatk.nlg.sclstm.multiwoz.train">tatk.nlg.sclstm.multiwoz.train module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.template.multiwoz.html">tatk.nlg.template.multiwoz package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template.multiwoz.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template.multiwoz.html#tatk-nlg-template-multiwoz-evaluate-module">tatk.nlg.template.multiwoz.evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template.multiwoz.html#tatk-nlg-template-multiwoz-nlg-module">tatk.nlg.template.multiwoz.nlg module</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-tatk.nlg.sclstm.bleu">
-<span id="tatk-nlg-sclstm-bleu-module"></span><h2>tatk.nlg.sclstm.bleu module<a class="headerlink" href="#module-tatk.nlg.sclstm.bleu" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="tatk.nlg.sclstm.bleu.get_bleu">
-<code class="sig-prename descclassname">tatk.nlg.sclstm.bleu.</code><code class="sig-name descname">get_bleu</code><span class="sig-paren">(</span><em class="sig-param">feat2content</em>, <em class="sig-param">template=False</em>, <em class="sig-param">ignore=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.bleu.get_bleu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.nlg.sclstm.bleu.score_woz">
-<code class="sig-prename descclassname">tatk.nlg.sclstm.bleu.</code><code class="sig-name descname">score_woz</code><span class="sig-paren">(</span><em class="sig-param">res_file</em>, <em class="sig-param">ignore=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.bleu.score_woz" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="module-tatk.nlg.template">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tatk.nlg.template" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -221,10 +205,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.nlg.sclstm.camrest.html" class="btn btn-neutral float-right" title="tatk.nlg.sclstm.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.nlg.template.camrest.html" class="btn btn-neutral float-right" title="tatk.nlg.template.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.nlg.html" class="btn btn-neutral" title="tatk.nlg package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.nlg.sclstm.multiwoz.html" class="btn btn-neutral" title="tatk.nlg.sclstm.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

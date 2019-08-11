@@ -1,0 +1,25 @@
+tatk.nlg.template.multiwoz package
+==================================
+
+Submodules
+----------
+
+tatk.nlg.template.multiwoz.evaluate module
+------------------------------------------
+
+.. automodule:: tatk.nlg.template.multiwoz.evaluate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlg.template.multiwoz.nlg module
+-------------------------------------
+
+.. automodule:: tatk.nlg.template.multiwoz.nlg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

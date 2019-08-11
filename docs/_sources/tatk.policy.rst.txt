@@ -9,6 +9,7 @@ Subpackages
    tatk.policy.mdrg
    tatk.policy.pg
    tatk.policy.ppo
+   tatk.policy.rule
    tatk.policy.vector
    tatk.policy.vhus
 

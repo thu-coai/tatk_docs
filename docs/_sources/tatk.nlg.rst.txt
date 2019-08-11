@@ -7,7 +7,7 @@ Subpackages
 .. toctree::
 
    tatk.nlg.sclstm
-   tatk.nlg.template_nlg
+   tatk.nlg.template
 
 Submodules
 ----------

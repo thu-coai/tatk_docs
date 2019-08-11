@@ -1,0 +1,19 @@
+tatk.policy.rule package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.policy.rule.camrest
+   tatk.policy.rule.multiwoz
+
+Module contents
+---------------
+
+.. automodule:: tatk.policy.rule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__

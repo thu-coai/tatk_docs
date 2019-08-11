@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tatk.nlg.template_nlg package &mdash; tatk  documentation</title>
+  <title>tatk.policy.rule package &mdash; tatk  documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.nlg.template_nlg.camrest package" href="tatk.nlg.template_nlg.camrest.html" />
-    <link rel="prev" title="tatk.nlg.sclstm.multiwoz package" href="tatk.nlg.sclstm.multiwoz.html" /> 
+    <link rel="next" title="tatk.policy.rule.camrest package" href="tatk.policy.rule.camrest.html" />
+    <link rel="prev" title="tatk.policy.ppo package" href="tatk.policy.ppo.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,22 +85,28 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tatk.util.html">tatk.util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.task.html">tatk.task package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="tatk.nlg.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="tatk.nlg.sclstm.html">tatk.nlg.sclstm package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlg.template_nlg package</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="tatk.policy.html">tatk.policy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tatk.policy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.mdrg.html">tatk.policy.mdrg package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.pg.html">tatk.policy.pg package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.ppo.html">tatk.policy.ppo package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.policy.rule package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlg.template_nlg">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.rule">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.vector.html">tatk.policy.vector package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.vhus.html">tatk.policy.vhus package</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.html#module-tatk.nlg.nlg">tatk.nlg.nlg module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.policy">tatk.policy.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.rlmodule">tatk.policy.rlmodule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.html#module-tatk.policy.vec">tatk.policy.vec module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.html">tatk.nlu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.evaluator.html">tatk.evaluator package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.html">tatk.dst package</a></li>
@@ -150,15 +156,15 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="tatk.nlg.html">tatk.nlg package</a> &raquo;</li>
+          <li><a href="tatk.policy.html">tatk.policy package</a> &raquo;</li>
         
-      <li>tatk.nlg.template_nlg package</li>
+      <li>tatk.policy.rule package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/tatk.nlg.template_nlg.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tatk.policy.rule.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,29 +177,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tatk-nlg-template-nlg-package">
-<h1>tatk.nlg.template_nlg package<a class="headerlink" href="#tatk-nlg-template-nlg-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tatk-policy-rule-package">
+<h1>tatk.policy.rule package<a class="headerlink" href="#tatk-policy-rule-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html">tatk.nlg.template_nlg.camrest package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html#module-tatk.nlg.template_nlg.camrest.evaluate">tatk.nlg.template_nlg.camrest.evaluate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.camrest.html#module-tatk.nlg.template_nlg.camrest.nlg">tatk.nlg.template_nlg.camrest.nlg module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.rule.camrest.html">tatk.policy.rule.camrest package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.camrest.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.camrest.html#module-tatk.policy.rule.camrest.policy_agenda_camrest">tatk.policy.rule.camrest.policy_agenda_camrest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.camrest.html#module-tatk.policy.rule.camrest.rule">tatk.policy.rule.camrest.rule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.camrest.html#module-tatk.policy.rule.camrest.rule_based_camrest_bot">tatk.policy.rule.camrest.rule_based_camrest_bot module</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html">tatk.nlg.template_nlg.multiwoz package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html#module-tatk.nlg.template_nlg.multiwoz.evaluate">tatk.nlg.template_nlg.multiwoz.evaluate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlg.template_nlg.multiwoz.html#module-tatk.nlg.template_nlg.multiwoz.nlg">tatk.nlg.template_nlg.multiwoz.nlg module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.policy.rule.multiwoz.html">tatk.policy.rule.multiwoz package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.multiwoz.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.multiwoz.html#module-tatk.policy.rule.multiwoz.policy_agenda_multiwoz">tatk.policy.rule.multiwoz.policy_agenda_multiwoz module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.multiwoz.html#module-tatk.policy.rule.multiwoz.rule">tatk.policy.rule.multiwoz.rule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.policy.rule.multiwoz.html#module-tatk.policy.rule.multiwoz.rule_based_multiwoz_bot">tatk.policy.rule.multiwoz.rule_based_multiwoz_bot module</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="section" id="module-tatk.nlg.template_nlg">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tatk.nlg.template_nlg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.policy.rule">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tatk.policy.rule" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -205,10 +213,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.nlg.template_nlg.camrest.html" class="btn btn-neutral float-right" title="tatk.nlg.template_nlg.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.policy.rule.camrest.html" class="btn btn-neutral float-right" title="tatk.policy.rule.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.nlg.sclstm.multiwoz.html" class="btn btn-neutral" title="tatk.nlg.sclstm.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.policy.ppo.html" class="btn btn-neutral" title="tatk.policy.ppo package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
