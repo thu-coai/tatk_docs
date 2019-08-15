@@ -300,6 +300,16 @@ matching.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="tatk.dialog_agent.agent.PipelineAgent.get_in_da">
+<code class="sig-name descname">get_in_da</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent.get_in_da" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.dialog_agent.agent.PipelineAgent.get_out_da">
+<code class="sig-name descname">get_out_da</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent.get_out_da" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="tatk.dialog_agent.agent.PipelineAgent.get_reward">
 <code class="sig-name descname">get_reward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent.get_reward" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -356,7 +366,7 @@ matching.</p>
 <p>Dialog controller classes.</p>
 <dl class="class">
 <dt id="tatk.dialog_agent.session.BiSession">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.session.</code><code class="sig-name descname">BiSession</code><span class="sig-paren">(</span><em class="sig-param">sys_agent</em>, <em class="sig-param">user_agent</em>, <em class="sig-param">kb_query</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.BiSession" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.session.</code><code class="sig-name descname">BiSession</code><span class="sig-paren">(</span><em class="sig-param">sys_agent</em>, <em class="sig-param">user_agent</em>, <em class="sig-param">kb_query</em>, <em class="sig-param">evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.BiSession" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#tatk.dialog_agent.session.Session" title="tatk.dialog_agent.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.session.Session</span></code></a></p>
 <p>The dialog controller which aggregates several agents to conduct a complete dialog session.</p>
 <dl class="simple">
@@ -374,7 +384,7 @@ matching.</p>
 </dl>
 <dl class="method">
 <dt id="tatk.dialog_agent.session.BiSession.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">sys_agent</em>, <em class="sig-param">user_agent</em>, <em class="sig-param">kb_query</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.BiSession.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">sys_agent</em>, <em class="sig-param">user_agent</em>, <em class="sig-param">kb_query</em>, <em class="sig-param">evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.session.BiSession.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
 <dt>sys_agent (Agent):</dt><dd><p>An instance of system agent.</p>
@@ -382,6 +392,8 @@ matching.</p>
 <dt>user_agent (Agent):</dt><dd><p>An instance of user agent.</p>
 </dd>
 <dt>kb_query (KBquery):</dt><dd><p>An instance of database query tool.</p>
+</dd>
+<dt>evaluator (Evaluator):</dt><dd><p>An instance of evaluator.</p>
 </dd>
 </dl>
 </dd>
