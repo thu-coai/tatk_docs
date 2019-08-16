@@ -212,7 +212,12 @@
 <dl class="method">
 <dt id="tatk.nlu.bert.dataloader.Dataloader.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">intent_vocab</em>, <em class="sig-param">tag_vocab</em>, <em class="sig-param">tokenizer</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.dataloader.Dataloader.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dd><p>tokenize data and convert to ids.
+sample representation: [list of words, list of tags, list of intents, original dialog act]
+:param data: {‘train’: train_data, ‘val’: val_data, ‘test’: test_data}
+:param intent_vocab: list of all intens
+:param tag_vocab: list of all tags
+:param tokenizer: bert_tokenizer, same with pre-trained model</p>
 </dd></dl>
 
 <dl class="method">
@@ -283,6 +288,11 @@ instead of this since the former takes care of running the
 registered hooks while the latter silently ignores them.</p>
 </div>
 </dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.bert.model.BertNLU.predict_batch">
+<code class="sig-name descname">predict_batch</code><span class="sig-paren">(</span><em class="sig-param">word_seq_tensor</em>, <em class="sig-param">word_mask_tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.model.BertNLU.predict_batch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="tatk.nlu.bert.model.BertNLU.train_batch">
