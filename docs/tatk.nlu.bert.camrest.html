@@ -207,21 +207,19 @@ For more information, please refer to <code class="docutils literal notranslate"
 <p>Chen, Q., Zhuo, Z., &amp; Wang, W. (2019). BERT for Joint Intent Classification and Slot Filling. arXiv preprint arXiv:1902.10909.</p>
 <dl class="class">
 <dt id="tatk.nlu.bert.camrest.nlu.BERTNLU">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.bert.camrest.nlu.</code><code class="sig-name descname">BERTNLU</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">model_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.nlu.BERTNLU" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.bert.camrest.nlu.</code><code class="sig-name descname">BERTNLU</code><span class="sig-paren">(</span><em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.nlu.BERTNLU" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="tatk.nlu.html#tatk.nlu.nlu.NLU" title="tatk.nlu.nlu.NLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.nlu.nlu.NLU</span></code></a></p>
 <dl class="method">
 <dt id="tatk.nlu.bert.camrest.nlu.BERTNLU.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">model_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.nlu.BERTNLU.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.bert.camrest.nlu.BERTNLU.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>BERT NLU initialization.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
 <dt>mode (str):</dt><dd><p>can be either <cite>‘usr’</cite>, <cite>‘sys’</cite> or <cite>‘all’</cite>, representing which side of data the model was trained on.</p>
 </dd>
-<dt>model_file (str):</dt><dd><p>trained model path or url, should be coherent with mode.</p>
-</dd>
 </dl>
 </dd>
-<dt>Example:</dt><dd><p>nlu = BERTNLU(mode=’usr’, model_file=’<a class="reference external" href="https://tatk-data.s3-ap-northeast-1.amazonaws.com/bert_camrest_usr.zip">https://tatk-data.s3-ap-northeast-1.amazonaws.com/bert_camrest_usr.zip</a>’)</p>
+<dt>Example:</dt><dd><p>nlu = BERTNLU(mode=’usr’)</p>
 </dd>
 </dl>
 </dd></dl>
