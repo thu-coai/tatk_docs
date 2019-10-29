@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
    tatk.util.camrest
+   tatk.util.dataloader
    tatk.util.multiwoz
 
 Submodules

@@ -1,0 +1,16 @@
+tatk.util.dataloader package
+============================
+
+Submodules
+----------
+
+tatk.util.dataloader.dataloader module
+--------------------------------------
+
+.. automodule:: tatk.util.dataloader.dataloader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
