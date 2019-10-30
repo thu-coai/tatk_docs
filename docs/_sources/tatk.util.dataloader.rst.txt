@@ -4,10 +4,19 @@ tatk.util.dataloader package
 Submodules
 ----------
 
-tatk.util.dataloader.dataloader module
---------------------------------------
+tatk.util.dataloader.dataset\_dataloader module
+-----------------------------------------------
 
-.. automodule:: tatk.util.dataloader.dataloader
+.. automodule:: tatk.util.dataloader.dataset_dataloader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.util.dataloader.module\_dataloader module
+----------------------------------------------
+
+.. automodule:: tatk.util.dataloader.module_dataloader
    :members:
    :undoc-members:
    :show-inheritance:
