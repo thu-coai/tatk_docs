@@ -241,20 +241,54 @@
 <p>NLU module interface.</p>
 <dl class="method">
 <dt id="tatk.nlu.nlu.NLU.predict">
-<em class="property">abstract </em><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">utterance</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.predict" title="Permalink to this definition">¶</a></dt>
+<em class="property">abstract </em><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">utterance</em>, <em class="sig-param">context=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict the dialog act of a natural language utterance.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
-<dt>utterance (str):</dt><dd><p>A natural language utterance.</p>
+<dt>utterance (string):</dt><dd><p>A natural language utterance.</p>
+</dd>
+<dt>context (list of string):</dt><dd><p>Previous utterances.</p>
 </dd>
 </dl>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>output (dict):</dt><dd><p>The dialog act of utterance.</p>
+<dt>output (list of tuples):</dt><dd><p>The dialog act of utterance.</p>
 </dd>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.nlu.NLU.predict_batch">
+<em class="property">abstract </em><code class="sig-name descname">predict_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_utterance</em>, <em class="sig-param">batch_context=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.predict_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the dialog act of a batch of natural language utterances.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_utterance (list of string):</dt><dd><p>Natural language utterances.</p>
+</dd>
+<dt>batch_context (list of list of string):</dt><dd><p>Previous utterances.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>output (list of list of tuples):</dt><dd><p>The dialog act of utterances.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.nlu.NLU.test">
+<em class="property">abstract </em><code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model testing entry point</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.nlu.NLU.train">
+<em class="property">abstract </em><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.nlu.NLU.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model training entry point</p>
 </dd></dl>
 
 </dd></dl>
