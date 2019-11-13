@@ -175,13 +175,13 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html">tatk.dst.mdbt.multiwoz package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#module-tatk.dst.mdbt.multiwoz.mdbt">tatk.dst.mdbt.multiwoz.mdbt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#tatk-dst-mdbt-multiwoz-mdbt-module">tatk.dst.mdbt.multiwoz.mdbt module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.html#module-tatk.dst.mdbt.mdbt">tatk.dst.mdbt.mdbt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.html#tatk-dst-mdbt-mdbt-module">tatk.dst.mdbt.mdbt module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.html#module-tatk.dst.mdbt.mdbt_util">tatk.dst.mdbt.mdbt_util module</a></li>
 </ul>
 </li>
@@ -189,14 +189,14 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.rule.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tatk.dst.rule.camrest.html">tatk.dst.rule.camrest package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.camrest.html#module-tatk.dst.rule.camrest.state_tracker">tatk.dst.rule.camrest.state_tracker module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.camrest.html#tatk-dst-rule-camrest-state-tracker-module">tatk.dst.rule.camrest.state_tracker module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.dst.rule.multiwoz.html">tatk.dst.rule.multiwoz package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#module-tatk.dst.rule.multiwoz.dst_util">tatk.dst.rule.multiwoz.dst_util module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#module-tatk.dst.rule.multiwoz.evaluate">tatk.dst.rule.multiwoz.evaluate module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#module-tatk.dst.rule.multiwoz.state_tracker">tatk.dst.rule.multiwoz.state_tracker module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#tatk-dst-rule-multiwoz-dst-util-module">tatk.dst.rule.multiwoz.dst_util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#tatk-dst-rule-multiwoz-evaluate-module">tatk.dst.rule.multiwoz.evaluate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.rule.multiwoz.html#tatk-dst-rule-multiwoz-state-tracker-module">tatk.dst.rule.multiwoz.state_tracker module</a></li>
 </ul>
 </li>
 </ul>
@@ -216,25 +216,68 @@
 <dl class="class">
 <dt id="tatk.dst.state_tracker.Tracker">
 <em class="property">class </em><code class="sig-prename descclassname">tatk.dst.state_tracker.</code><code class="sig-name descname">Tracker</code><a class="headerlink" href="#tatk.dst.state_tracker.Tracker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>Base class for dialog state tracker models.</p>
 <dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.from_cache">
+<code class="sig-name descname">from_cache</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.from_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>restore internal state for multi-turn dialog</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="tatk.dst.state_tracker.Tracker.init_session">
-<em class="property">abstract </em><code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.init_session" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the class variables for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.test">
+<em class="property">abstract </em><code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model testing entry point</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.to_cache">
+<code class="sig-name descname">to_cache</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.to_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>save internal state for multi-turn dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.train">
+<em class="property">abstract </em><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model training entry point</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="tatk.dst.state_tracker.Tracker.update">
-<em class="property">abstract </em><code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">dialog_act</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.update" title="Permalink to this definition">¶</a></dt>
+<em class="property">abstract </em><code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the internal dialog state variable.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
-<dt>dialog_act (str or dict):</dt><dd><p>The type is str when Tracker is word-level (such as NBT), and dict when it is DA-level.</p>
+<dt>action (str or list of tuples):</dt><dd><p>The type is str when Tracker is word-level (such as NBT), and list of tuples when it is DA-level.</p>
 </dd>
 </dl>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>new_state (tuple):</dt><dd><p>Updated dialog state, with the same form of previous state.</p>
+<dt>new_state (dict):</dt><dd><p>Updated dialog state, with the same form of previous state.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.state_tracker.Tracker.update_batch">
+<em class="property">abstract </em><code class="sig-name descname">update_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.state_tracker.Tracker.update_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the internal dialog state variable.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_action (list of str or list of list of tuples):</dt><dd><p>The type is list of str when Tracker is word-level (such as NBT), and list of list of tuples when it is DA-level.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>batch_new_state (list of dict):</dt><dd><p>Updated dialog states, with the same form of previous states.</p>
 </dd>
 </dl>
 </dd>

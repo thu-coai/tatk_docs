@@ -95,7 +95,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.dst.mdbt package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-tatk.dst.mdbt.mdbt">tatk.dst.mdbt.mdbt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tatk-dst-mdbt-mdbt-module">tatk.dst.mdbt.mdbt module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.dst.mdbt.mdbt_util">tatk.dst.mdbt.mdbt_util module</a></li>
 </ul>
 </li>
@@ -181,7 +181,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html">tatk.dst.mdbt.multiwoz package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#module-tatk.dst.mdbt.multiwoz.mdbt">tatk.dst.mdbt.multiwoz.mdbt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.mdbt.multiwoz.html#tatk-dst-mdbt-multiwoz-mdbt-module">tatk.dst.mdbt.multiwoz.mdbt module</a></li>
 </ul>
 </li>
 </ul>
@@ -190,48 +190,8 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.dst.mdbt.mdbt">
-<span id="tatk-dst-mdbt-mdbt-module"></span><h2>tatk.dst.mdbt.mdbt module<a class="headerlink" href="#module-tatk.dst.mdbt.mdbt" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.dst.mdbt.mdbt.MDBT">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.mdbt.mdbt.</code><code class="sig-name descname">MDBT</code><span class="sig-paren">(</span><em class="sig-param">ontology_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">slots</em>, <em class="sig-param">data_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.dst.html#tatk.dst.state_tracker.Tracker" title="tatk.dst.state_tracker.Tracker"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.state_tracker.Tracker</span></code></a></p>
-<p>A multi-domain belief tracker, adopted from <a class="reference external" href="https://github.com/osmanio2/multi-domain-belief-tracking">https://github.com/osmanio2/multi-domain-belief-tracking</a>.</p>
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">ontology_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">slots</em>, <em class="sig-param">data_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.detect_requestable_slots">
-<code class="sig-name descname">detect_requestable_slots</code><span class="sig-paren">(</span><em class="sig-param">observation</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.detect_requestable_slots" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.init_session">
-<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.init_session" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.normalize_history">
-<code class="sig-name descname">normalize_history</code><span class="sig-paren">(</span><em class="sig-param">history</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.normalize_history" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replace zero-length history.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.restore">
-<code class="sig-name descname">restore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.restore" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.mdbt.mdbt.MDBT.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">user_act=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the dialog state.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-dst-mdbt-mdbt-module">
+<h2>tatk.dst.mdbt.mdbt module<a class="headerlink" href="#tatk-dst-mdbt-mdbt-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-tatk.dst.mdbt.mdbt_util">
 <span id="tatk-dst-mdbt-mdbt-util-module"></span><h2>tatk.dst.mdbt.mdbt_util module<a class="headerlink" href="#module-tatk.dst.mdbt.mdbt_util" title="Permalink to this headline">¶</a></h2>

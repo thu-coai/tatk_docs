@@ -92,12 +92,12 @@
 <li class="toctree-l3 current"><a class="reference internal" href="tatk.nlu.svm.html">tatk.nlu.svm package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="tatk.nlu.svm.html#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.Classifier">tatk.nlu.svm.Classifier module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.Features">tatk.nlu.svm.Features module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#tatk-nlu-svm-classifier-module">tatk.nlu.svm.Classifier module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#tatk-nlu-svm-features-module">tatk.nlu.svm.Features module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.Tuples">tatk.nlu.svm.Tuples module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.dataset_walker">tatk.nlu.svm.dataset_walker module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.sutils">tatk.nlu.svm.sutils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#module-tatk.nlu.svm.train">tatk.nlu.svm.train module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.svm.html#tatk-nlu-svm-train-module">tatk.nlu.svm.train module</a></li>
 </ul>
 </li>
 </ul>
@@ -184,96 +184,14 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.nlu.svm.camrest.evaluate">
-<span id="tatk-nlu-svm-camrest-evaluate-module"></span><h2>tatk.nlu.svm.camrest.evaluate module<a class="headerlink" href="#module-tatk.nlu.svm.camrest.evaluate" title="Permalink to this headline">¶</a></h2>
-<p>Evaluate SVMNLU models on Camrest test dataset</p>
-<dl class="simple">
-<dt>Metric:</dt><dd><p>dataset level Precision/Recall/F1</p>
-</dd>
-<dt>Usage:</dt><dd><p>PYTHONPATH=../../../.. python evaluate.py [usr|sys|all]</p>
-</dd>
-</dl>
-<dl class="function">
-<dt id="tatk.nlu.svm.camrest.evaluate.da2triples">
-<code class="sig-prename descclassname">tatk.nlu.svm.camrest.evaluate.</code><code class="sig-name descname">da2triples</code><span class="sig-paren">(</span><em class="sig-param">dialog_act</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.camrest.evaluate.da2triples" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-nlu-svm-camrest-evaluate-module">
+<h2>tatk.nlu.svm.camrest.evaluate module<a class="headerlink" href="#tatk-nlu-svm-camrest-evaluate-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.nlu.svm.camrest.nlu">
-<span id="tatk-nlu-svm-camrest-nlu-module"></span><h2>tatk.nlu.svm.camrest.nlu module<a class="headerlink" href="#module-tatk.nlu.svm.camrest.nlu" title="Permalink to this headline">¶</a></h2>
-<p>SVMNLU build a classifier for each semantic tuple (intent-slot-value) based on n-gram features. It’s first proposed by Mairesse et al. (2009). We adapt the implementation from pydial.
-For more information, please refer to <code class="docutils literal notranslate"><span class="pre">tatk/nlu/svm/camrest/README.md</span></code></p>
-<p>Trained models can be download on:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://tatk-data.s3-ap-northeast-1.amazonaws.com/svm_camrest_all.zip">https://tatk-data.s3-ap-northeast-1.amazonaws.com/svm_camrest_all.zip</a></p></li>
-<li><p><a class="reference external" href="https://tatk-data.s3-ap-northeast-1.amazonaws.com/svm_camrest_sys.zip">https://tatk-data.s3-ap-northeast-1.amazonaws.com/svm_camrest_sys.zip</a></p></li>
-<li><p><a class="reference external" href="https://tatk-data.s3-ap-northeast-1.amazonaws.com/svm_camrest_usr.zip">https://tatk-data.s3-ap-northeast-1.amazonaws.com/svm_camrest_usr.zip</a></p></li>
-</ul>
-<p>Reference:</p>
-<p>Mairesse, F., Gasic, M., Jurcicek, F., Keizer, S., Thomson, B., Yu, K., &amp; Young, S. (2009, April). Spoken language understanding from unaligned data using discriminative classification models. In 2009 IEEE International Conference on Acoustics, Speech and Signal Processing (pp. 4749-4752). IEEE.</p>
-<dl class="class">
-<dt id="tatk.nlu.svm.camrest.nlu.SVMNLU">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.svm.camrest.nlu.</code><code class="sig-name descname">SVMNLU</code><span class="sig-paren">(</span><em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.camrest.nlu.SVMNLU" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.nlu.html#tatk.nlu.nlu.NLU" title="tatk.nlu.nlu.NLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.nlu.nlu.NLU</span></code></a></p>
-<dl class="method">
-<dt id="tatk.nlu.svm.camrest.nlu.SVMNLU.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.camrest.nlu.SVMNLU.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>SVM NLU initialization.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><dl class="simple">
-<dt>mode (str):</dt><dd><p>can be either <cite>‘usr’</cite>, <cite>‘sys’</cite> or <cite>‘all’</cite>, representing which side of data the model was trained on.</p>
-</dd>
-</dl>
-</dd>
-<dt>Example:</dt><dd><p>nlu = SVMNLU(mode=’usr’)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.nlu.svm.camrest.nlu.SVMNLU.predict">
-<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">utterance</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.camrest.nlu.SVMNLU.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict the dialog act of a natural language utterance.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><dl class="simple">
-<dt>utterance (str):</dt><dd><p>A natural language utterance.</p>
-</dd>
-</dl>
-</dd>
-<dt>Returns:</dt><dd><dl class="simple">
-<dt>output (dict):</dt><dd><p>The dialog act of utterance.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-nlu-svm-camrest-nlu-module">
+<h2>tatk.nlu.svm.camrest.nlu module<a class="headerlink" href="#tatk-nlu-svm-camrest-nlu-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.nlu.svm.camrest.preprocess">
-<span id="tatk-nlu-svm-camrest-preprocess-module"></span><h2>tatk.nlu.svm.camrest.preprocess module<a class="headerlink" href="#module-tatk.nlu.svm.camrest.preprocess" title="Permalink to this headline">¶</a></h2>
-<p>Preprocess camrest data for SVMNLU.</p>
-<dl class="simple">
-<dt>Usage:</dt><dd><p>python preprocess [mode=all|usr|sys]
-mode: which side data will be use</p>
-</dd>
-<dt>Require:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">../../../../data/camrest/[train|val|test].json.zip</span></code> data file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">../../../../data/camrest/db</span></code> database dir</p></li>
-</ul>
-</dd>
-<dt>Output:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">configs/ontology_camrest_[mode].json</span></code> ontology file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">data/[mode]_data/</span></code> processed data dir</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="function">
-<dt id="tatk.nlu.svm.camrest.preprocess.read_zipped_json">
-<code class="sig-prename descclassname">tatk.nlu.svm.camrest.preprocess.</code><code class="sig-name descname">read_zipped_json</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.svm.camrest.preprocess.read_zipped_json" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="tatk-nlu-svm-camrest-preprocess-module">
+<h2>tatk.nlu.svm.camrest.preprocess module<a class="headerlink" href="#tatk-nlu-svm-camrest-preprocess-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

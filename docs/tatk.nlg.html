@@ -175,16 +175,16 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlg.sclstm.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html">tatk.nlg.sclstm.camrest package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#module-tatk.nlg.sclstm.camrest.evaluate">tatk.nlg.sclstm.camrest.evaluate module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#module-tatk.nlg.sclstm.camrest.sc_lstm">tatk.nlg.sclstm.camrest.sc_lstm module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#module-tatk.nlg.sclstm.camrest.train">tatk.nlg.sclstm.camrest.train module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#tatk-nlg-sclstm-camrest-evaluate-module">tatk.nlg.sclstm.camrest.evaluate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#tatk-nlg-sclstm-camrest-sc-lstm-module">tatk.nlg.sclstm.camrest.sc_lstm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.camrest.html#tatk-nlg-sclstm-camrest-train-module">tatk.nlg.sclstm.camrest.train module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html">tatk.nlg.sclstm.multiwoz package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#module-tatk.nlg.sclstm.multiwoz.evaluate">tatk.nlg.sclstm.multiwoz.evaluate module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#module-tatk.nlg.sclstm.multiwoz.sc_lstm">tatk.nlg.sclstm.multiwoz.sc_lstm module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#module-tatk.nlg.sclstm.multiwoz.train">tatk.nlg.sclstm.multiwoz.train module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#tatk-nlg-sclstm-multiwoz-evaluate-module">tatk.nlg.sclstm.multiwoz.evaluate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#tatk-nlg-sclstm-multiwoz-sc-lstm-module">tatk.nlg.sclstm.multiwoz.sc_lstm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlg.sclstm.multiwoz.html#tatk-nlg-sclstm-multiwoz-train-module">tatk.nlg.sclstm.multiwoz.train module</a></li>
 </ul>
 </li>
 </ul>
@@ -224,24 +224,72 @@
 <dl class="class">
 <dt id="tatk.nlg.nlg.NLG">
 <em class="property">class </em><code class="sig-prename descclassname">tatk.nlg.nlg.</code><code class="sig-name descname">NLG</code><a class="headerlink" href="#tatk.nlg.nlg.NLG" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>Base class for NLG model.</p>
 <dl class="method">
+<dt id="tatk.nlg.nlg.NLG.from_cache">
+<code class="sig-name descname">from_cache</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.from_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>restore internal state for multi-turn dialog</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="tatk.nlg.nlg.NLG.generate">
-<em class="property">abstract </em><code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a natural language utterance conditioned on the dialog act.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
-<dt>action (dict):</dt><dd><p>The dialog action produced by dialog policy module, which is in dialog act format.</p>
+<dt>action (list of tuples):</dt><dd><p>The dialog action produced by dialog policy module, which is in dialog act format.</p>
 </dd>
 </dl>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>response (str):</dt><dd><p>A natural langauge utterance.</p>
+<dt>utterance (str):</dt><dd><p>A natural langauge utterance.</p>
 </dd>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.nlg.NLG.generate_batch">
+<em class="property">abstract </em><code class="sig-name descname">generate_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate natural language utterances conditioned on a batch of dialog acts.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_action (list of list of tuples):</dt><dd><p>A batch of dialog acts</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>batch_utterance (list of string):</dt><dd><p>Natural language utterances.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.nlg.NLG.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the class variables for a new session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.nlg.NLG.test">
+<em class="property">abstract </em><code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model testing entry point</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.nlg.NLG.to_cache">
+<code class="sig-name descname">to_cache</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.to_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>save internal state for multi-turn dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.nlg.NLG.train">
+<em class="property">abstract </em><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model training entry point</p>
 </dd></dl>
 
 </dd></dl>

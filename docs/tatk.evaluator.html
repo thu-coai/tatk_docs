@@ -90,8 +90,8 @@
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlg.html">tatk.nlg package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">tatk.evaluator package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tatk.evaluator.evaluator">tatk.evaluator.evaluator module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tatk.evaluator.multiwoz_eval">tatk.evaluator.multiwoz_eval module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tatk-evaluator-evaluator-module">tatk.evaluator.evaluator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tatk-evaluator-multiwoz-eval-module">tatk.evaluator.multiwoz_eval module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.e2e.html">tatk.e2e package</a></li>
@@ -166,161 +166,11 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.evaluator.evaluator">
-<span id="tatk-evaluator-evaluator-module"></span><h2>tatk.evaluator.evaluator module<a class="headerlink" href="#module-tatk.evaluator.evaluator" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.evaluator.evaluator.Evaluator">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.evaluator.evaluator.</code><code class="sig-name descname">Evaluator</code><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.add_goal">
-<code class="sig-name descname">add_goal</code><span class="sig-paren">(</span><em class="sig-param">goal</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.add_goal" title="Permalink to this definition">¶</a></dt>
-<dd><p>init goal and array.</p>
-<dl class="simple">
-<dt>args:</dt><dd><dl class="simple">
-<dt>goal:</dt><dd><p>dict[domain] dict[‘info’/’book’/’reqt’] dict/dict/list[slot]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.add_sys_da">
-<code class="sig-name descname">add_sys_da</code><span class="sig-paren">(</span><em class="sig-param">da_turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.add_sys_da" title="Permalink to this definition">¶</a></dt>
-<dd><p>add sys_da into array.</p>
-<dl class="simple">
-<dt>args:</dt><dd><dl class="simple">
-<dt>da_turn:</dt><dd><p>dict[domain-intent] list[slot, value]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.add_usr_da">
-<code class="sig-name descname">add_usr_da</code><span class="sig-paren">(</span><em class="sig-param">da_turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.add_usr_da" title="Permalink to this definition">¶</a></dt>
-<dd><p>add usr_da into array</p>
-<dl class="simple">
-<dt>args:</dt><dd><dl class="simple">
-<dt>da_turn:</dt><dd><p>dict[domain-intent] list[slot, value]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.book_rate">
-<code class="sig-name descname">book_rate</code><span class="sig-paren">(</span><em class="sig-param">ref2goal=True</em>, <em class="sig-param">aggregate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.book_rate" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if the selected entity meets the constraint</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.domain_success">
-<code class="sig-name descname">domain_success</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">ref2goal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.domain_success" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if the domain (subtask) is successfully completed</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.inform_F1">
-<code class="sig-name descname">inform_F1</code><span class="sig-paren">(</span><em class="sig-param">ref2goal=True</em>, <em class="sig-param">aggregate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.inform_F1" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if all the requested information is answered</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.evaluator.Evaluator.task_success">
-<code class="sig-name descname">task_success</code><span class="sig-paren">(</span><em class="sig-param">ref2goal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.evaluator.Evaluator.task_success" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if all the domains are successfully completed</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-evaluator-evaluator-module">
+<h2>tatk.evaluator.evaluator module<a class="headerlink" href="#tatk-evaluator-evaluator-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-tatk.evaluator.multiwoz_eval">
-<span id="tatk-evaluator-multiwoz-eval-module"></span><h2>tatk.evaluator.multiwoz_eval module<a class="headerlink" href="#module-tatk.evaluator.multiwoz_eval" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.evaluator.multiwoz_eval.</code><code class="sig-name descname">MultiWozEvaluator</code><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#tatk.evaluator.evaluator.Evaluator" title="tatk.evaluator.evaluator.Evaluator"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.evaluator.evaluator.Evaluator</span></code></a></p>
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.add_goal">
-<code class="sig-name descname">add_goal</code><span class="sig-paren">(</span><em class="sig-param">goal</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.add_goal" title="Permalink to this definition">¶</a></dt>
-<dd><p>init goal and array</p>
-<dl class="simple">
-<dt>args:</dt><dd><dl class="simple">
-<dt>goal:</dt><dd><p>dict[domain] dict[‘info’/’book’/’reqt’] dict/dict/list[slot]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.add_sys_da">
-<code class="sig-name descname">add_sys_da</code><span class="sig-paren">(</span><em class="sig-param">da_turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.add_sys_da" title="Permalink to this definition">¶</a></dt>
-<dd><p>add sys_da into array</p>
-<dl class="simple">
-<dt>args:</dt><dd><dl class="simple">
-<dt>da_turn:</dt><dd><p>dict[domain-intent] list[slot, value]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.add_usr_da">
-<code class="sig-name descname">add_usr_da</code><span class="sig-paren">(</span><em class="sig-param">da_turn</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.add_usr_da" title="Permalink to this definition">¶</a></dt>
-<dd><p>add usr_da into array</p>
-<dl class="simple">
-<dt>args:</dt><dd><dl class="simple">
-<dt>da_turn:</dt><dd><p>dict[domain-intent] list[slot, value]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.book_rate">
-<code class="sig-name descname">book_rate</code><span class="sig-paren">(</span><em class="sig-param">ref2goal=True</em>, <em class="sig-param">aggregate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.book_rate" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if the selected entity meets the constraint</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.domain_success">
-<code class="sig-name descname">domain_success</code><span class="sig-paren">(</span><em class="sig-param">domain</em>, <em class="sig-param">ref2goal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.domain_success" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if the domain (subtask) is successfully completed</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.inform_F1">
-<code class="sig-name descname">inform_F1</code><span class="sig-paren">(</span><em class="sig-param">ref2goal=True</em>, <em class="sig-param">aggregate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.inform_F1" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if all the requested information is answered</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.evaluator.multiwoz_eval.MultiWozEvaluator.task_success">
-<code class="sig-name descname">task_success</code><span class="sig-paren">(</span><em class="sig-param">ref2goal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.evaluator.multiwoz_eval.MultiWozEvaluator.task_success" title="Permalink to this definition">¶</a></dt>
-<dd><p>judge if all the domains are successfully completed</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="tatk-evaluator-multiwoz-eval-module">
+<h2>tatk.evaluator.multiwoz_eval module<a class="headerlink" href="#tatk-evaluator-multiwoz-eval-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
