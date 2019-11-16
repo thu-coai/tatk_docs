@@ -1,0 +1,34 @@
+tatk.policy.mle.camrest package
+===============================
+
+Submodules
+----------
+
+tatk.policy.mle.camrest.loader module
+-------------------------------------
+
+.. automodule:: tatk.policy.mle.camrest.loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.mle.camrest.mle module
+----------------------------------
+
+.. automodule:: tatk.policy.mle.camrest.mle
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.mle.camrest.train module
+------------------------------------
+
+.. automodule:: tatk.policy.mle.camrest.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

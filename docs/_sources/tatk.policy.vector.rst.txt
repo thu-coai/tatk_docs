@@ -4,6 +4,15 @@ tatk.policy.vector package
 Submodules
 ----------
 
+tatk.policy.vector.dataset module
+---------------------------------
+
+.. automodule:: tatk.policy.vector.dataset
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.vector.vector\_camrest module
 -----------------------------------------
 

@@ -12,6 +12,15 @@ Subpackages
 Submodules
 ----------
 
+tatk.policy.vhus.train module
+-----------------------------
+
+.. automodule:: tatk.policy.vhus.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.vhus.usermodule module
 ----------------------------------
 
@@ -25,6 +34,15 @@ tatk.policy.vhus.util module
 ----------------------------
 
 .. automodule:: tatk.policy.vhus.util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.vhus.vhus module
+----------------------------
+
+.. automodule:: tatk.policy.vhus.vhus
    :members:
    :undoc-members:
    :show-inheritance:
