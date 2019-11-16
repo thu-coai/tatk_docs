@@ -95,7 +95,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="tatk.dst.mdbt.html">tatk.dst.mdbt package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="tatk.dst.mdbt.html#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#tatk-dst-mdbt-mdbt-module">tatk.dst.mdbt.mdbt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#module-tatk.dst.mdbt.mdbt">tatk.dst.mdbt.mdbt module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.dst.mdbt.html#module-tatk.dst.mdbt.mdbt_util">tatk.dst.mdbt.mdbt_util module</a></li>
 </ul>
 </li>
@@ -180,8 +180,53 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-dst-mdbt-multiwoz-mdbt-module">
-<h2>tatk.dst.mdbt.multiwoz.mdbt module<a class="headerlink" href="#tatk-dst-mdbt-multiwoz-mdbt-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.dst.mdbt.multiwoz.mdbt">
+<span id="tatk-dst-mdbt-multiwoz-mdbt-module"></span><h2>tatk.dst.mdbt.multiwoz.mdbt module<a class="headerlink" href="#module-tatk.dst.mdbt.multiwoz.mdbt" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.mdbt.multiwoz.mdbt.</code><code class="sig-name descname">MultiWozMDBT</code><span class="sig-paren">(</span><em class="sig-param">data_dir='configs'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.dst.mdbt.html#tatk.dst.mdbt.mdbt.MDBT" title="tatk.dst.mdbt.mdbt.MDBT"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.mdbt.mdbt.MDBT</span></code></a></p>
+<dl class="method">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">data_dir='configs'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor of MultiWOzMDBT class.
+Args:</p>
+<blockquote>
+<div><p>data_dir (str): The path of data dir, where the root path is tatk/dst/mdbt/multiwoz.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.auto_download">
+<code class="sig-name descname">auto_download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.auto_download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically download the pretrained model and necessary data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">sess</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the MDBT model on mdbt dataset. Almost the same as original code.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.MultiWozMDBT.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train the model.
+Model saved to</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.test_model">
+<code class="sig-prename descclassname">tatk.dst.mdbt.multiwoz.mdbt.</code><code class="sig-name descname">test_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.test_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.mdbt.multiwoz.mdbt.test_update">
+<code class="sig-prename descclassname">tatk.dst.mdbt.multiwoz.mdbt.</code><code class="sig-name descname">test_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.multiwoz.mdbt.test_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 

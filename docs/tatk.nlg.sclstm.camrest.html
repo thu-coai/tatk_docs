@@ -179,14 +179,134 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlg-sclstm-camrest-evaluate-module">
-<h2>tatk.nlg.sclstm.camrest.evaluate module<a class="headerlink" href="#tatk-nlg-sclstm-camrest-evaluate-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlg.sclstm.camrest.evaluate">
+<span id="tatk-nlg-sclstm-camrest-evaluate-module"></span><h2>tatk.nlg.sclstm.camrest.evaluate module<a class="headerlink" href="#module-tatk.nlg.sclstm.camrest.evaluate" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate NLG models on utterances of Camrest test dataset
+Metric: dataset level BLEU-4, slot error rate
+Usage: python evaluate.py [usr|sys|all]</p>
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.evaluate.get_bleu4">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.evaluate.</code><code class="sig-name descname">get_bleu4</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em>, <em class="sig-param">golden_utts</em>, <em class="sig-param">gen_utts</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.evaluate.get_bleu4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.evaluate.get_err_slot">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.evaluate.</code><code class="sig-name descname">get_err_slot</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em>, <em class="sig-param">gen_slots</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.evaluate.get_err_slot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="tatk-nlg-sclstm-camrest-sc-lstm-module">
-<h2>tatk.nlg.sclstm.camrest.sc_lstm module<a class="headerlink" href="#tatk-nlg-sclstm-camrest-sc-lstm-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlg.sclstm.camrest.sc_lstm">
+<span id="tatk-nlg-sclstm-camrest-sc-lstm-module"></span><h2>tatk.nlg.sclstm.camrest.sc_lstm module<a class="headerlink" href="#module-tatk.nlg.sclstm.camrest.sc_lstm" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.sc_lstm.</code><code class="sig-name descname">SCLSTM</code><span class="sig-paren">(</span><em class="sig-param">archive_file='/home/travis/build/thu-coai/tatk/tatk/nlg/sclstm/camrest/models/nlg-sclstm-camrest.zip'</em>, <em class="sig-param">use_cuda=False</em>, <em class="sig-param">is_user=False</em>, <em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/nlg_sclstm_camrest.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.nlg.html#tatk.nlg.nlg.NLG" title="tatk.nlg.nlg.NLG"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.nlg.nlg.NLG</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">archive_file='/home/travis/build/thu-coai/tatk/tatk/nlg/sclstm/camrest/models/nlg-sclstm-camrest.zip'</em>, <em class="sig-param">use_cuda=False</em>, <em class="sig-param">is_user=False</em>, <em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/nlg_sclstm_camrest.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.generate">
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param">meta</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a natural language utterance conditioned on the dialog act.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>action (list of tuples):</dt><dd><p>The dialog action produced by dialog policy module, which is in dialog act format.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>utterance (str):</dt><dd><p>A natural langauge utterance.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.generate_delex">
+<code class="sig-name descname">generate_delex</code><span class="sig-paren">(</span><em class="sig-param">meta</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.generate_delex" title="Permalink to this definition">¶</a></dt>
+<dd><p>meta = {“inform”: [[“area”,”centre of town”]]}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.generate_slots">
+<code class="sig-name descname">generate_slots</code><span class="sig-paren">(</span><em class="sig-param">meta</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.sc_lstm.SCLSTM.generate_slots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.sc_lstm.parse">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.sc_lstm.</code><code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">is_user</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.sc_lstm.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="tatk-nlg-sclstm-camrest-train-module">
-<h2>tatk.nlg.sclstm.camrest.train module<a class="headerlink" href="#tatk-nlg-sclstm-camrest-train-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlg.sclstm.camrest.train">
+<span id="tatk-nlg-sclstm-camrest-train-module"></span><h2>tatk.nlg.sclstm.camrest.train module<a class="headerlink" href="#module-tatk.nlg.sclstm.camrest.train" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.evaluate">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">dataset</em>, <em class="sig-param">model</em>, <em class="sig-param">data_type</em>, <em class="sig-param">beam_search</em>, <em class="sig-param">beam_size</em>, <em class="sig-param">batch_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.get_slot_error">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">get_slot_error</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">gens</em>, <em class="sig-param">refs</em>, <em class="sig-param">sv_indexes</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.get_slot_error" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>gens:  (batch_size, beam_size)
+refs:  (batch_size,)
+sv:    (batch_size,)</p>
+</dd>
+<dt>Returns:</dt><dd><p>count: accumulative slot error of a batch
+countPerGen: slot error for each sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.interact">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">interact</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.parse">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.read">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">args</em>, <em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.score">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">feat</em>, <em class="sig-param">gen</em>, <em class="sig-param">template</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>feat = [‘d-a-s-v:Booking-Book-Day-1’, ‘d-a-s-v:Booking-Book-Name-1’, ‘d-a-s-v:Booking-Book-Name-2’]
+gen = ‘xxx slot-booking-book-name xxx slot-booking-book-time’</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.str2bool">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">str2bool</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.str2bool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.test">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.train">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.camrest.train.train_epoch">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.camrest.train.</code><code class="sig-name descname">train_epoch</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">dataset</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.camrest.train.train_epoch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
