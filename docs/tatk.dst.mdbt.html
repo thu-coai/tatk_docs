@@ -231,6 +231,24 @@
 <dd><p>Update the dialog state.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="tatk.dst.mdbt.mdbt.MDBT.update_batch">
+<code class="sig-name descname">update_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt.MDBT.update_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the internal dialog state variable.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_action (list of str or list of list of tuples):</dt><dd><p>The type is list of str when Tracker is word-level (such as NBT), and list of list of tuples when it is DA-level.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>batch_new_state (list of dict):</dt><dd><p>Updated dialog states, with the same form of previous states.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -354,6 +372,25 @@ or TensorShapes.</p>
 <dt id="tatk.dst.mdbt.mdbt_util.load_woz_data">
 <code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">load_woz_data</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">word_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">url=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.load_woz_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the woz3 data and extract feature vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – the data to load</p></li>
+<li><p><strong>word_vectors</strong> – word embeddings</p></li>
+<li><p><strong>ontology</strong> – list of domain-slot-value</p></li>
+<li><p><strong>url</strong> – Is the data coming from a url, default true</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list(num of turns, user_input vectors, system_response vectors, labels)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tatk.dst.mdbt.mdbt_util.load_woz_data_new">
+<code class="sig-prename descclassname">tatk.dst.mdbt.mdbt_util.</code><code class="sig-name descname">load_woz_data_new</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">word_vectors</em>, <em class="sig-param">ontology</em>, <em class="sig-param">url=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.mdbt.mdbt_util.load_woz_data_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ported from load_woz_data, using tatk.util.dataloader pkg</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
