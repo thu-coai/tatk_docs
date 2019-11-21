@@ -1,0 +1,23 @@
+tatk.dst.submt package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.dst.submt.multiwoz
+
+Submodules
+----------
+
+tatk.dst.submt.submt module
+---------------------------
+
+.. automodule:: tatk.dst.submt.submt
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

@@ -1,0 +1,25 @@
+tatk.dst.submt.multiwoz package
+===============================
+
+Submodules
+----------
+
+tatk.dst.submt.multiwoz.convert\_to\_glue\_format module
+--------------------------------------------------------
+
+.. automodule:: tatk.dst.submt.multiwoz.convert_to_glue_format
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.dst.submt.multiwoz.submt module
+------------------------------------
+
+.. automodule:: tatk.dst.submt.multiwoz.submt
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
