@@ -1,0 +1,50 @@
+tatk.nlu.jointBERT package
+==========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   tatk.nlu.jointBERT.multiwoz
+
+Submodules
+----------
+
+tatk.nlu.jointBERT.dataloader module
+------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.dataloader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.jointBERT module
+-----------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.jointBERT
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.test module
+------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.train module
+-------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

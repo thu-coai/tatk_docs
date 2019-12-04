@@ -1,0 +1,34 @@
+tatk.nlu.jointBERT.multiwoz package
+===================================
+
+Submodules
+----------
+
+tatk.nlu.jointBERT.multiwoz.nlu module
+--------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.multiwoz.nlu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.multiwoz.postprocess module
+----------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.multiwoz.postprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.multiwoz.preprocess module
+---------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.multiwoz.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
