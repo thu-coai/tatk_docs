@@ -8,7 +8,7 @@ Subpackages
 
    tatk.dst.mdbt
    tatk.dst.rule
-   tatk.dst.submt
+   tatk.dst.sumbt
 
 Submodules
 ----------

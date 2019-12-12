@@ -1,22 +1,22 @@
-tatk.dst.submt.multiwoz package
+tatk.dst.sumbt.multiwoz package
 ===============================
 
 Submodules
 ----------
 
-tatk.dst.submt.multiwoz.convert\_to\_glue\_format module
+tatk.dst.sumbt.multiwoz.convert\_to\_glue\_format module
 --------------------------------------------------------
 
-.. automodule:: tatk.dst.submt.multiwoz.convert_to_glue_format
+.. automodule:: tatk.dst.sumbt.multiwoz.convert_to_glue_format
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.dst.submt.multiwoz.submt module
+tatk.dst.sumbt.multiwoz.sumbt module
 ------------------------------------
 
-.. automodule:: tatk.dst.submt.multiwoz.submt
+.. automodule:: tatk.dst.sumbt.multiwoz.sumbt
    :members:
    :undoc-members:
    :show-inheritance:

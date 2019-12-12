@@ -1,4 +1,4 @@
-tatk.dst.submt package
+tatk.dst.sumbt package
 ======================
 
 Subpackages
@@ -6,15 +6,15 @@ Subpackages
 
 .. toctree::
 
-   tatk.dst.submt.multiwoz
+   tatk.dst.sumbt.multiwoz
 
 Submodules
 ----------
 
-tatk.dst.submt.submt module
+tatk.dst.sumbt.sumbt module
 ---------------------------
 
-.. automodule:: tatk.dst.submt.submt
+.. automodule:: tatk.dst.sumbt.sumbt
    :members:
    :undoc-members:
    :show-inheritance:
