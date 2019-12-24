@@ -22,6 +22,15 @@ tatk.policy.vector.vector\_camrest module
    :show-inheritance:
    :special-members: __init__
 
+tatk.policy.vector.vector\_crosswoz module
+------------------------------------------
+
+.. automodule:: tatk.policy.vector.vector_crosswoz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
 tatk.policy.vector.vector\_multiwoz module
 ------------------------------------------
 

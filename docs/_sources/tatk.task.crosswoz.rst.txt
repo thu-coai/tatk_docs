@@ -1,0 +1,79 @@
+tatk.task.crosswoz package
+==========================
+
+Submodules
+----------
+
+tatk.task.crosswoz.attraction\_generator module
+-----------------------------------------------
+
+.. automodule:: tatk.task.crosswoz.attraction_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.goal\_generator module
+-----------------------------------------
+
+.. automodule:: tatk.task.crosswoz.goal_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.hotel\_generator module
+------------------------------------------
+
+.. automodule:: tatk.task.crosswoz.hotel_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.metro\_generator module
+------------------------------------------
+
+.. automodule:: tatk.task.crosswoz.metro_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.reorder module
+---------------------------------
+
+.. automodule:: tatk.task.crosswoz.reorder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.restaurant\_generator module
+-----------------------------------------------
+
+.. automodule:: tatk.task.crosswoz.restaurant_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.sentence\_generator module
+---------------------------------------------
+
+.. automodule:: tatk.task.crosswoz.sentence_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.task.crosswoz.taxi\_generator module
+-----------------------------------------
+
+.. automodule:: tatk.task.crosswoz.taxi_generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

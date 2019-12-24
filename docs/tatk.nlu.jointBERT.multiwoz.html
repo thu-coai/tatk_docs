@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="tatk.nlu.svm package" href="tatk.nlu.svm.html" />
-    <link rel="prev" title="tatk.nlu.jointBERT package" href="tatk.nlu.jointBERT.html" /> 
+    <link rel="prev" title="tatk.nlu.jointBERT.crosswoz package" href="tatk.nlu.jointBERT.crosswoz.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,9 +92,9 @@
 <li class="toctree-l3 current"><a class="reference internal" href="tatk.nlu.jointBERT.html">tatk.nlu.jointBERT package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="tatk.nlu.jointBERT.html#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#tatk-nlu-jointbert-dataloader-module">tatk.nlu.jointBERT.dataloader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#tatk-nlu-jointbert-jointbert-module">tatk.nlu.jointBERT.jointBERT module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#tatk-nlu-jointbert-test-module">tatk.nlu.jointBERT.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#module-tatk.nlu.jointBERT.dataloader">tatk.nlu.jointBERT.dataloader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#module-tatk.nlu.jointBERT.jointBERT">tatk.nlu.jointBERT.jointBERT module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#module-tatk.nlu.jointBERT.test">tatk.nlu.jointBERT.test module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.nlu.jointBERT.html#tatk-nlu-jointbert-train-module">tatk.nlu.jointBERT.train module</a></li>
 </ul>
 </li>
@@ -183,19 +183,46 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-jointbert-multiwoz-nlu-module">
-<h2>tatk.nlu.jointBERT.multiwoz.nlu module<a class="headerlink" href="#tatk-nlu-jointbert-multiwoz-nlu-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.jointBERT.multiwoz.nlu">
+<span id="tatk-nlu-jointbert-multiwoz-nlu-module"></span><h2>tatk.nlu.jointBERT.multiwoz.nlu module<a class="headerlink" href="#module-tatk.nlu.jointBERT.multiwoz.nlu" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.jointBERT.multiwoz.nlu.BERTNLU">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.jointBERT.multiwoz.nlu.</code><code class="sig-name descname">BERTNLU</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">config_file</em>, <em class="sig-param">model_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.multiwoz.nlu.BERTNLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.nlu.html#tatk.nlu.nlu.NLU" title="tatk.nlu.nlu.NLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.nlu.nlu.NLU</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.multiwoz.nlu.BERTNLU.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">config_file</em>, <em class="sig-param">model_file</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.multiwoz.nlu.BERTNLU.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.multiwoz.nlu.BERTNLU.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">utterance</em>, <em class="sig-param">context=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.multiwoz.nlu.BERTNLU.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the dialog act of a natural language utterance.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>utterance (string):</dt><dd><p>A natural language utterance.</p>
+</dd>
+<dt>context (list of string):</dt><dd><p>Previous utterances.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>action (list of tuples):</dt><dd><p>The dialog act of utterance.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-tatk.nlu.jointBERT.multiwoz.postprocess">
 <span id="tatk-nlu-jointbert-multiwoz-postprocess-module"></span><h2>tatk.nlu.jointBERT.multiwoz.postprocess module<a class="headerlink" href="#module-tatk.nlu.jointBERT.multiwoz.postprocess" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="tatk.nlu.jointBERT.multiwoz.postprocess.calculateF1">
 <code class="sig-prename descclassname">tatk.nlu.jointBERT.multiwoz.postprocess.</code><code class="sig-name descname">calculateF1</code><span class="sig-paren">(</span><em class="sig-param">predict_golden</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.multiwoz.postprocess.calculateF1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="tatk.nlu.jointBERT.multiwoz.postprocess.da2triples">
-<code class="sig-prename descclassname">tatk.nlu.jointBERT.multiwoz.postprocess.</code><code class="sig-name descname">da2triples</code><span class="sig-paren">(</span><em class="sig-param">dialog_act</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.multiwoz.postprocess.da2triples" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -221,32 +248,6 @@
 </div>
 <div class="section" id="module-tatk.nlu.jointBERT.multiwoz.preprocess">
 <span id="tatk-nlu-jointbert-multiwoz-preprocess-module"></span><h2>tatk.nlu.jointBERT.multiwoz.preprocess module<a class="headerlink" href="#module-tatk.nlu.jointBERT.multiwoz.preprocess" title="Permalink to this headline">¶</a></h2>
-<p>Preprocess multiwoz data for BertNLU.</p>
-<dl class="simple">
-<dt>Usage:</dt><dd><p>python preprocess [mode=all|usr|sys]
-mode: which side data will be use</p>
-</dd>
-<dt>Require:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">../../../../data/multiwoz/[train|val|test].json.zip</span></code> data file</p></li>
-</ul>
-</dd>
-<dt>Output:</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">data/[mode]_data/</span></code>: processed data dir</dt><dd><ul>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">data.pkl</span></code>: data[data_key=train|val|test] is a list of [tokens,tags,intents],</dt><dd><p>tokens: list of words; tags: list of BIO tags(e.g. B-domain-intent+slot); intent: list of ‘domain-intent+slot*value’.</p>
-</dd>
-</dl>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">intent_vocab.pkl</span></code>: list of all intents (format: ‘domain-intent+slot*value’)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag_vocab.pkl</span></code>: list of all tags (format: ‘O’|’B-domain-intent+slot’|’B-domain-intent+slot’)</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
 <dl class="function">
 <dt id="tatk.nlu.jointBERT.multiwoz.preprocess.da2triples">
 <code class="sig-prename descclassname">tatk.nlu.jointBERT.multiwoz.preprocess.</code><code class="sig-name descname">da2triples</code><span class="sig-paren">(</span><em class="sig-param">dialog_act</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.multiwoz.preprocess.da2triples" title="Permalink to this definition">¶</a></dt>
@@ -276,7 +277,7 @@ mode: which side data will be use</p>
         <a href="tatk.nlu.svm.html" class="btn btn-neutral float-right" title="tatk.nlu.svm package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tatk.nlu.jointBERT.html" class="btn btn-neutral" title="tatk.nlu.jointBERT package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tatk.nlu.jointBERT.crosswoz.html" class="btn btn-neutral" title="tatk.nlu.jointBERT.crosswoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

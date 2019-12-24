@@ -1,0 +1,34 @@
+tatk.nlg.template.crosswoz package
+==================================
+
+Submodules
+----------
+
+tatk.nlg.template.crosswoz.evaluate module
+------------------------------------------
+
+.. automodule:: tatk.nlg.template.crosswoz.evaluate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlg.template.crosswoz.generate\_auto\_template module
+----------------------------------------------------------
+
+.. automodule:: tatk.nlg.template.crosswoz.generate_auto_template
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlg.template.crosswoz.nlg module
+-------------------------------------
+
+.. automodule:: tatk.nlg.template.crosswoz.nlg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

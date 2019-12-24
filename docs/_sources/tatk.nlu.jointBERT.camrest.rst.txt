@@ -1,0 +1,34 @@
+tatk.nlu.jointBERT.camrest package
+==================================
+
+Submodules
+----------
+
+tatk.nlu.jointBERT.camrest.nlu module
+-------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.camrest.nlu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.camrest.postprocess module
+---------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.camrest.postprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.camrest.preprocess module
+--------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.camrest.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

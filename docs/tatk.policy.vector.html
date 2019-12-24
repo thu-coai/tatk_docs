@@ -96,6 +96,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.vector.dataset">tatk.policy.vector.dataset module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.vector.vector_camrest">tatk.policy.vector.vector_camrest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.vector.vector_crosswoz">tatk.policy.vector.vector_crosswoz module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-tatk.policy.vector.vector_multiwoz">tatk.policy.vector.vector_multiwoz module</a></li>
 </ul>
 </li>
@@ -262,6 +263,58 @@
 </dl>
 </dd>
 <dt>Returns:</dt><dd><p>state_vec (np.array): Dialog state vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.policy.vector.vector_crosswoz">
+<span id="tatk-policy-vector-vector-crosswoz-module"></span><h2>tatk.policy.vector.vector_crosswoz module<a class="headerlink" href="#module-tatk.policy.vector.vector_crosswoz" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.policy.vector.vector_crosswoz.CrossWozVector">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.policy.vector.vector_crosswoz.</code><code class="sig-name descname">CrossWozVector</code><span class="sig-paren">(</span><em class="sig-param">sys_da_voc_json</em>, <em class="sig-param">usr_da_voc_json</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_crosswoz.CrossWozVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.policy.html#tatk.policy.vec.Vector" title="tatk.policy.vec.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.policy.vec.Vector</span></code></a></p>
+<dl class="method">
+<dt id="tatk.policy.vector.vector_crosswoz.CrossWozVector.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">sys_da_voc_json</em>, <em class="sig-param">usr_da_voc_json</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_crosswoz.CrossWozVector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vector.vector_crosswoz.CrossWozVector.action_devectorize">
+<code class="sig-name descname">action_devectorize</code><span class="sig-paren">(</span><em class="sig-param">action_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_crosswoz.CrossWozVector.action_devectorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>must call state_vectorize func before
+:param action_vec:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vector.vector_crosswoz.CrossWozVector.action_vectorize">
+<code class="sig-name descname">action_vectorize</code><span class="sig-paren">(</span><em class="sig-param">da</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_crosswoz.CrossWozVector.action_vectorize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vector.vector_crosswoz.CrossWozVector.generate_dict">
+<code class="sig-name descname">generate_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_crosswoz.CrossWozVector.generate_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>init the dict for mapping state/action into vector</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.policy.vector.vector_crosswoz.CrossWozVector.state_vectorize">
+<code class="sig-name descname">state_vectorize</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.vector.vector_crosswoz.CrossWozVector.state_vectorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>vectorize a state</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>state (tuple):</dt><dd><p>Dialog state</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>state_vec (np.array):</dt><dd><p>Dialog state vector</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>

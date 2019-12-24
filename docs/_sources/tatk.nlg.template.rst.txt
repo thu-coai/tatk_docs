@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
    tatk.nlg.template.camrest
+   tatk.nlg.template.crosswoz
    tatk.nlg.template.multiwoz
 
 Module contents

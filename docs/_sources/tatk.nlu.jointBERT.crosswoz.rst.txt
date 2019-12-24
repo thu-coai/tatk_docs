@@ -1,0 +1,43 @@
+tatk.nlu.jointBERT.crosswoz package
+===================================
+
+Submodules
+----------
+
+tatk.nlu.jointBERT.crosswoz.analyse module
+------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.crosswoz.analyse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.crosswoz.nlu module
+--------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.crosswoz.nlu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.crosswoz.postprocess module
+----------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.crosswoz.postprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.nlu.jointBERT.crosswoz.preprocess module
+---------------------------------------------
+
+.. automodule:: tatk.nlu.jointBERT.crosswoz.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+

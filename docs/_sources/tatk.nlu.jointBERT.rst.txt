@@ -6,6 +6,8 @@ Subpackages
 
 .. toctree::
 
+   tatk.nlu.jointBERT.camrest
+   tatk.nlu.jointBERT.crosswoz
    tatk.nlu.jointBERT.multiwoz
 
 Submodules

@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tatk.nlu.jointBERT.multiwoz package" href="tatk.nlu.jointBERT.multiwoz.html" />
+    <link rel="next" title="tatk.nlu.jointBERT.camrest package" href="tatk.nlu.jointBERT.camrest.html" />
     <link rel="prev" title="tatk.nlu.bert.multiwoz package" href="tatk.nlu.bert.multiwoz.html" /> 
 </head>
 
@@ -92,9 +92,9 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">tatk.nlu.jointBERT package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-jointbert-dataloader-module">tatk.nlu.jointBERT.dataloader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-jointbert-jointbert-module">tatk.nlu.jointBERT.jointBERT module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-jointbert-test-module">tatk.nlu.jointBERT.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.jointBERT.dataloader">tatk.nlu.jointBERT.dataloader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.jointBERT.jointBERT">tatk.nlu.jointBERT.jointBERT module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tatk.nlu.jointBERT.test">tatk.nlu.jointBERT.test module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tatk-nlu-jointbert-train-module">tatk.nlu.jointBERT.train module</a></li>
 </ul>
 </li>
@@ -182,9 +182,24 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.jointBERT.camrest.html">tatk.nlu.jointBERT.camrest package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.camrest.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.camrest.html#tatk-nlu-jointbert-camrest-nlu-module">tatk.nlu.jointBERT.camrest.nlu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.camrest.html#module-tatk.nlu.jointBERT.camrest.postprocess">tatk.nlu.jointBERT.camrest.postprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.camrest.html#module-tatk.nlu.jointBERT.camrest.preprocess">tatk.nlu.jointBERT.camrest.preprocess module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tatk.nlu.jointBERT.crosswoz.html">tatk.nlu.jointBERT.crosswoz package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.crosswoz.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.crosswoz.html#module-tatk.nlu.jointBERT.crosswoz.analyse">tatk.nlu.jointBERT.crosswoz.analyse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.crosswoz.html#module-tatk.nlu.jointBERT.crosswoz.nlu">tatk.nlu.jointBERT.crosswoz.nlu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.crosswoz.html#module-tatk.nlu.jointBERT.crosswoz.postprocess">tatk.nlu.jointBERT.crosswoz.postprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.crosswoz.html#module-tatk.nlu.jointBERT.crosswoz.preprocess">tatk.nlu.jointBERT.crosswoz.preprocess module</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.nlu.jointBERT.multiwoz.html">tatk.nlu.jointBERT.multiwoz package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.multiwoz.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.multiwoz.html#tatk-nlu-jointbert-multiwoz-nlu-module">tatk.nlu.jointBERT.multiwoz.nlu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.multiwoz.html#module-tatk.nlu.jointBERT.multiwoz.nlu">tatk.nlu.jointBERT.multiwoz.nlu module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.multiwoz.html#module-tatk.nlu.jointBERT.multiwoz.postprocess">tatk.nlu.jointBERT.multiwoz.postprocess module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.nlu.jointBERT.multiwoz.html#module-tatk.nlu.jointBERT.multiwoz.preprocess">tatk.nlu.jointBERT.multiwoz.preprocess module</a></li>
 </ul>
@@ -195,14 +210,114 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlu-jointbert-dataloader-module">
-<h2>tatk.nlu.jointBERT.dataloader module<a class="headerlink" href="#tatk-nlu-jointbert-dataloader-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.jointBERT.dataloader">
+<span id="tatk-nlu-jointbert-dataloader-module"></span><h2>tatk.nlu.jointBERT.dataloader module<a class="headerlink" href="#module-tatk.nlu.jointBERT.dataloader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.jointBERT.dataloader.</code><code class="sig-name descname">Dataloader</code><span class="sig-paren">(</span><em class="sig-param">intent_vocab</em>, <em class="sig-param">tag_vocab</em>, <em class="sig-param">pretrained_weights</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">intent_vocab</em>, <em class="sig-param">tag_vocab</em>, <em class="sig-param">pretrained_weights</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intent_vocab</strong> – list of all intents</p></li>
+<li><p><strong>tag_vocab</strong> – list of all tags</p></li>
+<li><p><strong>pretrained_weights</strong> – which bert, e.g. ‘bert-base-uncased’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.bert_tokenize">
+<code class="sig-name descname">bert_tokenize</code><span class="sig-paren">(</span><em class="sig-param">word_seq</em>, <em class="sig-param">tag_seq</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.bert_tokenize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.get_train_batch">
+<code class="sig-name descname">get_train_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_size</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.get_train_batch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.load_data">
+<code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">data_key</em>, <em class="sig-param">cut_sen_len</em>, <em class="sig-param">use_bert_tokenizer=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>sample representation: [list of words, list of tags, list of intents, original dialog act]
+:param data_key: train/val/test
+:param data:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.pad_batch">
+<code class="sig-name descname">pad_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_data</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.pad_batch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.seq_id2intent">
+<code class="sig-name descname">seq_id2intent</code><span class="sig-paren">(</span><em class="sig-param">ids</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.seq_id2intent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.seq_id2tag">
+<code class="sig-name descname">seq_id2tag</code><span class="sig-paren">(</span><em class="sig-param">ids</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.seq_id2tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.seq_intent2id">
+<code class="sig-name descname">seq_intent2id</code><span class="sig-paren">(</span><em class="sig-param">intents</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.seq_intent2id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.seq_tag2id">
+<code class="sig-name descname">seq_tag2id</code><span class="sig-paren">(</span><em class="sig-param">tags</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.seq_tag2id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.dataloader.Dataloader.yield_batches">
+<code class="sig-name descname">yield_batches</code><span class="sig-paren">(</span><em class="sig-param">batch_size</em>, <em class="sig-param">data_key</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.dataloader.Dataloader.yield_batches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="tatk-nlu-jointbert-jointbert-module">
-<h2>tatk.nlu.jointBERT.jointBERT module<a class="headerlink" href="#tatk-nlu-jointbert-jointbert-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlu.jointBERT.jointBERT">
+<span id="tatk-nlu-jointbert-jointbert-module"></span><h2>tatk.nlu.jointBERT.jointBERT module<a class="headerlink" href="#module-tatk.nlu.jointBERT.jointBERT" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.nlu.jointBERT.jointBERT.JointBERT">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.nlu.jointBERT.jointBERT.</code><code class="sig-name descname">JointBERT</code><span class="sig-paren">(</span><em class="sig-param">model_config</em>, <em class="sig-param">device</em>, <em class="sig-param">slot_dim</em>, <em class="sig-param">intent_dim</em>, <em class="sig-param">intent_weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.jointBERT.JointBERT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.jointBERT.JointBERT.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">model_config</em>, <em class="sig-param">device</em>, <em class="sig-param">slot_dim</em>, <em class="sig-param">intent_dim</em>, <em class="sig-param">intent_weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.jointBERT.JointBERT.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes internal Module state, shared by both nn.Module and ScriptModule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.nlu.jointBERT.jointBERT.JointBERT.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">word_seq_tensor</em>, <em class="sig-param">word_mask_tensor</em>, <em class="sig-param">tag_seq_tensor=None</em>, <em class="sig-param">tag_mask_tensor=None</em>, <em class="sig-param">intent_tensor=None</em>, <em class="sig-param">context_seq_tensor=None</em>, <em class="sig-param">context_mask_tensor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.jointBERT.JointBERT.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
 </div>
-<div class="section" id="tatk-nlu-jointbert-test-module">
-<h2>tatk.nlu.jointBERT.test module<a class="headerlink" href="#tatk-nlu-jointbert-test-module" title="Permalink to this headline">¶</a></h2>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tatk.nlu.jointBERT.test">
+<span id="tatk-nlu-jointbert-test-module"></span><h2>tatk.nlu.jointBERT.test module<a class="headerlink" href="#module-tatk.nlu.jointBERT.test" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tatk.nlu.jointBERT.test.set_seed">
+<code class="sig-prename descclassname">tatk.nlu.jointBERT.test.</code><code class="sig-name descname">set_seed</code><span class="sig-paren">(</span><em class="sig-param">seed</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlu.jointBERT.test.set_seed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="tatk-nlu-jointbert-train-module">
 <h2>tatk.nlu.jointBERT.train module<a class="headerlink" href="#tatk-nlu-jointbert-train-module" title="Permalink to this headline">¶</a></h2>
@@ -217,7 +332,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tatk.nlu.jointBERT.multiwoz.html" class="btn btn-neutral float-right" title="tatk.nlu.jointBERT.multiwoz package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tatk.nlu.jointBERT.camrest.html" class="btn btn-neutral float-right" title="tatk.nlu.jointBERT.camrest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tatk.nlu.bert.multiwoz.html" class="btn btn-neutral" title="tatk.nlu.bert.multiwoz package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
