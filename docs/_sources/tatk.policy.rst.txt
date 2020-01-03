@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   tatk.policy.gdpl
    tatk.policy.mdrg
    tatk.policy.mle
    tatk.policy.pg

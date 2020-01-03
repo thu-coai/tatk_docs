@@ -1,0 +1,25 @@
+tatk.policy.gdpl package
+========================
+
+Submodules
+----------
+
+tatk.policy.gdpl.estimator module
+---------------------------------
+
+.. automodule:: tatk.policy.gdpl.estimator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+tatk.policy.gdpl.gdpl module
+----------------------------
+
+.. automodule:: tatk.policy.gdpl.gdpl
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+
+
