@@ -9,6 +9,7 @@ Subpackages
    tatk.dst.mdbt
    tatk.dst.rule
    tatk.dst.sumbt
+   tatk.dst.trade
 
 Submodules
 ----------
