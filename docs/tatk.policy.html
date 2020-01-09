@@ -268,6 +268,12 @@
 <li class="toctree-l4"><a class="reference internal" href="tatk.policy.rule.camrest.html#module-tatk.policy.rule.camrest.rule_based_camrest_bot">tatk.policy.rule.camrest.rule_based_camrest_bot module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="tatk.policy.rule.crosswoz.html">tatk.policy.rule.crosswoz package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tatk.policy.rule.crosswoz.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.policy.rule.crosswoz.html#module-tatk.policy.rule.crosswoz.evaluate">tatk.policy.rule.crosswoz.evaluate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tatk.policy.rule.crosswoz.html#module-tatk.policy.rule.crosswoz.rule_simulator">tatk.policy.rule.crosswoz.rule_simulator module</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="tatk.policy.rule.multiwoz.html">tatk.policy.rule.multiwoz package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tatk.policy.rule.multiwoz.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tatk.policy.rule.multiwoz.html#module-tatk.policy.rule.multiwoz.policy_agenda_multiwoz">tatk.policy.rule.multiwoz.policy_agenda_multiwoz module</a></li>
@@ -331,7 +337,7 @@
 <dt id="tatk.policy.policy.Policy.predict">
 <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.policy.Policy.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict the next agent action given dialog state.
-update state[‘system_action’] with input action</p>
+update state[‘system_action’] with predict system action</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
 <dt>state (tuple or dict):</dt><dd><p>when the DST and Policy module are separated, the type of state is tuple.

@@ -254,36 +254,11 @@
 <dl class="class">
 <dt id="tatk.policy.mle.crosswoz.mle.MLE">
 <em class="property">class </em><code class="sig-prename descclassname">tatk.policy.mle.crosswoz.mle.</code><code class="sig-name descname">MLE</code><span class="sig-paren">(</span><em class="sig-param">archive_file='/home/travis/build/thu-coai/tatk/tatk/policy/mle/crosswoz/models/mle_policy_crosswoz.zip'</em>, <em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/mle_policy_multiwoz.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mle.crosswoz.mle.MLE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.policy.html#tatk.policy.policy.Policy" title="tatk.policy.policy.Policy"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.policy.policy.Policy</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="tatk.policy.mle.html#tatk.policy.mle.mle.MLEAbstract" title="tatk.policy.mle.mle.MLEAbstract"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.policy.mle.mle.MLEAbstract</span></code></a></p>
 <dl class="method">
 <dt id="tatk.policy.mle.crosswoz.mle.MLE.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">archive_file='/home/travis/build/thu-coai/tatk/tatk/policy/mle/crosswoz/models/mle_policy_crosswoz.zip'</em>, <em class="sig-param">model_file='https://tatk-data.s3-ap-northeast-1.amazonaws.com/mle_policy_multiwoz.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mle.crosswoz.mle.MLE.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mle.crosswoz.mle.MLE.init_session">
-<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mle.crosswoz.mle.MLE.init_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restore after one session</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mle.crosswoz.mle.MLE.load">
-<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mle.crosswoz.mle.MLE.load" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.mle.crosswoz.mle.MLE.predict">
-<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mle.crosswoz.mle.MLE.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict an system action given state.
-Args:</p>
-<blockquote>
-<div><p>state (dict): Dialog state. Please refer to util/state.py</p>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>action : System act, with the form of (act_type, {slot_name_1: value_1, slot_name_2, value_2, …})</p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
