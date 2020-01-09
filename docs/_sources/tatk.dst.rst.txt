@@ -14,10 +14,10 @@ Subpackages
 Submodules
 ----------
 
-tatk.dst.state\_tracker module
-------------------------------
+tatk.dst.dst module
+-------------------
 
-.. automodule:: tatk.dst.state_tracker
+.. automodule:: tatk.dst.dst
    :members:
    :undoc-members:
    :show-inheritance:

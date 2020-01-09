@@ -4,19 +4,19 @@ tatk.dst.rule.crosswoz package
 Submodules
 ----------
 
-tatk.dst.rule.crosswoz.evaluate module
---------------------------------------
+tatk.dst.rule.crosswoz.dst module
+---------------------------------
 
-.. automodule:: tatk.dst.rule.crosswoz.evaluate
+.. automodule:: tatk.dst.rule.crosswoz.dst
    :members:
    :undoc-members:
    :show-inheritance:
    :special-members: __init__
 
-tatk.dst.rule.crosswoz.state\_tracker module
---------------------------------------------
+tatk.dst.rule.crosswoz.evaluate module
+--------------------------------------
 
-.. automodule:: tatk.dst.rule.crosswoz.state_tracker
+.. automodule:: tatk.dst.rule.crosswoz.evaluate
    :members:
    :undoc-members:
    :show-inheritance:

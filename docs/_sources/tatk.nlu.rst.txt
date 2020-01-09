@@ -6,7 +6,6 @@ Subpackages
 
 .. toctree::
 
-   tatk.nlu.bert
    tatk.nlu.jointBERT
    tatk.nlu.svm
 

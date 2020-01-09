@@ -32,15 +32,6 @@ tatk.util.file\_util module
    :show-inheritance:
    :special-members: __init__
 
-tatk.util.kb\_query module
---------------------------
-
-.. automodule:: tatk.util.kb_query
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :special-members: __init__
-
 tatk.util.module module
 -----------------------
 

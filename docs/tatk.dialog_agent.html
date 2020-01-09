@@ -212,7 +212,7 @@ type(response) == list of tuples.</p>
 
 <dl class="class">
 <dt id="tatk.dialog_agent.agent.PipelineAgent">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.agent.</code><code class="sig-name descname">PipelineAgent</code><span class="sig-paren">(</span><em class="sig-param">nlu_model: tatk.nlu.nlu.NLU</em>, <em class="sig-param">tracker: tatk.dst.state_tracker.Tracker</em>, <em class="sig-param">policy: tatk.policy.policy.Policy</em>, <em class="sig-param">nlg_model: tatk.nlg.nlg.NLG</em>, <em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dialog_agent.agent.</code><code class="sig-name descname">PipelineAgent</code><span class="sig-paren">(</span><em class="sig-param">nlu: tatk.nlu.nlu.NLU</em>, <em class="sig-param">dst: tatk.dst.dst.DST</em>, <em class="sig-param">policy: tatk.policy.policy.Policy</em>, <em class="sig-param">nlg: tatk.nlg.nlg.NLG</em>, <em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#tatk.dialog_agent.agent.Agent" title="tatk.dialog_agent.agent.Agent"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dialog_agent.agent.Agent</span></code></a></p>
 <p>Pipeline dialog agent base class, including NLU, DST, Policy and NLG.</p>
 <p>The combination modes of pipeline agent modules are flexible. The only thing you have to make sure is that
@@ -281,7 +281,7 @@ matching.</p>
 </dl>
 <dl class="method">
 <dt id="tatk.dialog_agent.agent.PipelineAgent.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">nlu_model: tatk.nlu.nlu.NLU</em>, <em class="sig-param">tracker: tatk.dst.state_tracker.Tracker</em>, <em class="sig-param">policy: tatk.policy.policy.Policy</em>, <em class="sig-param">nlg_model: tatk.nlg.nlg.NLG</em>, <em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">nlu: tatk.nlu.nlu.NLU</em>, <em class="sig-param">dst: tatk.dst.dst.DST</em>, <em class="sig-param">policy: tatk.policy.policy.Policy</em>, <em class="sig-param">nlg: tatk.nlg.nlg.NLG</em>, <em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dialog_agent.agent.PipelineAgent.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>The constructor of PipelineAgent class.</p>
 <p>Here are some special combination cases:</p>
 <blockquote>
@@ -292,13 +292,13 @@ matching.</p>
 </div></blockquote>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
-<dt>nlu_model (NLU):</dt><dd><p>The natural langauge understanding module of agent.</p>
+<dt>nlu (NLU):</dt><dd><p>The natural langauge understanding module of agent.</p>
 </dd>
-<dt>tracker (Tracker):</dt><dd><p>The dialog state tracker of agent.</p>
+<dt>dst (DST):</dt><dd><p>The dialog state tracker of agent.</p>
 </dd>
 <dt>policy (Policy):</dt><dd><p>The dialog policy module of agent.</p>
 </dd>
-<dt>nlg_model (NLG):</dt><dd><p>The natural langauge generator module of agent.</p>
+<dt>nlg (NLG):</dt><dd><p>The natural langauge generator module of agent.</p>
 </dd>
 </dl>
 </dd>

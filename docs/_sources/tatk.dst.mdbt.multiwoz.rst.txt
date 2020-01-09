@@ -4,10 +4,10 @@ tatk.dst.mdbt.multiwoz package
 Submodules
 ----------
 
-tatk.dst.mdbt.multiwoz.mdbt module
-----------------------------------
+tatk.dst.mdbt.multiwoz.dst module
+---------------------------------
 
-.. automodule:: tatk.dst.mdbt.multiwoz.mdbt
+.. automodule:: tatk.dst.mdbt.multiwoz.dst
    :members:
    :undoc-members:
    :show-inheritance:

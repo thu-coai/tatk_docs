@@ -247,30 +247,12 @@
 <dd><p>Generate a natural language utterance conditioned on the dialog act.</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
-<dt>action (list of tuples):</dt><dd><p>The dialog action produced by dialog policy module, which is in dialog act format.</p>
+<dt>action (list of list):</dt><dd><p>The dialog action produced by dialog policy module, which is in dialog act format.</p>
 </dd>
 </dl>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
 <dt>utterance (str):</dt><dd><p>A natural langauge utterance.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.nlg.nlg.NLG.generate_batch">
-<code class="sig-name descname">generate_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_action</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.nlg.NLG.generate_batch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate natural language utterances conditioned on a batch of dialog acts.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><dl class="simple">
-<dt>batch_action (list of list of tuples):</dt><dd><p>A batch of dialog acts</p>
-</dd>
-</dl>
-</dd>
-<dt>Returns:</dt><dd><dl class="simple">
-<dt>batch_utterance (list of string):</dt><dd><p>Natural language utterances.</p>
 </dd>
 </dl>
 </dd>

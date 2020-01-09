@@ -330,7 +330,8 @@
 <dl class="method">
 <dt id="tatk.policy.policy.Policy.predict">
 <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.policy.Policy.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict the next agent action given dialog state.</p>
+<dd><p>Predict the next agent action given dialog state.
+update state[‘system_action’] with input action</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
 <dt>state (tuple or dict):</dt><dd><p>when the DST and Policy module are separated, the type of state is tuple.
@@ -339,26 +340,7 @@ else when they are aggregated together, the type of state is dict (dialog act).<
 </dl>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>action (list of tuples):</dt><dd><p>The next dialog action.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.policy.policy.Policy.predict_batch">
-<code class="sig-name descname">predict_batch</code><span class="sig-paren">(</span><em class="sig-param">batch_state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.policy.Policy.predict_batch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict actions given a batch of dialog states.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><dl class="simple">
-<dt>batch_state (list of tuple or dict):</dt><dd><p>when the DST and Policy module are separated, the type of state is tuple.
-else when they are aggregated together, the type of state is dict (dialog act).</p>
-</dd>
-</dl>
-</dd>
-<dt>Returns:</dt><dd><dl class="simple">
-<dt>batch_action (list of list of tuples):</dt><dd><p>The next dialog action.</p>
+<dt>action (list of list):</dt><dd><p>The next dialog action.</p>
 </dd>
 </dl>
 </dd>

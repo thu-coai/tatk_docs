@@ -103,7 +103,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.state_tracker">tatk.dst.state_tracker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tatk.dst.html#module-tatk.dst.dst">tatk.dst.dst module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tatk.dialog_agent.html">tatk.dialog_agent package</a></li>
@@ -180,6 +180,45 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-tatk.dst.rule.multiwoz.dst">
+<span id="tatk-dst-rule-multiwoz-dst-module"></span><h2>tatk.dst.rule.multiwoz.dst module<a class="headerlink" href="#module-tatk.dst.rule.multiwoz.dst" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tatk.dst.rule.multiwoz.dst.RuleDST">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.rule.multiwoz.dst.</code><code class="sig-name descname">RuleDST</code><a class="headerlink" href="#tatk.dst.rule.multiwoz.dst.RuleDST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="tatk.dst.html#tatk.dst.dst.DST" title="tatk.dst.dst.DST"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.dst.DST</span></code></a></p>
+<p>Rule based DST which trivially updates new values from NLU result to states.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>state(dict):</dt><dd><p>Dialog state. Function <code class="docutils literal notranslate"><span class="pre">tatk.util.multiwoz.state.default_state</span></code> returns a default state.</p>
+</dd>
+<dt>value_dict(dict):</dt><dd><p>It helps check whether <code class="docutils literal notranslate"><span class="pre">user_act</span></code> has correct content.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.dst.RuleDST.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.dst.RuleDST.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.dst.RuleDST.init_session">
+<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.dst.RuleDST.init_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize <code class="docutils literal notranslate"><span class="pre">self.state</span></code> with a default state, which <code class="docutils literal notranslate"><span class="pre">tatk.util.multiwoz.state.default_state</span></code> returns.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.dst.rule.multiwoz.dst.RuleDST.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">user_act=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.dst.RuleDST.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>update belief_state, request_state
+:param user_act:
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-tatk.dst.rule.multiwoz.dst_util">
 <span id="tatk-dst-rule-multiwoz-dst-util-module"></span><h2>tatk.dst.rule.multiwoz.dst_util module<a class="headerlink" href="#module-tatk.dst.rule.multiwoz.dst_util" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -219,58 +258,6 @@
 <dt id="tatk.dst.rule.multiwoz.dst_util.str_similar">
 <code class="sig-prename descclassname">tatk.dst.rule.multiwoz.dst_util.</code><code class="sig-name descname">str_similar</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.dst_util.str_similar" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</div>
-<div class="section" id="tatk-dst-rule-multiwoz-evaluate-module">
-<h2>tatk.dst.rule.multiwoz.evaluate module<a class="headerlink" href="#tatk-dst-rule-multiwoz-evaluate-module" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-tatk.dst.rule.multiwoz.state_tracker">
-<span id="tatk-dst-rule-multiwoz-state-tracker-module"></span><h2>tatk.dst.rule.multiwoz.state_tracker module<a class="headerlink" href="#module-tatk.dst.rule.multiwoz.state_tracker" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.dst.rule.multiwoz.state_tracker.</code><code class="sig-name descname">RuleDST</code><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="tatk.dst.html#tatk.dst.state_tracker.Tracker" title="tatk.dst.state_tracker.Tracker"><code class="xref py py-class docutils literal notranslate"><span class="pre">tatk.dst.state_tracker.Tracker</span></code></a></p>
-<p>Rule based DST which trivially updates new values from NLU result to states.</p>
-<dl class="simple">
-<dt>Attributes:</dt><dd><dl class="simple">
-<dt>state(dict):</dt><dd><p>Dialog state. Function <code class="docutils literal notranslate"><span class="pre">tatk.util.camrest.state.default_state</span></code> returns a default state.</p>
-</dd>
-<dt>value_dict(dict):</dt><dd><p>It helps check whether <code class="docutils literal notranslate"><span class="pre">user_act</span></code> has correct content.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<dl class="method">
-<dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST.init_session">
-<code class="sig-name descname">init_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST.init_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize <code class="docutils literal notranslate"><span class="pre">self.state</span></code> with a default state, which <code class="docutils literal notranslate"><span class="pre">tatk.util.multiwoz.state.default_state</span></code> returns.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.dst.rule.multiwoz.state_tracker.RuleDST.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">user_act=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.dst.rule.multiwoz.state_tracker.RuleDST.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the internal dialog state variable.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><dl class="simple">
-<dt>action (str or list of tuples):</dt><dd><p>The type is str when Tracker is word-level (such as NBT), and list of tuples when it is DA-level.</p>
-</dd>
-</dl>
-</dd>
-<dt>Returns:</dt><dd><dl class="simple">
-<dt>new_state (dict):</dt><dd><p>Updated dialog state, with the same form of previous state.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
 
 </div>
 </div>

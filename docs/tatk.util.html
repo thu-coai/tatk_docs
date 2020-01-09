@@ -94,7 +94,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.allennlp_file_utils">tatk.util.allennlp_file_utils module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.file_util">tatk.util.file_util module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.module">tatk.util.module module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-tatk.util.train_util">tatk.util.train_util module</a></li>
 </ul>
@@ -348,31 +347,25 @@ by a period.</p>
 <code class="sig-prename descclassname">tatk.util.file_util.</code><code class="sig-name descname">cached_path</code><span class="sig-paren">(</span><em class="sig-param">file_path</em>, <em class="sig-param">cached_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.file_util.cached_path" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="module-tatk.util.kb_query">
-<span id="tatk-util-kb-query-module"></span><h2>tatk.util.kb_query module<a class="headerlink" href="#module-tatk.util.kb_query" title="Permalink to this headline">¶</a></h2>
-<p>Base Class for Knowledge Base Query</p>
-<dl class="class">
-<dt id="tatk.util.kb_query.KBquery">
-<em class="property">class </em><code class="sig-prename descclassname">tatk.util.kb_query.</code><code class="sig-name descname">KBquery</code><a class="headerlink" href="#tatk.util.kb_query.KBquery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="tatk.util.kb_query.KBquery.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.kb_query.KBquery.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="tatk.util.kb_query.KBquery.query">
-<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">constrains</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.kb_query.KBquery.query" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="tatk.util.file_util.dump_json">
+<code class="sig-prename descclassname">tatk.util.file_util.</code><code class="sig-name descname">dump_json</code><span class="sig-paren">(</span><em class="sig-param">content</em>, <em class="sig-param">filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.file_util.dump_json" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
+<dl class="function">
+<dt id="tatk.util.file_util.read_zipped_json">
+<code class="sig-prename descclassname">tatk.util.file_util.</code><code class="sig-name descname">read_zipped_json</code><span class="sig-paren">(</span><em class="sig-param">zip_path</em>, <em class="sig-param">filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.file_util.read_zipped_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.util.file_util.write_zipped_json">
+<code class="sig-prename descclassname">tatk.util.file_util.</code><code class="sig-name descname">write_zipped_json</code><span class="sig-paren">(</span><em class="sig-param">zip_path</em>, <em class="sig-param">filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.file_util.write_zipped_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 <div class="section" id="module-tatk.util.module">
 <span id="tatk-util-module-module"></span><h2>tatk.util.module module<a class="headerlink" href="#module-tatk.util.module" title="Permalink to this headline">¶</a></h2>
-<p>Natural language understanding interface.</p>
+<p>module interface.</p>
 <dl class="class">
 <dt id="tatk.util.module.Module">
 <em class="property">class </em><code class="sig-prename descclassname">tatk.util.module.</code><code class="sig-name descname">Module</code><a class="headerlink" href="#tatk.util.module.Module" title="Permalink to this definition">¶</a></dt>

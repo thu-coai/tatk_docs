@@ -898,7 +898,8 @@ registered hooks while the latter silently ignores them.</p>
 <dl class="method">
 <dt id="tatk.policy.mdrg.multiwoz.policy.MDRGWordPolicy.predict">
 <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.policy.mdrg.multiwoz.policy.MDRGWordPolicy.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict the next agent action given dialog state.</p>
+<dd><p>Predict the next agent action given dialog state.
+update state[‘system_action’] with input action</p>
 <dl class="simple">
 <dt>Args:</dt><dd><dl class="simple">
 <dt>state (tuple or dict):</dt><dd><p>when the DST and Policy module are separated, the type of state is tuple.
@@ -907,7 +908,7 @@ else when they are aggregated together, the type of state is dict (dialog act).<
 </dl>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>action (list of tuples):</dt><dd><p>The next dialog action.</p>
+<dt>action (list of list):</dt><dd><p>The next dialog action.</p>
 </dd>
 </dl>
 </dd>

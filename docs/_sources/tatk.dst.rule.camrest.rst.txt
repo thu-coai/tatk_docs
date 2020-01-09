@@ -4,10 +4,10 @@ tatk.dst.rule.camrest package
 Submodules
 ----------
 
-tatk.dst.rule.camrest.state\_tracker module
--------------------------------------------
+tatk.dst.rule.camrest.dst module
+--------------------------------
 
-.. automodule:: tatk.dst.rule.camrest.state_tracker
+.. automodule:: tatk.dst.rule.camrest.dst
    :members:
    :undoc-members:
    :show-inheritance:

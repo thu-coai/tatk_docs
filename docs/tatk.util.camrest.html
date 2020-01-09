@@ -100,7 +100,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.allennlp_file_utils">tatk.util.allennlp_file_utils module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.file_util">tatk.util.file_util module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.kb_query">tatk.util.kb_query module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.module">tatk.util.module module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tatk.util.html#module-tatk.util.train_util">tatk.util.train_util module</a></li>
 </ul>
@@ -186,11 +185,23 @@
 </div>
 <div class="section" id="module-tatk.util.camrest.dbquery">
 <span id="tatk-util-camrest-dbquery-module"></span><h2>tatk.util.camrest.dbquery module<a class="headerlink" href="#module-tatk.util.camrest.dbquery" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="tatk.util.camrest.dbquery.query">
-<code class="sig-prename descclassname">tatk.util.camrest.dbquery.</code><code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">constraints</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.dbquery.query" title="Permalink to this definition">¶</a></dt>
+<dl class="class">
+<dt id="tatk.util.camrest.dbquery.Database">
+<em class="property">class </em><code class="sig-prename descclassname">tatk.util.camrest.dbquery.</code><code class="sig-name descname">Database</code><a class="headerlink" href="#tatk.util.camrest.dbquery.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tatk.util.camrest.dbquery.Database.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.dbquery.Database.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tatk.util.camrest.dbquery.Database.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">constraints</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.dbquery.Database.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the list of entities for a given domain
 based on the annotation of the belief state</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -203,12 +214,12 @@ based on the annotation of the belief state</p>
 
 <dl class="function">
 <dt id="tatk.util.camrest.lexicalize.delexicalize_da">
-<code class="sig-prename descclassname">tatk.util.camrest.lexicalize.</code><code class="sig-name descname">delexicalize_da</code><span class="sig-paren">(</span><em class="sig-param">meta</em>, <em class="sig-param">requestable</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.lexicalize.delexicalize_da" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">tatk.util.camrest.lexicalize.</code><code class="sig-name descname">delexicalize_da</code><span class="sig-paren">(</span><em class="sig-param">da</em>, <em class="sig-param">requestable</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.lexicalize.delexicalize_da" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="tatk.util.camrest.lexicalize.flat_da">
-<code class="sig-prename descclassname">tatk.util.camrest.lexicalize.</code><code class="sig-name descname">flat_da</code><span class="sig-paren">(</span><em class="sig-param">meta</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.lexicalize.flat_da" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">tatk.util.camrest.lexicalize.</code><code class="sig-name descname">flat_da</code><span class="sig-paren">(</span><em class="sig-param">delexicalized_da</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.util.camrest.lexicalize.flat_da" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
