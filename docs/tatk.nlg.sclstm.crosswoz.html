@@ -179,8 +179,36 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tatk-nlg-sclstm-crosswoz-evaluate-module">
-<h2>tatk.nlg.sclstm.crosswoz.evaluate module<a class="headerlink" href="#tatk-nlg-sclstm-crosswoz-evaluate-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-tatk.nlg.sclstm.crosswoz.evaluate">
+<span id="tatk-nlg-sclstm-crosswoz-evaluate-module"></span><h2>tatk.nlg.sclstm.crosswoz.evaluate module<a class="headerlink" href="#module-tatk.nlg.sclstm.crosswoz.evaluate" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate NLG models on utterances of Multiwoz_zh test dataset
+Metric: dataset level BLEU-4, slot error rate
+Usage: python evaluate.py [usr|sys|all]</p>
+<dl class="function">
+<dt id="tatk.nlg.sclstm.crosswoz.evaluate.act2intent">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.crosswoz.evaluate.</code><code class="sig-name descname">act2intent</code><span class="sig-paren">(</span><em class="sig-param">dialog_act: list</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.crosswoz.evaluate.act2intent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.crosswoz.evaluate.get_bleu4">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.crosswoz.evaluate.</code><code class="sig-name descname">get_bleu4</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em>, <em class="sig-param">golden_utts</em>, <em class="sig-param">gen_utts</em>, <em class="sig-param">data_key</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.crosswoz.evaluate.get_bleu4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.crosswoz.evaluate.get_err_slot">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.crosswoz.evaluate.</code><code class="sig-name descname">get_err_slot</code><span class="sig-paren">(</span><em class="sig-param">dialog_acts</em>, <em class="sig-param">gen_slots</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.crosswoz.evaluate.get_err_slot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.crosswoz.evaluate.split_delex_sentence">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.crosswoz.evaluate.</code><code class="sig-name descname">split_delex_sentence</code><span class="sig-paren">(</span><em class="sig-param">sen</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.crosswoz.evaluate.split_delex_sentence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tatk.nlg.sclstm.crosswoz.evaluate.value_replace">
+<code class="sig-prename descclassname">tatk.nlg.sclstm.crosswoz.evaluate.</code><code class="sig-name descname">value_replace</code><span class="sig-paren">(</span><em class="sig-param">sentences</em>, <em class="sig-param">dialog_act</em><span class="sig-paren">)</span><a class="headerlink" href="#tatk.nlg.sclstm.crosswoz.evaluate.value_replace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="tatk-nlg-sclstm-crosswoz-generate-resources-module">
 <h2>tatk.nlg.sclstm.crosswoz.generate_resources module<a class="headerlink" href="#tatk-nlg-sclstm-crosswoz-generate-resources-module" title="Permalink to this headline">¶</a></h2>
